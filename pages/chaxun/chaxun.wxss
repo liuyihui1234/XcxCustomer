@@ -1,0 +1,191 @@
+/* pages/chaxun/chaxun.wxss */
+page{
+  height: 100%;
+}
+/* 修改colorUI的样式 */
+.cu-bar{
+  background-color: #fff;
+}
+.cu-bar .search-form{
+  background-color: #e9e9e9;
+  margin: 0;
+  margin-left: 22rpx;
+  padding-right: 21rpx;
+}
+.cu-btn:not([class*="bg-"]) {
+  background-color: #fff;
+}
+.cu-bar .search-form input{
+  height:50rpx;
+  line-height:50rpx;
+}
+.cu-bar .search-form+.action {
+  margin-right: 0;
+}
+.cu-bar .action:last-child{
+  margin-right: 0;
+}
+.round{
+  border-radius: none;
+}
+.cu-btn{
+  font-size: 32rpx;
+  color: #cb252a;
+}
+
+.placeholder{
+  padding-left: 30rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.saomiao{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 选项卡切换 */
+.tab {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  padding: 33rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  border-top: 1rpx solid #e8e8e8;
+}
+ 
+.topTabSwiper {
+  background-color: #fff;
+  zoom: 1;
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+.tabBorer {
+  border-bottom: 1px solid #333;
+  color: #333;
+}
+ 
+.swiper {
+  min-height: 150%;
+  width: 100%;
+}
+.swiper_con {
+  text-align: center;
+  width: 93%;
+  background-color:#fff;
+  margin:30rpx auto;
+  border-radius: 10rpx;
+}
+.swiper_con_title{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #eee;
+  padding: 17rpx 33rpx;
+}
+.swiper_con_title image{
+  width: 27rpx;
+  height: 27rpx;
+  margin-left: 13rpx;
+  margin-top: 7rpx;
+}
+.yundanhao{
+  font-size: 26rpx;
+  color: #999;
+}
+.qianshou{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 144rpx;
+  height: 68rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 66rpx;
+  background-color: #9d9ba6;
+  color: #fff;
+}
+.address{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 36rpx;
+}
+.send{
+  width: 96rpx;
+  height: 10rpx;
+  background-size: contain;
+ 
+}
+.city{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.start_city{
+  padding-right: 55rpx;
+}
+.start.city,.end.city{
+  font-size: 36rpx;
+  color: #333;
+}
+.end_city{
+  padding-left: 63rpx;
+}
+.start.peisong,.end.peisong{
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+.qiaoshou_content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20rpx 34rpx;
+}
+.qiaoshou_address,.qiaoshou_time{
+  display: flex;
+  flex-direction: row;
+}
+.qiaoshou_time{
+  margin-top: 17rpx;
+}
+.qianshou_aside{
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 30rpx;
+  color: #333;
+}
+.qiaoshou_main{
+  display: flex;
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 21rpx;
+}
+.qiaoshou_main{
+  display: flex;
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 21rpx;
+}
+.anniu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 30rpx;
+}
+.button{
+  width: 173rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border: 1rpx solid #d8d8d8;
+  border-radius: 3rpx;
+  margin-right: 44rpx;
+}
+
+

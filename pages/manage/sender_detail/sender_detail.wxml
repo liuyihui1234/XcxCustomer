@@ -1,0 +1,35 @@
+<!--pages/manage/sender_detail/sender_detail.wxml-->
+	<view class="cu-form-group">
+		<view class="title">输入框</view>
+		<input placeholder="三字标题"></input>
+	</view>
+<view class="cu-form-group">
+		<view class="title">手机号码</view>
+		<input placeholder="输入框带标签"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+  	<view class="cu-form-group">
+		<view class="title">省市区</view>
+		<input placeholder=""></input>
+		<text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">多列选择</view>
+		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+			</view>
+		</picker>
+	</view>
+<view class='form-list'>
+  <button class='scan' bindtap='scanCode'>点我扫描二维码</button>
+</view>
+  

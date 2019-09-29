@@ -1,0 +1,33 @@
+/* pages/chaxun/tousu/tousu_details/tousu_details.wxss */
+page{
+  background-color: #fff;
+}
+.tousu_details_c{
+  padding: 0 22rpx;
+}
+.tousu_details_title{
+  font-size: 26rpx;
+  color: #333;
+  padding: 50rpx 0 31rpx 0;
+  font-weight: bold;
+}
+/* colorui样式变动 */
+.cu-form-group{
+  border: 1rpx solid #dcdcdc;
+}
+.cu-form-group textarea{
+  font-size: 24rpx;
+  color: #999;
+}
+.cuIcon-cameraadd text{
+  font-size: 26rpx;
+  color: #999;
+}
+.grid.grid-square>view>text[class*="cuIcon-"]{
+  background-color: #f3f3f3;
+}
+.cu-form-group input{
+  font-size: 24rpx;
+  color: #999;
+}
+

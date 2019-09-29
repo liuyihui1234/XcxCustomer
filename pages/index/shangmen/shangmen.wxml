@@ -1,0 +1,111 @@
+<!--pages/index/shangmen.wxml-->
+
+	<!-- <view class="cu-form-group">
+		<view class="title">寄件人信息</view>
+		<input placeholder="点击填写寄件地址" bindtap='sender'></input>
+	</view> -->
+
+  <view>
+       <view class='ji_shou_address'>
+          <!-- 左边寄收图片 -->
+          <image class='ji_shou_logo' src='../../../images/ji_shou_logo.png'></image>
+          <!-- 右边输入部分 -->
+          
+          <view class='ji_shou_cnt'>
+            <view class='ji_cnt'>
+              <view class='input_cnt_ji' bindtap='jijian'>
+              <text>寄件人信息</text>
+              <input placeholder='点击填写寄件地址'>点击填写寄件地址</input>
+              </view>
+              <view class='click_address_box_ji'>
+                <image class='click_address_ji_img' src='../../../images/click_address.png' mode='widthFix'></image>
+              </view>
+            </view>
+            <view>
+
+            </view>
+              
+            <!-- 寄收快递中间的线 -->
+            <view class='ji_shou_line'>
+            </view>
+
+            <view class='shou_cnt'>
+            <view class='input_cnt_shou' bindtap='shoujian'>
+              <input placeholder='复制收件人完整信息，系统自动识别地址'></input>
+            </view>
+              <view class='click_address_box_shou'>
+                <image class='click_address_shou_img' src='../../../images/click_address.png' mode='widthFix'></image>
+              </view>
+            </view>
+          </view>
+          
+      </view>
+
+      <!-- <view class="cu-form-group">
+        <view class="title">期待上门时间</view>
+        <picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
+        range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+          </view>
+        </picker>
+      </view> -->
+      <view class="cu-form-group">
+				<view class="title">期待上门时间</view>
+				<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+					<view class="picker">
+						{{index>-1?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+					</view>
+				</picker>
+			</view>
+    <view class="cu-list menu card-menu margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow" bindtap='wupin'>
+      <navigator class="content" url="" hover-class="none">
+        <view class="text-grey">物品信息
+        <view class='red_must'>必填</view>
+        </view>
+        <input placeholder-class='input_float_right' placeholder='请填写'></input>
+      </navigator>
+    </view>
+    <view class="cu-item arrow" bindtap='baojia'>
+      <navigator class="content" url="" hover-class="none">
+        <text class="text-grey">保价</text>
+        <input placeholder-class='input_float_right' placeholder='未保价物品最高赔7倍运费，建议保价' style='width: 460rpx;'></input>
+      </navigator>
+    </view>
+    <view class="cu-item arrow" bindtap='zengzhi'>
+      <view class="content" bindtap="showQrcode">
+        <text class="text-grey">增值服务</text>
+        <input placeholder-class='input_float_right' placeholder='代收货款，签单返还等'></input>
+      </view>
+    </view>
+  </view>
+  <!-- tick  打对勾 -->
+  <view class='tick'>
+      <checkbox class='round red' :class="checkbox[2].checked?'checked':''" :checked="checkbox[2].checked?true:false"
+        value="C"></checkbox>
+        <text class='text1'>我已阅读并同意</text>
+        <text style=' font-weight: bold;'>《电子运单契约条款》</text>
+  </view>
+    
+  </view>
+  <!-- 底部结算部分 -->
+  <view class='footer'>
+    <view class='footer_left'>
+      <view class='footer_left_up'>
+        <view class='footer_left_money'>
+            预估
+            <text>￥--</text>
+        </view>
+        <view class='jifu'>
+            寄付现结
+        </view>
+      </view>
+      <view class='footer_left_down'>
+         最终费用以快递小哥核实为准
+      </view>
+    </view>
+    <view class='footer_right'>
+        下单
+    </view>
+  </view>

@@ -1,0 +1,92 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.banner{
+  width: 100%;
+  position: relative;
+}
+
+/* 四个导航--大导航*/
+
+.big_nav{
+  position: absolute;
+  top: 250rpx;
+  left: 22rpx;
+  width: 706rpx;
+  height: 361rpx;
+  background-color: #fff;
+  border-radius: 4rpx;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content:center;
+  align-items: center; */
+  box-shadow: 0 1px 3px #f1f1f1;
+}
+.big_item{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 353rpx;
+  padding: 47rpx 20rpx;
+  border-top: 1rpx solid #e7e7e7;
+  border-left: 1rpx solid #e7e7e7;
+}
+.big_item:nth-child(1),.big_item:nth-child(3){
+  border-left:none; 
+}
+.big_item:nth-child(1),.big_item:nth-child(2){
+  border-top: none;
+}
+
+.big_item_img{
+  width: 20%;
+  height: 25%;
+  background-size: contain;
+  margin-top: 5rpx;
+}
+.big_item_text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 18rpx;
+}
+.textTitle{
+  font-size: 30rpx;
+  color: #333;
+}
+.textPs{
+  /* margin-top: 5rpx; */
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* 七个导航-- 小导航 */
+.small_nav{
+  width: 706rpx;
+  height: 442rpx;
+  background-color: #fff;
+  margin: 100rpx auto;
+  border-radius: 5rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 80rpx;
+}
+.small_item{
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0 0 0;
+  box-sizing: border-box;
+}
+.small_nav .small_item_img{
+  width: 35%;
+  height: 35%;
+  background-size: contain; 
+}
+.small_nav .small_item_text{
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 10rpx;
+}

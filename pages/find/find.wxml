@@ -1,0 +1,25 @@
+<!--pages/find/find.wxml-->
+<view class='find_c'>
+<view class='img_text'>
+  <block wx:for="{{find_navs}}" :key="{{index}}">
+    <view class='block_item'>
+      <view class='img'>
+        <image src='{{item.img}}' mode='widthFix'></image>
+      </view>
+      <view class='text'>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+
+  <!-- banner图片 -->
+  <view class='find_banner' >
+  <image src="{{find_banner}}" mode='widthFix'></image>
+  </view>
+
+  <text class='find_banner2_title'>热门活动</text>
+  <view class='find_banner2'>
+    <image src='{{find_banner2}}' mode='widthFix'></image>
+  </view>
+</view>

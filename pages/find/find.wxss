@@ -1,0 +1,55 @@
+/* pages/find/find.wxss */
+page{
+  background-color: #f8f8f8;
+}
+.find_c{
+  width: 706rpx;
+  height: 336rpx;
+  background-color: #fff;
+  box-shadow: 4rpx 4rpx 4rpx 2rpx #ededed,-2rpx -2rpx 4rpx 2rpx #ededed;
+  margin: 26rpx auto;
+}
+.img_text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.img_text .block_item{
+  width: 33.33%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40rpx;
+}
+.img_text .img{
+  width: 62rpx;
+  height: 62rpx;
+  background-size: contain;
+}
+.img_text .text{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.find_banner{
+  padding-top: 52rpx;
+  width: 100%; 
+  padding-bottom: 40rpx;
+}
+.find_banner image{
+  width: 100%;
+  /* height: auto; */
+}
+.find_banner2{
+  padding-top: 32rpx;
+  width: 100%;
+}
+.find_banner2 image{
+  width: 100%;
+  /* height: auto; */
+}
+.find_banner2_title{
+  font-size: 30rpx;
+  color: #333333;
+}

@@ -1,0 +1,65 @@
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>中国内地</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>中国港澳台</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>国际</view>
+</view>
+<!-- style='height:{{heights?heights+"%":"152%"}}' -->
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <swiper-item>
+    <view class='search_group'>
+      <view class='search_info'>
+        <input class='search_input' placeholder='请输入姓名/电话'></input>
+        <image class='address_search_icon' src='../../.././images/address_search_icon.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='address_group'>
+      <view class='when_address_empty'>
+        <image class='address_empty_img' src='../../.././images/address_empty.png' mode='widthFix'></image>
+        <view class='address_empty_text'>空空如也~新增地址开启寄件吧！</view>
+      </view>
+    </view>
+      <view class='btn_add_address_box'>
+        <view class='btn_add_address' bindtap='new_add_address'>
+          新增地址
+        </view>
+      </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='search_group'>
+      <view class='search_info'>
+        <input class='search_input' placeholder='请输入姓名/电话'></input>
+        <image class='address_search_icon' src='../../.././images/address_search_icon.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='address_group'>
+      <view class='when_address_empty'>
+        <image class='address_empty_img' src='../../.././images/address_empty.png' mode='widthFix'></image>
+        <view class='address_empty_text'>空空如也~新增地址开启寄件吧！</view>
+      </view>
+    </view>
+      <view class='btn_add_address_box'>
+        <view class='btn_add_address' bindtap='new_add_address'>
+          新增地址
+        </view>
+      </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='search_group'>
+      <view class='search_info'>
+        <input class='search_input' placeholder='请输入姓名/电话'></input>
+        <image class='address_search_icon' src='../../.././images/address_search_icon.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='address_group'>
+      <view class='when_address_empty'>
+        <image class='address_empty_img' src='../../.././images/address_empty.png' mode='widthFix'></image>
+        <view class='address_empty_text'>空空如也~新增地址开启寄件吧！</view>
+      </view>
+    </view>
+      <view class='btn_add_address_box'>
+        <view class='btn_add_address' bindtap='new_add_address'>
+          新增地址
+        </view>
+      </view>
+  </swiper-item>
+</swiper>

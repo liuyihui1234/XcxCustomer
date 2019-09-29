@@ -1,0 +1,50 @@
+/* pages/chaxun/chaxun.wxss */
+page{
+  height: 100%;
+}
+/* 选项卡切换 */
+.tab {
+  float: left;
+  /* width: 50%; */
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  border-top: 1rpx solid #e8e8e8;
+  margin: 0rpx 140rpx;
+}
+ 
+.topTabSwiper {
+  background-color: #fff;
+  zoom: 1;
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+.tabBorer {
+  border-bottom: 1px solid #cb252a;
+  color: #cb252a;
+}
+.swiper {
+  width: 100%;
+  height: 1028rpx;
+  background-color: #f8f8f8;
+}
+.when_no_avai{
+  margin-top: 190rpx;
+  text-align: center;
+}
+.no_avai{
+  width: 318rpx;
+  height: 249rpx;
+  margin-bottom: 78rpx;
+}
+.no_avai_text{
+  font-size: 26rpx;
+  color: #999999;
+}
+

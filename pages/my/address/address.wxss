@@ -1,0 +1,96 @@
+/* pages/chaxun/chaxun.wxss */
+page{
+  /* position: relative; */
+  height: 100%;
+}
+/* 选项卡切换 */
+.tab {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  border-top: 1rpx solid #e8e8e8;
+}
+ 
+.topTabSwiper {
+  background-color: #fff;
+  zoom: 1;
+}
+ 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ 
+.tabBorer {
+  color: #cb252a;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+/* 搜索框 */
+.search_group{
+  width: 100%;
+  background-color: #ffffff;
+  padding:10rpx;
+}
+.search_info{
+  margin: 20rpx 33rpx;
+  background-color: #e9e9e9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search_input{
+  margin-left:20rpx;
+  margin-top: 14rpx;
+  margin-bottom: 14rpx; 
+  padding-right: 280rpx;
+}
+.address_search_icon{
+  width: 29rpx;
+  height: 30rpx;
+}
+.address_group{
+  width: 100%;
+  /* height: 937rpx; */
+  background-color: #f8f8f8;
+}
+.when_address_empty{
+  text-align: center;
+}
+.address_empty_img{
+  width: 138rpx;
+  height: 109rpx;
+  margin-top: 181rpx;
+  margin-bottom: 35rpx;
+}
+.address_empty_text{
+  font-size: 26rpx;
+  color: #999999;
+}
+/* 新增地址按钮 */
+.btn_add_address_box{
+  width: 100%;
+}
+.btn_add_address{
+  /* position: absolute;
+  left: 50%;
+  bottom: 70rpx; */
+  background-color: #cb252a;
+  color: #ffffff;
+  font-size: 32rpx;
+  /* padding: 26rpx 270rpx; */
+  width: 670rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  margin: 0 auto;
+  margin-top: 500rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

@@ -1,0 +1,128 @@
+<!--pages/index/shangmen/zengzhi/zengzhi.wxml-->
+<!-- "测试号的appid": "wx323f0b5dcbfac8f2", -->
+<!-- 保价模块-->
+<view class='first_baojia'>
+    <view class='baojia'>
+      <text class='baojia_text'>保价</text>
+      <image class='baojia_img' bindtap="baojia_showModal" src='../../../.././images/baojia_img.png' mode='widthFix'></image>
+    </view>
+    <!-- value价值 -->
+  <view class='value'>
+    <text class='value_title'>声明价值：</text>
+    <view class='value_money_box'>
+      <view class='value_money'>
+        <input placeholder='1-500000的整数' placeholder-class='input'></input>
+        <view>元</view>
+      </view>
+    </view>
+  </view>
+  <!-- 费用 -->
+  <view class='cost'>
+    <text>费用：</text>
+    <text class='cost_money'>￥ -- </text>
+    <text>元</text>
+  </view>
+</view>
+
+<!-- 签单返还 -->
+<view class='second_qiandan'>
+<view class='qiandan'>
+  <text>签单返还</text>
+  <checkbox-group class="block" bindchange="CheckboxChange">
+      <view class="cu-form-group">
+        <view class='margin'>
+          <checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+          <view class="title">签名</view>
+        </view>
+        <view class='margin'>
+          <checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+          <view class="title">盖章</view>
+        </view>
+        <view class='margin'>
+          <checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+          <view class="title">登记身份证</view>
+        </view>
+        <view class='margin'>
+          <checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+          <view class="title">收取身份证复印件</view>
+        </view>
+      </view>
+  </checkbox-group>
+   <view class='cost'>
+    <text>费用：</text>
+    <text class='cost_money'>￥ -- </text>
+    <text>元</text>
+  </view>
+</view>
+</view>
+
+<view class='third_serve'>
+  <checkbox-group class="block" bindchange="CheckboxChange">
+				<view class="cu-form-group">
+          <view class='serve'>
+					<checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+					<view class="title">装车服务</view>
+          </view>
+          <view class='serve_cost'>
+            <text>费用：</text>
+            <text class='cost_money'>￥ -- </text>
+            <text>元</text>
+          </view>
+				</view>
+				<view class="cu-form-group">
+        <view class='serve'>
+					<checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+					<view class="title">卸车服务</view>
+        </view>
+         <view class='serve_cost'>
+            <text>费用：</text>
+            <text class='cost_money'>￥ -- </text>
+            <text>元</text>
+          </view>
+				</view>
+        <view class="cu-form-group">
+        <view class='serve'>
+					<checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
+					<view class="title">特殊入仓
+          <image class='rucang_img' bindtap="rucang_showModal" src='../../../.././images/baojia_img.png' mode='widthFix'></image>
+          </view>
+        </view>
+         <view class='serve_cost'>
+            <text>费用：</text>
+            <text class='cost_money'>￥ -- </text>
+            <text>元</text>
+          </view>
+				</view>
+				<!-- #endif -->
+			</checkbox-group>
+  <!-- 确定按钮 -->
+    <!-- Determine确定 -->
+    <view class='btn_box'>
+      确定
+    </view>
+</view>
+
+<!-- 弹窗 -->
+	
+		<view class="cu-modal {{modalName1=='baojia_Modal'?'show':''}}" bindtap="hideModal">
+			<view class="cu-dialog">
+				<!-- <view class="cu-bar justify-end">
+					<view class="content">保价说明：</view>
+				</view> -->
+				<view class="padding-xl">
+        <text class='baojia_dialog_title'>保价说明：</text>
+        <text class='baojia_dialog_cnt'>
+					1、您未选择保价的，本公司在三倍运费的限额内赔偿托运物的实际损失。
+          2、您选择保价且支付保价费用的，托运物丢失、破损或短少的，本公司按照保价金额和损失的比例向您赔偿，最高不超过托运物的实际损失金额。
+        </text>
+				</view>
+			</view>
+		</view>
+
+    <view class="cu-modal {{modalName2=='rucang_Modal'?'show':''}}" bindtap="hideModal">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+					配送时收货的特殊要求。如：超时等待卸货、验货时按要求拆箱等个性化配送操作要求。
+				</view>
+			</view>
+		</view>

@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chaxun/chaxun",
+    "pages/find/find",
+    "pages/my/my",
+    "pages/manage/manage",
+    "pages/index/shangmen/shangmen",
+    "pages/manage/sender_detail/sender_detail",
+    "pages/index/shangmen/jijian/jijian",
+    "pages/index/shangmen/shoujian/shoujian",
+    "pages/chaxun/tousu/tousu",
+    "pages/chaxun/tousu/tousu_details/tousu_details",
+    "pages/index/shangmen/wupin/wupin",
+    "pages/index/shangmen/baojia/baojia",
+    "pages/index/shangmen/zengzhi/zengzhi",
+    "pages/my/my_jifen/my_jifen",
+    "pages/my/youhui/youhui",
+    "pages/my/address/address",
+    "pages/my/fapiao/fapiao",
+    "pages/my/shopping/shopping",
+    "pages/my/address/new_add_address/new_add_address"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "寄快递",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_act.png"
+      },
+      {
+        "pagePath": "pages/chaxun/chaxun",
+        "text": "查快递",
+        "iconPath": "images/chaxun.png",
+        "selectedIconPath": "images/chaxun_act.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/find_act.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_act.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cb252a",
+    "navigationBarTitleText": "快8速运",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取当前的位置信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

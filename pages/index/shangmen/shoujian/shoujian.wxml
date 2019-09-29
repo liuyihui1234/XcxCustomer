@@ -1,0 +1,49 @@
+<!--pages/manage/sender_detail/sender_detail.wxml-->
+	<view class="cu-form-group">
+		<input placeholder="姓名" placeholder-class='name_input'></input>
+		<input placeholder="电话"></input>
+		<input placeholder="-分机号"></input>
+    <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix'></image>
+	</view>
+  <view class="cu-form-group">
+		<input placeholder="省市区"></input>
+		<text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text>
+	</view>
+  <view class="cu-form-group">
+		<input placeholder="详细地址（精确到门牌号）"></input>
+	</view>
+  <view class="cu-form-group">
+		<input placeholder="公司名称（选填）"></input>
+	</view>
+   <!-- tick  打对勾 -->
+  <view class="cu-form-group">
+  <view class='tick_first_two'>
+    <checkbox class='round red' :class="checkbox[1].checked?'checked':''" :checked="checkbox[1].checked?true:false" value="B"></checkbox>
+    <view class='default_jijian_address'>
+      设为默认寄件地址
+    </view>
+  </view>
+    <view class='empty'>
+      清空当前信息
+    </view>
+  </view>
+
+  <!-- 粘贴地址信息，自动拆分姓名、电话和地址 -->
+  <!-- camera摄像头  voice语音 -->
+  <view class='detailed_information_box'>
+    <view class='detailed_information'>
+      <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动拆分姓名、电话和地址" placeholder-class='textarea_class'></textarea>
+      <view>
+        <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
+        <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+      <view class='button_keep'>
+          <text class='keep'>保存</text>
+      </view>
+  </view> 
+
+  

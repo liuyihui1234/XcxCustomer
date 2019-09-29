@@ -1,0 +1,75 @@
+/* pages/index/shangmen/jijian/jijian.wxss */
+input{
+  font-size: 26rpx;
+}
+/* 姓名右边的竖线 */
+.name_input{
+  border-right: 1rpx solid #e4e4e4;
+}
+/* 电话本图片 */
+.telephone_book{
+  width: 26rpx;
+}
+.tick_first_two{
+  display: flex;
+  flex-direction: row;
+}
+.default_jijian_address{
+  margin-left: 20rpx;
+  color: #666666;
+}
+.empty{
+  color: #666666;
+}
+.detailed_information_box{
+  margin-top: 24rpx;
+  background-color: #ffffff;
+  padding-top: 34rpx;
+  padding-bottom: 34rpx;
+}
+.detailed_information{
+  width: 700rpx;
+  height: 200rpx;
+  border: 1rpx solid #cccccc;
+  margin: 0 auto;
+  padding: 30rpx;
+}
+textarea{
+  height: 110rpx;
+}
+.textarea_class{
+  padding: 30rpx;
+}
+.camera{
+  width: 34rpx;
+}
+.voice{
+  width: 23rpx;
+  margin-left: 40rpx;
+}
+/* 底部部分 */
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 190rpx;
+  background-color: #ffffff;
+  text-align: center;
+}
+.button_keep{
+  width: 420rpx;
+  height: 96rpx;
+  border-radius: 96rpx;
+  background-color: #999999;
+  margin: 30rpx auto;
+}
+.button_keep:hover{
+  background-color: #d03a3d;
+}
+.keep{
+  color: #ffffff;
+  text-align: center;
+  line-height: 96rpx;
+  font-size: 38rpx;
+}

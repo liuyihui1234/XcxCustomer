@@ -1,0 +1,52 @@
+<!--pages/chaxun/tousu/tousu_details/tousu_details.wxml-->
+<view class='tousu_details_c'>
+<!-- 第一部分 -->
+  <view class='tousu_details_title'>
+  问题描述（必填）
+  </view>
+  <view class="cu-form-group">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="描述一下您的问题，便于我们更好地为您处理哦！"></textarea>
+	</view>
+  <!-- 第二部分 -->
+  <view class="tousu_details_title">
+		<view class="action">
+			相关凭证（最多5张）
+		</view>
+		<!-- <view class="action">
+			{{imgList.length}}/5
+		</view> -->
+	</view>
+	<view class="">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+				<text class="cuIcon-cameraadd">
+          <text>上传照片</text>
+        </text>
+			</view>
+		</view>
+	</view>
+<!-- 第三部分 -->
+ <view class='tousu_details_title'>
+  投诉联系人
+  </view>
+  <view class="cu-form-group">
+		<input placeholder="王小豆"></input>
+	</view>
+  <!-- 第四部分 -->
+   <view class='tousu_details_title'>
+  联系电话
+  </view>
+  <view class="cu-form-group">
+		<input placeholder="15838348055"></input>
+	</view>
+ <!-- 提交按钮 -->
+ <view class="padding flex flex-direction">
+  <button class="cu-btn bg-red margin-tb-sm lg">提交</button>
+</view>
+</view>

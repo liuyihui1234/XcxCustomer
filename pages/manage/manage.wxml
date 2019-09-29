@@ -1,0 +1,6 @@
+<!--pages/order.wxml-->
+	<view class="cu-form-group">
+		<view class="title">寄件人信息</view>
+		<input placeholder="点击填写寄件地址" bindtap='sender'></input>
+		<text class="cuIcon-locationfill text-orange"></text>
+	</view>

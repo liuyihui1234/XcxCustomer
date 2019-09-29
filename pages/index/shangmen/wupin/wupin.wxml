@@ -1,0 +1,98 @@
+<!--pages/index/shangmen/wupin/wupin.wxml-->
+<!-- 大盒子 -->
+<view class='big_box'>
+  <!-- 包裹类型模块 -->
+    <view class='baoguo_type'>
+        <view class='baoguo_type_title'>包裹类型</view>
+        <view class='baoguo_type_cnt_box'>
+          <view class='baoguo_type_cnt'>
+              <text>日用品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>食品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>文件</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>日用品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>衣物</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>其他</text>
+          </view>
+        </view>
+    </view> 
+    <!-- 预估重量 -->
+    <view class='predict_weight'>
+      <view class='predict_weight_up'>
+        <view class='predict_weight_title'>预估重量</view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='button_reduce' disabled="{{!count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{count}}'></input>
+              <view>公斤</view>
+            </view>
+            <button class='button_add' bindtap='button_add'>+</button>
+        </view>
+      </view>
+
+      <view class='predict_weight_down'>
+        <view>注：实际重量以收派员确定为准</view>
+      </view>
+    </view>
+
+    <!-- 物品照片与捎话 -->
+    <view class='additional_info'>
+      <view class='additional_info_title'>
+        物品照片与捎话
+      </view>
+      <!-- 图片上传 -->
+     <view class="">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+				<text class="cuIcon-cameraadd">
+          <!-- <text>上传照片</text> -->
+        </text>
+			</view>
+		</view>
+	</view>
+  <!-- 文字描述 给小哥捎句话儿吧 -->
+  	<view class="cu-form-group">
+     <view class='textarea_box'>
+				<textarea :disabled="modalName!=null" bindinput="textareaAInput" placeholder="给小哥捎句话吧..." placeholder-class='textarea_class' maxlength="20">
+        </textarea>
+        <!-- Lower right corner右下角 -->
+        <text class='lower_right_corner'>0/20</text>
+      </view>
+		</view>
+    <!-- 带纸箱 -->
+    <!-- Be careful注意 -->
+    <view class='be_careful'>
+      <view class='bg_color'>带纸箱</view>
+      <view class='bg_color'>上门前先联系</view>
+      <view class='color_red'>注意：纸箱需额外收费</view>
+    </view>
+
+    <!-- 备注 -->
+    <!-- Remarks备注 -->
+    <view class='remarks_info'>
+      注：物品照片帮助小哥判断是否符合快递规范以及选择合适运
+输工具，不会进行其他用途。
+    </view>
+
+    <!-- 确定按钮 -->
+    <!-- Determine确定 -->
+    <view class='btn_box'>
+      确定
+    </view>
+</view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/my/youhui/youhui.wxml-->
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>可用券</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>失效券</view>
+</view>
+<!-- style='height:{{heights?heights+"%":"152%"}}' -->
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <swiper-item>
+    <view class='when_no_avai'>
+        <image class='no_avai' src='../../.././images/no_avai.png' mode='widthFix'></image>
+        <view class='no_avai_text'>您暂时无可用快8券</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view class='when_no_avai'>
+        <image class='no_avai' src='../../.././images/no_avai.png' mode='widthFix'></image>
+        <view class='no_avai_text'>您暂时无可用快8券</view>
+    </view>
+  </swiper-item>
+</swiper>

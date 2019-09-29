@@ -1,0 +1,61 @@
+/* pages/index/shangmen/baojia/baojia.wxss */
+.big_box{
+  padding:24rpx 40rpx;
+}
+.value{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.value_title{
+  line-height: 90rpx;
+}
+.value_money{
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #e2e2e2;
+  padding: 16rpx 16rpx;
+}
+input{
+  padding-right: 150rpx;
+}
+.input{
+  font-size: 26rpx;
+}
+.cost{
+  margin-top: 22rpx;
+  text-align: right;
+}
+.cost_money{
+  color: #cb252a;
+}
+/* 说明 */
+.explain{
+  margin-top: 63rpx;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 47rpx;
+  letter-spacing: 3rpx;
+} 
+.explain_title{
+  font-weight: bold;
+}
+/* 保价 */
+.two_btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 28rpx;
+  margin:60rpx;
+}
+.two_btn view{
+  border: 1rpx solid #cb252a;
+  padding: 19rpx 56rpx;
+  border-radius: 66rpx;
+  color: #cb252a;
+  overflow: hidden;
+}
+.two_btn view:hover{
+  background-color: #cb252a;
+  color: #ffffff;
+}

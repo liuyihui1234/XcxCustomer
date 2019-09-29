@@ -1,0 +1,42 @@
+
+<view class='my_jifen'>
+  <image class='jifen_banner' src='../../.././images/jifen_banner.png' mode='widthFix'></image>
+  <text class='jifen_number'>0</text>
+  <view class='jifen_text'>
+    <text class='jifen_now'>当前可用积分</text>
+    <image class='jifen_action' src='../../.././images/jifen_action.png' mode='widthFix' bindtap="showModal" ></image>
+  </view>
+</view>
+<view class='jifen_detail'>
+  <view class='jifen_detail_left'>
+    <view class='jifen_detail_title'>
+      null
+    </view>
+    <view class='jifen_detail_date'>
+      2019-06-26 09：47：26
+    </view>
+  </view>
+  <view class='jifen_detail_add'>
+    +0
+  </view>
+</view>
+
+<view class='more_data'>
+  暂无更多数据
+</view>
+
+<!-- 积分详情弹窗 -->
+		<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+          <view>会员积分是快8速递提供给快递员的专属福利，通过积分可以参与快8会员平台的各项活动及优惠：</view>
+          <view>1、快递员可通过收件消费，每日签到；参与抽奖活动，和特定任务赚取积分；</view>
+          <view>2、积分可按照100积分抵扣1元，抵扣运费或兑换快8劵；</view>
+          <view>3、可商城参与线上积分抢购、积分兑换、积分拍卖、积分游戏等活动；</view>
+          <view>4、积分最多有效期为2年，本年度获得的积分将于下一个自然年年底过期；例如2019年获得的积分将于2020年12月31日清零。</view>
+          <view class='btn_red_know' bindtap="hideModal">
+            <text>我知道了</text>
+          </view>
+				</view>
+			</view>
+		</view>

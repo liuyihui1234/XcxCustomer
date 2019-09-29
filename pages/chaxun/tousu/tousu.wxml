@@ -1,0 +1,16 @@
+<!--pages/chaxun/tousu/tousu.wxml-->
+<view class='tousu_c'>
+  <view class='title'>
+    您遇到的问题是？
+  </view>
+  <block class='block' wx:for="{{tousuPro}}" wx:key="{{index}}">
+    <view class='block_item' bindtap='tousu_details'>
+      <view class='image'>
+        <image src='{{item.img}}' mode='widthFix'></image>
+      </view>
+      <view class='text'>
+      <text>{{item.text}}</text>
+      </view>
+    </view>
+  </block>
+</view>

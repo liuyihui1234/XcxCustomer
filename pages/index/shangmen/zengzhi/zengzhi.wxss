@@ -1,0 +1,110 @@
+/* pages/index/shangmen/zengzhi/zengzhi.wxss */
+
+/* 保价 */
+.first_baojia{
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30rpx 39rpx;
+}
+.baojia_text{
+  font-size: 28rpx;
+  color: #333333;
+}
+.baojia_img{
+  width: 33rpx;
+  height: 33rpx;
+  vertical-align: middle;
+  margin-left: 8rpx;
+}
+.value{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25rpx;
+}
+.value_title{
+  line-height: 90rpx;
+}
+.value_money{
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #e2e2e2;
+  padding: 16rpx 16rpx;
+}
+input{
+  padding-right: 150rpx;
+}
+.input{
+  font-size: 26rpx;
+}
+.cost{
+  margin-top: 22rpx;
+  text-align: right;
+}
+.cost_money{
+  color: #cb252a;
+}
+/* 签单模块 */
+.second_qiandan{
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30rpx 39rpx;
+  margin-top: 30rpx;
+}
+.cu-form-group{
+   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.title{
+  margin-left: 14rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.margin{
+  display: flex;
+  flex-direction: row;
+  margin: 38rpx 0 30rpx 0;
+}
+/* 第三个模块 */
+.third_serve{
+  background-color: #ffffff;
+  padding: 0rpx 39rpx;
+  margin-top: 30rpx;
+  padding-bottom: 80rpx; 
+}
+.serve{
+  display: flex;
+  flex-direction: row;
+}
+.rucang_img{
+  width: 33rpx;
+  height: 33rpx;
+  vertical-align: middle;
+}
+/* 确定按钮 */
+.btn_box{
+  background-color: #cb252a;
+  font-size: 32rpx;
+  color: #ffffff;
+  padding: 33rpx 200rpx;
+  border-radius: 98rpx;
+  text-align: center;
+  margin-top: 107rpx;
+} 
+/* 弹窗里面的内容 */
+.padding-xl{
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 49rpx;
+  text-align:left;
+  padding: 39rpx 50rpx;
+}
+.cu-dialog{
+  background-color: #ffffff;
+}
+.baojia_dialog_title{
+  font-size: 30rpx;
+  color: #000000;
+}

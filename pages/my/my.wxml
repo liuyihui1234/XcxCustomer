@@ -1,0 +1,86 @@
+<!--pages/my/my.wxml-->
+
+<!-- banner部分 -->
+<view class='my_banner'>
+  <image class='my_banner_img' src='../.././images/my_banner.png' mode="widthFix"></image>
+  <view class='my_imgs'>
+   <block wx:for="{{my_imgs}}" :key="{{index}}">
+    <view class='block_item' bindtap='my_imgs' data-my_imgs_id='{{item.my_imgs_id}}'>
+      <view class='group_img'>
+        <image class='item_img' src='{{item.img}}'></image>
+      </view>
+      <view class='group_text'>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>
+
+<view class='touxiang'>
+<!-- 头像一行 -->
+  <view class='touxiang_info'>
+    <image class='touxiang_img' src='../.././images/touxiang.png' mode='widthFix'></image>
+    <text class='touxiang_text'>15873666020</text>
+    <view class='qiandao' bindtap="showModal">
+      签到
+    </view>
+  </view>
+  <!-- 我寄的我收的我的积分 -->
+  <view class='number_text'>
+    <view class='ji'>
+      <text class='ji_number'>0</text>
+      <text class='ji_text'>我寄的</text>
+    </view>
+    <view class='shou'>
+      <text class='shou_number'>0</text>
+      <text class='shou_text'>我收的</text>
+    </view>
+     <view class='jifen' bindtap='my_jifen'>
+      <text class='jifen_number'>0</text>
+      <text class='jifen_text'>我的积分</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="" hover-class="none">
+        <image src="../.././images/my_online.png" class="png" mode="aspectFit"></image>
+        <text class="text-grey">在线客服</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="" hover-class="none">
+        <image src='../.././images/my_fankui.png'></image>
+        <text class="text-grey">功能反馈</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <image src='../.././images/my_phone.png'></image>
+        <text class="text-grey">客服电话</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <image src='../.././images/my_tousujilu.png'></image>
+        <text class="text-grey">投诉记录</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height">
+    <text>退出登录</text>
+  </view>
+
+  <!-- 签到弹窗 -->
+		<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+					<image class='qiandao_dialog_img' src='../.././images/qiandao.png' mode='widthFix'></image>
+          <view class='qiandao_succ'>签到成功</view>
+          <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
+          <view class='btn_know' bindtap="hideModal">朕知道了</view>
+				</view>
+			</view>
+		</view>

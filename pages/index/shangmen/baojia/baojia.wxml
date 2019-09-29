@@ -1,0 +1,52 @@
+<!--pages/index/shangmen/baojia/baojia.wxml-->
+<!-- 最大的盒子 -->
+<view class='big_box'>
+<!-- value价值 -->
+  <view class='value'>
+    <text class='value_title'>声明价值</text>
+    <view class='value_money_box'>
+      <view class='value_money'>
+        <input placeholder='1-500000的整数' placeholder-class='input'></input>
+        <view>元</view>
+      </view>
+    </view>
+  </view>
+  <!-- 费用 -->
+  <view class='cost'>
+      <text>费用：</text>
+      <text class='cost_money'>￥ -- </text>
+      <text>元</text>
+  </view>
+
+  <!-- 说明事项  Explain说明 -->
+    <view class='explain'>
+      <view class='explain_title'>
+        说明
+      </view>
+      <view class='explain_cnt'>
+        1、您交寄贵重物品的，请事先声明，否则视为价值不超过1000元。
+      </view>
+      <view class='explain_cnt'>
+        2、贵重物品请保价。若您未选择保价，则在九倍运费的限额内
+        向您赔偿托寄物的实际损失。
+      </view>
+      <view class='explain_cnt'>
+        3、若您已选择保价且支付保价费用的，则本公司按照保价金额
+        和损失的比例向您赔偿，最高不超过托寄物的实际损失金额。
+      </view>
+      <view class='explain_cnt'>
+        4、如果保价金额大于50万，请以小哥上门确认的保价金额为准。
+      </view>
+      <view class='explain_cnt'>
+        5、客户自行进行冷藏包装的医药件视为常温件。
+      </view>
+
+    </view>
+
+    <!-- 保价和不保价 -->
+    <view class='two_btn'>
+      <view class='no_btn'>不保价</view>
+      <view class='yes_btn'>确认保价</view>
+    </view>
+
+</view>

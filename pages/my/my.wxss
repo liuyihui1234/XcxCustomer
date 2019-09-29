@@ -1,0 +1,158 @@
+/* pages/my/my.wxss */
+page{
+  position: relative;
+}
+.my_banner{
+  position: relative;
+  width: 100%;
+  height: 622rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.my_banner_img{
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  width: 100%;
+  /* height: auto; */
+}
+.touxiang{
+  position: absolute;
+  top: 127rpx;
+  left: 22rpx;
+  width: 706rpx;
+  height: 336rpx;
+  background-color: #fff;
+  border-radius: 11rpx;
+  box-shadow: 0rpx 3rpx 2rpx 2rpx #e5e5e5;
+}
+/* 头像 */
+.touxiang_info{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 36rpx 0 40rpx 40rpx;
+  margin-left: 10rpx;
+}
+.touxiang_img{
+  width: 134rpx;
+}
+.touxiang_text{
+  line-height: 134rpx;
+  font-size: 30rpx;
+  color: #333333;
+  margin-left: 10rpx;
+}
+/* 签到 */
+.qiandao{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -24rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  background-color: #cf3539;
+  padding: 10rpx 34rpx;
+  line-height: 48rpx;
+  border-top-left-radius: 64rpx;
+  border-bottom-left-radius: 64rpx;
+}
+/* 寄件收件积分 */
+.number_text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 28rpx;
+}
+.ji,.shou,.jifen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ji_text,.shou_text,.jifen_text{
+  margin-top: 20rpx;
+}
+/* 四组图片和文字 */
+.my_imgs{
+  display: flex;
+  flex-direction: row;
+  margin-top: 135rpx;
+  justify-content: space-around;
+}
+.block_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item_img{
+  width: 61rpx;
+  height: 58rpx;
+}
+.group_text{
+  margin-top: 5rpx;
+}
+.cu-tabbar-height{
+  width: 100%;
+  height: 90rpx;
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 58rpx;
+}
+.cu-tabbar-height text{
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #333333;
+}
+/* colorui的样式修改 */
+.margin-top-xl {
+  margin-top: 14rpx;
+}
+.cu-list.card-menu{
+  margin-right: 0;
+  margin-left: 0;
+  border-radius: 0;
+}
+.cu-list.menu>.cu-item .content>image{
+  margin-right: 20rpx;
+}
+.margin-bottom-xl{
+  margin-bottom: 20rpx;
+}
+.cu-tabbar-height:hover{
+  background-color: #cf3539;
+}
+.cu-tabbar-height text:hover{
+  color: #ffffff;
+}
+/* 弹窗里面的样式 */
+.qiandao_dialog_img{
+  width: 272rpx;
+  height: 244rpx;
+}
+.cu-dialog{
+  width: auto;
+}
+.qiandao_succ{
+  margin-top:40rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #cb252a;
+  font-weight: bold;
+}
+.btn_know{
+  font-size: 30rpx;
+  color: #ffffff;
+  padding: 24rpx 86rpx;
+  margin-top: 60rpx;
+  background: -webkit-linear-gradient(left,#ef5746,#e9341f);
+  border-radius: 78rpx;
+}
+.padding-xl{
+  padding-left: 120rpx;
+  padding-right: 120rpx;
+}
+/* +.... */
+.jifen_count{
+  color: #cb252a;
+}
