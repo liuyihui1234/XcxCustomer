@@ -1,11 +1,12 @@
 // pages/my/address/new_add_address/new_add_address.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    region: [],
+    // region: ['广东省', '广州市', '海珠区'],
+    customItem: ''
   },
 
   /**
@@ -16,7 +17,12 @@ Page({
       title: '新增地址'  //修改title
     })
   },
-
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

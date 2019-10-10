@@ -1,0 +1,32 @@
+<view class='search_group'>
+  <view class='search_info'>
+    <input class='search_input' placeholder='请输入姓名/电话'></input>
+    <image class='address_search_icon' src='../../../.././images/address_search_icon.png' mode='widthFix'></image>
+  </view>
+</view>
+<view class='address_group'>
+<!-- 当有地址信息的时候 -->
+  <view class='when_address_have' wx:if="{{list.length}}">
+    <view class='when_address_have_cnt'>
+      <view class='name_tel'>
+        <text class='address_name'>王小豆</text>
+        <text class='address_tel'>15803685235</text>
+      </view>
+      <view class='address_address'>河南省郑州市管城回族区郑东商业中心c区2号楼7楼709室</view>
+    </view>
+    <view class='address_new_add'>
+      <image class='address_new_add_edit' src='../../../.././images/address_new_add_edit.png' mode='widthFix'></image>
+      <text class='address_edit'>编辑</text>
+    </view>
+  </view>
+  <!-- 当没有地址信息的时候 -->
+  <view class='when_address_empty' wx:else>
+    <image class='address_empty_img' src='../../../.././images/address_empty.png' mode='widthFix'></image>
+    <view class='address_empty_text'>空空如也~新增地址开启寄件吧！</view>
+  </view>
+</view>
+  <view class='btn_add_address_box'>
+    <view class='btn_add_address' bindtap='new_add_address'>
+      新增地址
+    </view>
+  </view>

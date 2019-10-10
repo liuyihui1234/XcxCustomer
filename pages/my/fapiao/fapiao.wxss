@@ -1,1 +1,93 @@
-/* pages/my/fapiao/fapiao.wxss */
+.header{
+  line-height: 60rpx;
+  height: 60rpx;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+}
+.fapiao_apply{
+  font-size: 30rpx;
+  color: #333333;
+}
+.kaipiao_history{
+  font-size: 24rpx;
+  color: #333333;
+}
+.fapiao_point_me{
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+.point_me_cnt{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 38rpx;
+}
+.point_me_cnt_yuan{
+  width: 78rpx;
+  height: 78rpx;
+  border: 1rpx solid #e4e4e4;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 16rpx;
+  margin-top: 16rpx;
+}
+.point_me_cnt_img{
+  width: 37rpx;
+  height: 38rpx;
+  margin: 20rpx auto;
+}
+.point_me_cnt_text{
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1rpx;
+}
+.point_me_img{
+  width: 15rpx;
+  height: 17rpx;
+  margin-right: 9rpx;
+}
+/* 可批量 */
+.can_batach{
+  width: 76rpx;
+  height: 38rpx;
+}
+.can_batach_box{
+  position: relative;
+  margin-top:-11rpx;
+  margin-left: 7rpx;
+}
+.can_batach_text{
+  position: absolute;
+  left: 8rpx;
+  top: 0;
+  color: #ffffff;
+  font-size: 20rpx;
+}
+.can_batach_view{
+  display: flex;
+  flex-direction: row;
+}
+.fost_size_30{
+  font-size: 30rpx;
+}
+.point_me_cnt_right text{
+  font-size: 22rpx;
+}
+.point_me_cnt_jiantou{
+  position: absolute;
+  right: 38rpx;
+  top: 66rpx;
+}
+/* 右箭头 */
+.point_me_right{
+  width: 20rpx;
+  height: 36rpx;
+}
+.when_no_info{
+  margin-top: 53rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #cb252a;
+}

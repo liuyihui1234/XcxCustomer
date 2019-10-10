@@ -1,0 +1,24 @@
+<view>
+  <view class='header'>
+    <input class='input_box' placeholder='请输入运单号添加' placeholder-class='number_input'></input>
+  </view>
+
+  <view class='kaipiao'>
+    <view class='kaipiao_line'></view>
+    <text class='kaipiao_text'>开票说明</text>
+  </view>
+
+  <view class='yuan_box'>
+    <view class='yuan'>
+      <image class='number_img' src='../../../.././images/number_img.png' mode='widthFix'></image>
+    </view>
+    <text class='yuan_box_text'>输入添加运单</text>
+  </view>
+</view>
+  <!-- 纯文字介绍 -->
+<view class='intro_text'>
+  <view>1、可手工输入添加运单，合并开一张发票，合并发票最多不超过100张运单。</view>
+  <view>2、运单手机号与登录会员手机不一致的，需进行首次验证，验证通过后该手机号为付款方的所有运单直接扫码批量添加。</view>
+  <view>3、待验证号码为座机，请输入座机后四位数字；为手机，请输入11位手机号码。</view>
+  <view>4、验证不通过，可关闭验证框，换其他运单继续添加。</view>
+</view>
