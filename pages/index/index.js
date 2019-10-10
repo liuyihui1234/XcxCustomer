@@ -71,6 +71,20 @@ Page({
     ]
     
   },
+  onLoad:function(){
+    var that = this;
+    var openId = wx.getStorageSync('openId')
+    /*if (!openId) {
+      wx.navigateTo({
+        url: '/pages/authorize/authorize',
+      })
+    }
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading',
+      duration: 1000,
+    });*/
+  },
   getNavItem:function(e){
     console.log(e);
     var big_nav_id = e.currentTarget.dataset.big_nav_id;

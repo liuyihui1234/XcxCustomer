@@ -18,6 +18,7 @@
     "pages/my/youhui/youhui",
     "pages/my/address/address",
     "pages/my/fapiao/fapiao",
+    "pages/authorize/authorize",
     "pages/my/shopping/shopping",
     "pages/my/address/new_add_address/new_add_address"
   ],
