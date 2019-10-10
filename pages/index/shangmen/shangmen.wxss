@@ -1,12 +1,18 @@
 /* pages/index/shangmen.wxss */
-
-/* .input_cnt_ji{
-  width: 460rpx;
+.cnt_address{
+  font-size: 26rpx;
+  color: #999999;
+}
+.input_cnt_ji{
+  width: 480rpx;
 }
 .input_cnt_shou{
-   width: 460rpx;
-} */
-
+   width: 480rpx;
+}
+.name_tel{
+  font-size: 30rpx;
+  color: #333333;
+}
 .ji_shou_address{
     width: 706rpx;
     height: 300rpx;
@@ -85,6 +91,8 @@
 .input_float_right{
   display: flex;
   justify-content:flex-end;
+  font-size: 28rpx;
+  color: #999999;
 }
 .red_must{
   display: block;

@@ -20,7 +20,10 @@
     "pages/my/fapiao/fapiao",
     "pages/authorize/authorize",
     "pages/my/shopping/shopping",
-    "pages/my/address/new_add_address/new_add_address"
+    "pages/my/address/new_add_address/new_add_address",
+    "pages/my/fapiao/fapiao_apply/fapiao_apply",
+    "pages/my/fapiao/kaipiao_history/kaipiao_history",
+    "pages/index/shangmen/address_book/address_book"
   ],
   "tabBar": {
     "color": "#333",

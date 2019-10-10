@@ -1,10 +1,21 @@
 /* pages/index/shangmen/jijian/jijian.wxss */
+.font-size30{
+  font-size: 30rpx;
+  color: #999999;
+}
+.border-right{
+  border-right: 1rpx solid #e4e4e4;
+}
+/* 分机号 */
+/* 省市区位置选择 */
+.cu-form-group picker .picker{
+  text-align: left;
+}
+.fenjihao{
+  margin-left: 7rpx;
+}
 input{
   font-size: 26rpx;
-}
-/* 姓名右边的竖线 */
-.name_input{
-  border-right: 1rpx solid #e4e4e4;
 }
 /* 电话本图片 */
 .telephone_book{
@@ -17,6 +28,7 @@ input{
 .default_jijian_address{
   margin-left: 20rpx;
   color: #666666;
+  line-height:60rpx;
 }
 .empty{
   color: #666666;

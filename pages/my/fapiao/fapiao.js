@@ -7,14 +7,21 @@ Page({
   data: {
 
   },
-
+  fapiao_apply:function(e){
+    wx.navigateTo({
+      url: './fapiao_apply/fapiao_apply',
+    })
+  },
+  kaipiao_history:function(e){
+    wx.navigateTo({
+      url: './kaipiao_history/kaipiao_history',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '我的发票申请'  //修改title
-    })
+    
   },
 
   /**

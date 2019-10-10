@@ -1,62 +1,26 @@
-// pages/order.js
+// pages/index/shangmen/address_book/address_book.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    index: -1,
-    picker: ['喵喵喵', '汪汪汪', '哼唧哼唧'],
+    list:[]
   },
-  PickerChange(e) {
-    this.index = e.detail.value
-  },
-  // 点击寄件跳转寄件页面
-  jijian: function (e) {
+  new_add_address: function (e) {
     wx.navigateTo({
-      url: './jijian/jijian',
-    })
-  },
-  // 点击收件人跳转收件人页面
-  shoujian: function (e) {
-    wx.navigateTo({
-      url: './shoujian/shoujian',
-    })
-  },
-  address_book:function(e){
-    wx.navigateTo({
-      url: './address_book/address_book',
-    })
-  },
-  wupin: function (e) {
-    wx.navigateTo({
-      url: './wupin/wupin',
-    })
-  },
-  baojia: function (e) {
-    wx.navigateTo({
-      url: './baojia/baojia',
-    })
-  },
-  zengzhi: function (e) {
-    wx.navigateTo({
-      url: './zengzhi/zengzhi',
+      url: '../../../my/address/new_add_address/new_add_address',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  sender: function (options) {
-    wx.navigateTo({
-      url: './jijian/jijian',
+  onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: '地址簿'  //修改title
     })
   },
 
-  onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '快递员上门'  //修改title
-    })
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

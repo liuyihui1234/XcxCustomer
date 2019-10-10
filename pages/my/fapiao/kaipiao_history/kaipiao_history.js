@@ -1,30 +1,20 @@
-// pages/index/shangmen/shoujian/shoujian.js
+// pages/my/fapiao/kaipiao_history/kaipiao_history.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    region: [],
-    // region: ['广东省', '广州市', '海珠区'],
-    customItem: ''
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '收件人地址填写'  //修改title
-    })
+
   },
-  bindRegionChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

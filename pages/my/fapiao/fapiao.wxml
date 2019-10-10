@@ -1,2 +1,39 @@
-<!--pages/my/fapiao/fapiao.wxml-->
-<text>pages/my/fapiao/fapiao.wxml</text>
+<!-- 头部部分  申请发票 开票历史 -->
+<view class='header'>
+  <text></text>
+  <text class='fapiao_apply'>申请发票</text>
+  <text class='kaipiao_history' bindtap='kaipiao_history'>开票历史</text>
+</view>
+
+<view class='fapiao_point_me'>
+  <view class='point_me_cnt'>
+      <view class='point_me_cnt_yuan'>
+        <image class='point_me_cnt_img' src='../../.././images/point_me_cnt_img.png' mode='widthFix'></image>
+      </view>
+      <view class='point_me_cnt_text'>
+        <view class='can_batach_view'>
+         <text class='fost_size_30'>找不到开票运单？点此开票</text>
+         <!-- can_batach 可批量 -->
+         <view class='can_batach_box'>
+          <image class='can_batach' src='../../.././images/can_batch.png' mode='widthFix'></image>
+          <text class='can_batach_text'>可批量</text>
+         </view>
+        </view>
+        <view class='point_me_cnt_right'>
+          <image class='point_me_img' src='../../.././images/point_me_cnt_right.png' mode='widthFix'></image>
+          <text>寄件后1-2个工作日才可开票</text>
+        </view>
+        <view class='point_me_cnt_right'>
+          <image class='point_me_img' src='../../.././images/point_me_cnt_right.png' mode='widthFix'></image>
+          <text>开票列表仅展示近一年的运单</text>
+        </view>
+      </view>
+      <view class='point_me_cnt_jiantou'>
+        <image class='point_me_right' src='../../.././images/point_me_right.png' mode='widthFix' bindtap='fapiao_apply'></image>
+      </view>
+  </view>
+</view>
+
+<view class='when_no_info'>
+  <text class='when_no_info_text'>没有更多信息了</text>
+</view>
