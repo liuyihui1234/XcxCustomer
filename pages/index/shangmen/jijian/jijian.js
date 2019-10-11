@@ -10,6 +10,7 @@ Page({
    */
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log(e);
     this.setData({
       region: e.detail.value
     })
@@ -27,7 +28,7 @@ Page({
       url: url,
       data: params,
       success: function (res) {
-        // console.log(res)
+        //console.log(res)
         // that.setData({
         //   nowlocation: res.data.result.formatted_address,
         // })

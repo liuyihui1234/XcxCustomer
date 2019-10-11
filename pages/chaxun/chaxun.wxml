@@ -2,11 +2,11 @@
 
 <view class="cu-bar search">
 				<view class="search-form">
-					<input bindfocus="InputFocus" bindblur="InputBlur" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
+					<input bindfocus="InputFocus" bindinput="getNumber" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
 					<image class='saomiao' src='../.././images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
 				</view>
 				<view class="action">
-					<button class="cu-btn shadow-blur">查询</button>
+					<button class="cu-btn shadow-blur" bindtap='search'>查询</button>
 				</view>
 			</view>
 
@@ -18,23 +18,26 @@
 </view>
 <swiper current="{{currentData}}" class='swiper' duration="300" style='height:{{heights?heights+"%":"152%"}}' bindchange="bindchange">
   <swiper-item>
-    <view class='swiper_con'>
+    
+    
+    <view class='swiper_con' wx:for="{{orderList}}" wx:key="{{index}}">
       <!-- 运单号标题 -->
       <view class='swiper_con_title'>
         <view class='yundanhao'>
-            运单号：198350506575
+            运单号：{{item.number}}
         </view>
         <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
+        <view class='qianshou' wx:if="{{item.status==3}}" >已签收</view>
+        <view class='qianshou' wx:if="{{item.status!=3}}" >未签收</view>
       </view>
       <!-- 运单号内容 -->
       <view class='address'>
           <view class='start_city'>
             <view class='start city'>
-              武汉市
+              {{item.fromcityname}}
             </view>
             <view class='start peisong'>
-              武汉配送中心
+               {{item.createincname}}
             </view>
           </view>
             <view class='send'>
@@ -42,29 +45,37 @@
             </view>
           <view class='end_city'>
             <view class='end city'>
-              郑州市
+              {{item.toprovincename}}
             </view>
             <view class='end peisong'>
-              王小豆
+              {{item.toname}}
             </view>
           </view>
         </view>
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+        <view class='qiaoshou_address' wx:if="{{item.status==3}}">
+          <view class='qiaoshou_aside' >
             已签收：
           </view>
-          <view class='qiaoshou_main'>
+          <view class='qiaoshou_main' >
             代签收，感谢使用快8，期待再次为您服务
           </view>
         </view>
-        <view class='qiaoshou_time'>
+        <view class='qiaoshou_address' wx:if="{{item.status!=3}}">
+          <view class='qiaoshou_aside' >
+            未签收：
+          </view>
+          <view class='qiaoshou_main' >
+            未签收，感谢使用快8，期待再次为您服务
+          </view>
+        </view>
+        <view class='qiaoshou_time' wx:if="{{item.status==3}}">
           <view class='qiaoshou_aside time'>
             签收时间：
           </view>
           <view class='qiaoshou_main time'>
-            2019-06-29 15：45：00
+            {{item.endtime}}
           </view>
         </view>
       </view>
@@ -74,319 +85,76 @@
         <view class='button tousu' bindtap='tousu'>
           投诉
         </view>
-        <view class='button del' bindtap='del'>
+        <view class='button del'  bindtap='del' data-index="{{item.id}}">
           删除
         </view>
       </view>
-      </view>
-    
-    <view class='swiper_con'>
-      <!-- 运单号标题 -->
-      <view class='swiper_con_title'>
-        <view class='yundanhao'>
-            运单号：198350506575
-        </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
-      </view>
-      <!-- 运单号内容 -->
-      <view class='address'>
-          <view class='start_city'>
-            <view class='start city'>
-              武汉市
-            </view>
-            <view class='start peisong'>
-              武汉配送中心
-            </view>
-          </view>
-            <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
-            </view>
-          <view class='end_city'>
-            <view class='end city'>
-              郑州市
-            </view>
-            <view class='end peisong'>
-              王小豆
-            </view>
-          </view>
-        </view>
-        <!-- 签收地址和时间 -->
-      <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
-            已签收：
-          </view>
-          <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
-          </view>
-        </view>
-        <view class='qiaoshou_time'>
-          <view class='qiaoshou_aside time'>
-            签收时间：
-          </view>
-          <view class='qiaoshou_main time'>
-            2019-06-29  15：45：00
-          </view>
-        </view>
       </view>
 
-      <!-- 按钮 -->
-      <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
-          投诉
-        </view>
-        <view class='button del' bindtap='del'>
-          删除
-        </view>
-      </view>
-      </view>
-    
-   
-    <view class='swiper_con'>
-      <!-- 运单号标题 -->
-      <view class='swiper_con_title'>
-        <view class='yundanhao'>
-            运单号：198350506575
-        </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
-      </view>
-      <!-- 运单号内容 -->
-      <view class='address'>
-          <view class='start_city'>
-            <view class='start city'>
-              武汉市
-            </view>
-            <view class='start peisong'>
-              武汉配送中心
-            </view>
-          </view>
-            <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
-            </view>
-          <view class='end_city'>
-            <view class='end city'>
-              郑州市
-            </view>
-            <view class='end peisong'>
-              王小豆
-            </view>
-          </view>
-        </view>
-        <!-- 签收地址和时间 -->
-      <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
-            已签收：
-          </view>
-          <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
-          </view>
-        </view>
-        <view class='qiaoshou_time'>
-          <view class='qiaoshou_aside time'>
-            签收时间：
-          </view>
-          <view class='qiaoshou_main time'>
-            2019-06-29  15：45：00
-          </view>
-        </view>
-      </view>
-      <!-- 按钮 -->
-      <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
-          投诉
-        </view>
-        <view class='button del' bindtap='del'>
-          删除
-        </view>
-      </view>
-      </view>
   </swiper-item>
   <swiper-item>
-   <view class='swiper_con'>
-      <!-- 运单号标题 -->
-      <view class='swiper_con_title'>
-        <view class='yundanhao'>
-            运单号：198350506575
-        </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
-      </view>
-      <!-- 运单号内容 -->
-      <view class='address'>
-          <view class='start_city'>
-               <view class='start city'>
-              郑州市
-            </view>
-            <view class='start peisong'>
-              王小豆
-            </view>
-          </view>
-            <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
-            </view>
-          <view class='end_city'>
-             <view class='end city'>
-              武汉市
-            </view>
-            <view class='end peisong'>
-              武汉配送中心
-            </view>
-          </view>
-        </view>
-        <!-- 签收地址和时间 -->
-      <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
-            已签收：
-          </view>
-          <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
-          </view>
-        </view>
-        <view class='qiaoshou_time'>
-          <view class='qiaoshou_aside time'>
-            签收时间：
-          </view>
-          <view class='qiaoshou_main time'>
-            2019-06-29  15：45：00
-          </view>
-        </view>
-      </view>
-
-      <!-- 按钮 -->
-      <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
-          投诉
-        </view>
-        <view class='button del' bindtap='del'>
-          删除
-        </view>
-      </view>
-      </view>
-    <view class='swiper_con'>
-      <!-- 运单号标题 -->
-      <view class='swiper_con_title'>
-        <view class='yundanhao'>
-            运单号：198350506575
-        </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
-      </view>
-      <!-- 运单号内容 -->
-      <view class='address'>
-          <view class='start_city'>
-               <view class='start city'>
-              郑州市
-            </view>
-            <view class='start peisong'>
-              王小豆
-            </view>
-          </view>
-            <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
-            </view>
-          <view class='end_city'>
-             <view class='end city'>
-              武汉市
-            </view>
-            <view class='end peisong'>
-              武汉配送中心
-            </view>
-          </view>
-        </view>
-        <!-- 签收地址和时间 -->
-      <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
-            已签收：
-          </view>
-          <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
-          </view>
-        </view>
-        <view class='qiaoshou_time'>
-          <view class='qiaoshou_aside time'>
-            签收时间：
-          </view>
-          <view class='qiaoshou_main time'>
-            2019-06-29  15：45：00
-          </view>
-        </view>
-      </view>
-
-      <!-- 按钮 -->
-      <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
-          投诉
-        </view>
-        <view class='button del' bindtap='del'>
-          删除
-        </view>
-      </view>
-      </view>
+   
+    
       <view class='swiper_con'>
       <!-- 运单号标题 -->
-      <view class='swiper_con_title'>
-        <view class='yundanhao'>
-            运单号：198350506575
+        <view class='swiper_con_title'>
+          <view class='yundanhao'>
+              运单号：198350506575
+          </view>
+          <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+          <view class='qianshou'>已签收</view>
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
-        <view class='qianshou'>已签收</view>
-      </view>
-      <!-- 运单号内容 -->
-      <view class='address'>
-          <view class='start_city'>
-               <view class='start city'>
-              郑州市
+        <!-- 运单号内容 -->
+        <view class='address'>
+            <view class='start_city'>
+                <view class='start city'>
+                郑州市
+              </view>
+              <view class='start peisong'>
+                王小豆
+              </view>
             </view>
-            <view class='start peisong'>
-              王小豆
+              <view class='send'>
+                <image src='../.././images/send.png' mode='widthFix'></image>
+              </view>
+            <view class='end_city'>
+              <view class='end city'>
+                武汉市
+              </view>
+              <view class='end peisong'>
+                武汉配送中心
+              </view>
             </view>
           </view>
-            <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
+          <!-- 签收地址和时间 -->
+        <view class='qiaoshou_content'>
+          <view class='qiaoshou_address'>
+            <view class='qiaoshou_aside'>
+              已签收：
             </view>
-          <view class='end_city'>
-             <view class='end city'>
-              武汉市
+            <view class='qiaoshou_main'>
+              代签收，感谢使用快8，期待再次为您服务
             </view>
-            <view class='end peisong'>
-              武汉配送中心
+          </view>
+          <view class='qiaoshou_time'>
+            <view class='qiaoshou_aside time'>
+              签收时间：
+            </view>
+            <view class='qiaoshou_main time'>
+              2019-06-29  15：45：00
             </view>
           </view>
         </view>
-        <!-- 签收地址和时间 -->
-      <view class='qiaoshou_content'>
-        <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
-            已签收：
-          </view>
-          <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
-          </view>
-        </view>
-        <view class='qiaoshou_time'>
-          <view class='qiaoshou_aside time'>
-            签收时间：
-          </view>
-          <view class='qiaoshou_main time'>
-            2019-06-29  15：45：00
-          </view>
-        </view>
-      </view>
 
-      <!-- 按钮 -->
-      <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
-          投诉
+        <!-- 按钮 -->
+        <view class='anniu'>
+          <view class='button tousu' bindtap='tousu'>
+            投诉
+          </view>
+          <view class='button del' bindtap='del'>
+            删除
+          </view>
         </view>
-        <view class='button del' bindtap='del'>
-          删除
-        </view>
-      </view>
       </view>
      
      
