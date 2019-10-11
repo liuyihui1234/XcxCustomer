@@ -15,7 +15,7 @@
               <text>文件</text>
           </view>
           <view class='baoguo_type_cnt'>
-              <text>日用品</text>
+              <text>数码产品</text>
           </view>
           <view class='baoguo_type_cnt'>
               <text>衣物</text>
@@ -71,7 +71,7 @@
 				<textarea :disabled="modalName!=null" bindinput="textareaAInput" placeholder="给小哥捎句话吧..." placeholder-class='textarea_class' maxlength="20">
         </textarea>
         <!-- Lower right corner右下角 -->
-        <text class='lower_right_corner'>0/20</text>
+        <text class='lower_right_corner'>{{textareaAValue.length}}/20</text>
       </view>
 		</view>
     <!-- 带纸箱 -->

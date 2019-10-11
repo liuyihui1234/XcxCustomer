@@ -106,10 +106,6 @@
 .textarea_class{
   padding: 18rpx;
 }
-.grid.col-4.grid-square.flex-sub{
- margin-bottom:35rpx;
-
-}
 .lower_right_corner{
   position: absolute;
   right: 18rpx;
@@ -134,6 +130,10 @@
   padding: 15rpx 25rpx;
   border-radius: 54rpx;
 }
+.bg_color:hover{
+  background-color: #cb252a;
+  color: #ffffff;
+}
 .color_red{
   position: absolute;
   right: 0;
@@ -154,5 +154,5 @@
   padding: 33rpx 260rpx;
   border-radius: 98rpx;
   text-align: center;
-  margin-top: 107rpx;
+  /* margin-top: 107rpx; */
 } 

@@ -1,7 +1,7 @@
 <!--pages/manage/sender_detail/sender_detail.wxml-->
 	<view class="cu-form-group">
 		<input placeholder="姓名" placeholder-class='font-size30 border-right'></input>
-		<input placeholder="电话" placeholder-class='font-size30 border-right'></input>
+		<input placeholder="电话" placeholder-class='font-size30'></input>
     <text>-</text>
 		<input class='fenjihao' placeholder="分机号" placeholder-class='font-size30'></input>
     <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix'></image>

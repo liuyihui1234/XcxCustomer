@@ -8,6 +8,7 @@ Page({
     count: 1,
     imgList: [],
     textareaAInput: '',
+    textareaAValue: ''
   },
 
   /**
@@ -75,7 +76,11 @@ Page({
   },
   // 给小哥捎句话吧
   textareaAInput(e) {
-    this.textareaAValue = e.detail.value
+    // this.textareaAValue = e.detail.value
+    this.setData({
+      textareaAValue: e.detail.value
+    })
+    // console.log(this.data.textareaAValue)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

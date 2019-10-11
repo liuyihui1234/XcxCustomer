@@ -8,8 +8,21 @@
 }
 /* 分机号 */
 /* 省市区位置选择 */
-.cu-form-group picker .picker{
+/* .cu-form-group picker .picker{
   text-align: left;
+} */
+.province_city_district{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.cu-form-group picker::after{
+  display: none;
+}
+.width25{
+  margin-left:10rpx;
+  margin-right:10rpx; 
+  width: 25%;
 }
 .fenjihao{
   margin-left: 7rpx;
