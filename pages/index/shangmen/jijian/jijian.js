@@ -4,6 +4,10 @@ Page({
   data: {
     region:[],
     customItem: '',
+    picker: ['喵喵喵', '汪汪汪', '哼唧哼唧']
+  },
+  PickerChange(e) {
+    this.index = e.detail.value
   },
   /**
    * 生命周期函数--监听页面加载
@@ -71,6 +75,12 @@ Page({
       }
     })
 
+  },
+  // 点击跳转我的地址
+  address_book:function(e){
+    wx.navigateTo({
+      url: '../address_book/address_book',
+    })
   },
   onLoad: function (options) {
     wx.setNavigationBarTitle({

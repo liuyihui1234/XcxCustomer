@@ -1,21 +1,47 @@
 <!--pages/manage/sender_detail/sender_detail.wxml-->
 	<view class="cu-form-group">
 		<input placeholder="姓名" placeholder-class='font-size30 border-right'></input>
-		<input placeholder="电话" placeholder-class='font-size30 border-right'></input>
+		<input placeholder="电话" placeholder-class='font-size30'></input>
     <text>-</text>
 		<input class='fenjihao' placeholder="分机号" placeholder-class='font-size30'></input>
-    <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix'></image>
+    <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix' bindtap='address_book'></image>
 	</view>
   <view class="cu-form-group">
-  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
     <view wx:if="{{region.length}}">
       {{region[0]}} {{region[1]}} {{region[2]}}
     </view>
     <view class='font-size30' wx:else>省市区
     </view>
   </picker>
-		<text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text>
+		<text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text> -->
 	<!-- </view> -->
+  <view class='province_city_district'>
+    <picker class='width25 border-right' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view>
+        <view class='font-size30'>省</view>
+        {{index>-1?picker[index]:''}}
+      </view>
+    </picker>
+     <picker class='width25 border-right' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view>
+        <view class='font-size30'>市</view>
+        {{index>-1?picker[index]:''}}
+      </view>
+    </picker>
+     <picker class='width25 border-right' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view>
+        <view class='font-size30'>区</view>
+        {{index>-1?picker[index]:''}}
+      </view>
+    </picker>
+     <picker class='width25' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view>
+        <view class='font-size30'>镇</view>
+        {{index>-1?picker[index]:''}}
+      </view>
+    </picker>
+  </view>
 </view>
   <view class="cu-form-group">
 		<input placeholder="详细地址（精确到门牌号）" placeholder-class='font-size30'></input>
