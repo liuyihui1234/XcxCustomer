@@ -1,25 +1,26 @@
 <!--pages/manage/sender_detail/sender_detail.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
 	<view class="cu-form-group">
-		<input placeholder="姓名" placeholder-class='font-size30 border-right'></input>
-		<input placeholder="电话" placeholder-class='font-size30'></input>
+		<input placeholder="姓名" name="contactname" placeholder-class='font-size30 border-right'></input>
+		<input placeholder="电话" name="contactphone" placeholder-class='font-size30'></input>
     <text>-</text>
-		<input class='fenjihao' placeholder="分机号" placeholder-class='font-size30'></input>
-    <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix' bindtap='address_book'></image>
+		<input class='fenjihao' name="contacttel" placeholder="分机号" placeholder-class='font-size30'></input>
+    <!-- <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix' bindtap='address_book'></image> -->
 	</view>
   <view class="cu-form-group">
-  <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
     <view wx:if="{{region.length}}">
       {{region[0]}} {{region[1]}} {{region[2]}}
     </view>
     <view class='font-size30' wx:else>省市区
     </view>
   </picker>
-		<text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text> -->
+		<!-- <text class="cuIcon-locationfill text-orange" bindtap='getAddress'></text> -->
 	<!-- </view> -->
-  <view class='province_city_district'>
-    <picker class='width25 border-right' bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+  <!-- <view class='province_city_district'>
+    <picker class='width25 border-right' bindchange="PickerChange" value="{{index}}" range="{{provinceList}}">
       <view>
-        <view class='font-size30'>省</view>
+        <view class='font-size30 option-list'>省</view>
         {{index>-1?picker[index]:''}}
       </view>
     </picker>
@@ -41,18 +42,30 @@
         {{index>-1?picker[index]:''}}
       </view>
     </picker>
-  </view>
+  </view> -->
+</view>
+
+<view class="cu-form-group">
+  <picker mode="selector" bindchange="bindSheetChange" range="{{sheetName}}" >
+    <view wx:if="{{sheetContent!=''}}">
+      {{sheetContent}}
+    </view>
+    <view class='font-size30' wx:else>街道
+    </view>
+  </picker>
 </view>
   <view class="cu-form-group">
-		<input placeholder="详细地址（精确到门牌号）" placeholder-class='font-size30'></input>
+		<input placeholder="详细地址（精确到门牌号）" name="address" placeholder-class='font-size30'></input>
 	</view>
   <view class="cu-form-group">
-		<input placeholder="公司名称（选填）" placeholder-class='font-size30'></input>
+		<input placeholder="公司名称（选填）" name="companyname" placeholder-class='font-size30'></input>
 	</view>
    <!-- tick  打对勾 -->
   <view class="cu-form-group">
   <view class='tick_first_two'>
-    <checkbox class='round red' :class="checkbox[1].checked?'checked':''" :checked="checkbox[1].checked?true:false" value="B"></checkbox>
+    <checkbox-group name="type">
+      <checkbox name="type" class='round red' :class="checkbox[1].checked?'checked':''" :checked="checkbox[1].checked?true:false"               value="1"></checkbox>
+    </checkbox-group>
     <view class='default_jijian_address'>
       设为默认寄件地址
     </view>
@@ -66,18 +79,19 @@
   <!-- camera摄像头  voice语音 -->
   <view class='detailed_information_box'>
     <view class='detailed_information'>
-      <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动拆分姓名、电话和地址" placeholder-class='textarea_class'></textarea>
+      <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动解析地址" placeholder-class='textarea_class'></textarea>
       <view>
-        <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
-        <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image>
+        <!-- <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
+        <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image> -->
       </view>
     </view>
   </view>
 
   <view class='footer'>
-      <view class='button_keep'>
-          <text class='keep'>保存</text>
-      </view>
+      
+       <button class="button_keep" formType="submit">保存</button>
+      
   </view> 
+</form>
 
   

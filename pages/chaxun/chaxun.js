@@ -1,6 +1,7 @@
 // pages/chaxun/chaxun.js
-
-
+const App = getApp();
+const http = App.http;
+const openId = App.openId;
 Page({
 
   /**
@@ -9,12 +10,14 @@ Page({
   data: {
     InputBottom: 0,
     currentData: 0,
-    heights:4*50,
+    heights:8*50,
+    number:'',
+    orderList:[],
   },
   // 复制运单号
   copy:function(e){
     wx.setClipboardData({
-      data: '198350506575',
+      data: 'data',
       success(res) {
         wx.getClipboardData({
           success(res) {
@@ -74,18 +77,41 @@ Page({
       url: './tousu/tousu',
     })
   },
-  // 点击删除
+
+
   del(e) {
+    let that = this;
+    var orderId = e.currentTarget.dataset.index;
+    console.log(orderId);
     wx.showModal({
       content: '是否确认删除？',
-      cancelText: '是',
-      confirmText: '否',
+      cancelText: '否',
+      confirmText: '是',
       success: res => {
         if (res.confirm) {
-          this.data.imgList.splice(e.currentTarget.dataset.index, 1);
-          this.setData({
-            imgList: this.data.imgList
+          wx.request({
+            url: http + '/weixin/order/delUserSendOrder',
+            data: {
+              orderId: orderId
+            },
+            method: "post",
+            header: {
+              'Content-Type': 'application/json'
+            },
+            success: function (res) {
+              console.log(res);
+              if (res.data.code==1){
+                wx.showToast({
+                  title: res.data.msg,
+                })
+                that.onLoad();//刷新页面
+              }
+            }
           })
+          // this.data.imgList.splice(e.currentTarget.dataset.index, 1);
+          // this.setData({
+          //   imgList: this.data.imgList
+          // })
         }
       }
     })
@@ -94,8 +120,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
     wx.setNavigationBarTitle({
       title: '查快递'  //修改title
+    })
+    wx.request({
+      url: http + '/weixin/order/getUserSendOrder',
+      data: {
+        openId: openId,
+      },
+      method: "post",
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        that.setData({ orderList: res.data.data})
+        /*wx.navigateBack({
+          delta: 1
+        })*/
+      }
     })
   },
 
@@ -103,7 +146,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -146,5 +189,40 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   *  运单号查询
+   */
+  getNumber: function (e) {
+    let that = this;
+    var val = e.detail.value;
+    console.log(val);
+    that.setData({
+      number: val
+    });
+  },
+  /**
+   *  运单号查询
+   */
+  search: function () {
+    let that = this;
+    console.log(this.data.number);
+    wx.request({
+      url: http + '/weixin/order/getNumberSendOrder',
+      data: {
+        number: this.data.number
+      },
+      method: "post",
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        that.setData({ orderList: res.data.data})
+        /*wx.navigateBack({
+          delta: 1
+        })*/
+      }
+    })
   }
+  
 })
