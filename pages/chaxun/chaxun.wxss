@@ -32,10 +32,12 @@ page{
   font-size: 32rpx;
   color: #cb252a;
 }
-
+.search_input{
+  padding-left: 30rpx;
+}
 .placeholder{
   padding-left: 30rpx;
-  font-size: 24rpx;
+  font-size: 30rpx;
   color: #999;
 }
 .saomiao{
@@ -155,23 +157,20 @@ page{
 .qiaoshou_time{
   margin-top: 17rpx;
 }
-.qianshou_aside{
+.qiaoshou_aside{
   display: flex;
   flex-wrap: nowrap;
   font-size: 30rpx;
   color: #333;
 }
-.qiaoshou_main{
-  display: flex;
-  font-size: 26rpx;
-  color: #999;
-  margin-left: 21rpx;
+.qiaoshou_aside.width160{
+  width: 160rpx;
 }
 .qiaoshou_main{
   display: flex;
   font-size: 26rpx;
   color: #999;
-  margin-left: 21rpx;
+  text-align: left;
 }
 .anniu{
   display: flex;

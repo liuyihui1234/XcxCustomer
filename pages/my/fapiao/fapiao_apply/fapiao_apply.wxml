@@ -1,6 +1,6 @@
 <view>
   <view class='header'>
-    <input class='input_box' placeholder='请输入运单号添加' placeholder-class='number_input'></input>
+    <input class='input_box' type='number' placeholder='请输入运单号添加' placeholder-class='number_input'></input>
   </view>
 
   <view class='kaipiao'>

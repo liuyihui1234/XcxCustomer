@@ -11,6 +11,20 @@ Page({
     currentData: 0,
     heights:4*50,
   },
+  // 复制运单号
+  copy:function(e){
+    wx.setClipboardData({
+      data: '198350506575',
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
+  },
+
   InputFocus:function(e){
     this.InputBottom = e.detail.height
   },

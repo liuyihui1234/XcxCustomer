@@ -6,7 +6,7 @@
 </view>
 
 <view class='fapiao_point_me'>
-  <view class='point_me_cnt'>
+  <view class='point_me_cnt'  bindtap='fapiao_apply'>
       <view class='point_me_cnt_yuan'>
         <image class='point_me_cnt_img' src='../../.././images/point_me_cnt_img.png' mode='widthFix'></image>
       </view>
@@ -29,7 +29,7 @@
         </view>
       </view>
       <view class='point_me_cnt_jiantou'>
-        <image class='point_me_right' src='../../.././images/point_me_right.png' mode='widthFix' bindtap='fapiao_apply'></image>
+        <image class='point_me_right' src='../../.././images/point_me_right.png' mode='widthFix'></image>
       </view>
   </view>
 </view>

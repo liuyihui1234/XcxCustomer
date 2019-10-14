@@ -1,1 +1,18 @@
-/* pages/my/fapiao/kaipiao_history/kaipiao_history.wxss */
+.header{
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  font-size: 30rpx;
+}
+.refresh{
+  font-size: 26rpx;
+  color: #d03a3d;
+}
+.nothing_info{
+  text-align: center;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  color: #d03a3d;
+}

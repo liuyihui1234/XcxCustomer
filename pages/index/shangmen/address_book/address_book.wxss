@@ -46,11 +46,13 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
+  justify-content:space-between;
 }
 .when_address_have_cnt{
   margin:34rpx 0rpx 35rpx 15rpx;
   padding: 0rpx 30rpx 0rpx 0rpx;
   border-right: 1rpx solid #e5e5e5;
+  width: 580rpx;
 }
 .name_tel{
   font-size: 30rpx;

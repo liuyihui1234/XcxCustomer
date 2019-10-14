@@ -6,19 +6,21 @@
 </view>
 <view class='address_group'>
 <!-- 当有地址信息的时候 -->
-  <view class='when_address_have' wx:if="{{list.length}}">
+<view wx:if="{{list.length}}">
+  <view class='when_address_have'>
     <view class='when_address_have_cnt'>
       <view class='name_tel'>
         <text class='address_name'>王小豆</text>
         <text class='address_tel'>15803685235</text>
       </view>
-      <view class='address_address'>河南省郑州市管城回族区郑东商业中心c区2号楼7楼709室</view>
+      <view class='address_address'>河南省郑州市管城回族区郑东商业中</view>
     </view>
     <view class='address_new_add'>
-      <image class='address_new_add_edit' src='../../../.././images/address_new_add_edit.png' mode='widthFix'></image>
-      <text class='address_edit'>编辑</text>
+        <image class='address_new_add_edit' src='../../../.././images/address_new_add_edit.png' mode='widthFix'></image>
+        <text class='address_edit'>编辑</text>
+      </view>
     </view>
-  </view>
+</view>
   <!-- 当没有地址信息的时候 -->
   <view class='when_address_empty' wx:else>
     <image class='address_empty_img' src='../../../.././images/address_empty.png' mode='widthFix'></image>

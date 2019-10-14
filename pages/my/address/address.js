@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
   new_add_address:function(e){
     wx.navigateTo({

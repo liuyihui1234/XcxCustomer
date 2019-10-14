@@ -27,6 +27,7 @@ page{
  
 .tabBorer {
   color: #cb252a;
+  border-bottom: 1rpx solid #cb252a;
 }
 .swiper {
   width: 100%;
@@ -56,15 +57,11 @@ page{
   width: 29rpx;
   height: 30rpx;
 }
-.address_group{
-  width: 100%;
-  /* height: 937rpx; */
-  background-color: #f8f8f8;
-}
 .when_address_empty{
   padding-top: 200rpx;
-  padding-bottom: 400rpx;
+  padding-bottom: 420rpx;
   text-align: center;
+  background-color: #f8f8f8;
 }
 .address_empty_img{
   width: 138rpx;
@@ -74,6 +71,51 @@ page{
 .address_empty_text{
   font-size: 26rpx;
   color: #999999;
+}
+.when_address_have{
+  width: 706rpx;
+  margin: 35rpx auto 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.when_address_have_cnt{
+  margin:34rpx 0rpx 35rpx 15rpx;
+  padding: 0rpx 30rpx 0rpx 0rpx;
+  border-right: 1rpx solid #e5e5e5;
+  width: 580rpx;
+}
+.name_tel{
+  font-size: 30rpx;
+  color: #333333;
+}
+.address_tel{
+  margin-left: 50rpx;
+}
+.address_address{
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 42rpx;
+}
+.address_new_add{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 0rpx 30rpx;
+  text-align:center;
+}
+.address_new_add_edit{
+  width: 40rpx;
+  height: 38rpx;
+  margin: 0 auto;
+}
+.address_edit{
+  font-size: 24rpx;
+  color: #333333;
+  width: 50rpx;
+  margin-top: 24rpx;
 }
 /* 新增地址按钮 */
 .btn_add_address_box{

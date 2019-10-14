@@ -2,7 +2,7 @@
 
 <view class="cu-bar search">
 				<view class="search-form">
-					<input bindfocus="InputFocus" bindblur="InputBlur" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
+					<input class='search_input' bindfocus="InputFocus" bindblur="InputBlur" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
 					<image class='saomiao' src='../.././images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
 				</view>
 				<view class="action">
@@ -24,7 +24,7 @@
         <view class='yundanhao'>
             运单号：198350506575
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix'  bindtap='copy'></image>
         <view class='qianshou'>已签收</view>
       </view>
       <!-- 运单号内容 -->
@@ -52,11 +52,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+            代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
@@ -86,7 +86,7 @@
         <view class='yundanhao'>
             运单号：198350506575
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix' bindtap='copy'></image>
         <view class='qianshou'>已签收</view>
       </view>
       <!-- 运单号内容 -->
@@ -114,11 +114,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+            代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
@@ -177,11 +177,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+            代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
@@ -211,7 +211,7 @@
         <view class='yundanhao'>
             运单号：198350506575
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix' bindtap='copy'></image>
         <view class='qianshou'>已签收</view>
       </view>
       <!-- 运单号内容 -->
@@ -239,11 +239,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+           代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
@@ -272,7 +272,7 @@
         <view class='yundanhao'>
             运单号：198350506575
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix' bindtap='copy'></image>
         <view class='qianshou'>已签收</view>
       </view>
       <!-- 运单号内容 -->
@@ -300,11 +300,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+            代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
@@ -333,7 +333,7 @@
         <view class='yundanhao'>
             运单号：198350506575
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix' bindtap='copy'></image>
         <view class='qianshou'>已签收</view>
       </view>
       <!-- 运单号内容 -->
@@ -361,11 +361,11 @@
         <!-- 签收地址和时间 -->
       <view class='qiaoshou_content'>
         <view class='qiaoshou_address'>
-          <view class='qiaoshou_aside'>
+          <view class='qiaoshou_aside width160'>
             已签收：
           </view>
           <view class='qiaoshou_main'>
-            代签收，感谢使用快8，期待再次为您服务
+            代签收(百货商店)，感谢使用快8，期待再次为您服务。
           </view>
         </view>
         <view class='qiaoshou_time'>
