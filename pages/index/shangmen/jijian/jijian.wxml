@@ -80,6 +80,7 @@
   <view class='detailed_information_box'>
     <view class='detailed_information'>
       <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动解析地址" placeholder-class='textarea_class'></textarea>
+      <view class='jiexi' type="button">解析地址</view>
       <view>
         <!-- <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
         <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image> -->
