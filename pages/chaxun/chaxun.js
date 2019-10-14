@@ -1,6 +1,7 @@
 // pages/chaxun/chaxun.js
 const App = getApp();
 const http = App.http;
+const openId = App.openId;
 Page({
 
   /**
@@ -112,7 +113,7 @@ Page({
     wx.request({
       url: http + '/weixin/order/getUserSendOrder',
       data: {
-        openId:'dsfsdg',
+        openId: openId,
       },
       method: "post",
       header: {
