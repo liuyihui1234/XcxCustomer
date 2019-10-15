@@ -1,0 +1,44 @@
+page{
+  background-color: #f0f0f0;
+}
+.cu-list.menu>.cu-item{
+  background-color: #f0f0f0;
+}
+.cu-list.card-menu{
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+.cu-list.menu>.cu-item.arrow:before{
+  display: none;
+}
+.text-grey{
+  font-size: 30rpx;
+  color: #333333;
+}
+/* 多行input框 */
+.cu-form-group{
+  border: 1rpx solid #dcdcdc;
+}
+.textarea_box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.textarea_class{
+  padding: 18rpx;
+}
+.lower_right_corner{
+  position: absolute;
+  right: 18rpx;
+  bottom: 10rpx;
+  color: #999999;
+}
+/* 设置多行文本的高度 */
+.cu-form-group textarea{
+  height: 10.4em;
+}
+.cu-form-group{
+  width:700rpx;
+  margin:0 auto;
+}

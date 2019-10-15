@@ -1,0 +1,16 @@
+.cu-list.card-menu{
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cu-list.menu>.cu-item.arrow:before {
+  display: none;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.cu-list.menu>.cu-item.arrow{
+  padding-right: 30rpx;
+}
