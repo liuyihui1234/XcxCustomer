@@ -27,7 +27,7 @@
   </picker>
 </view>
   <view class="cu-form-group">
-		<input placeholder="详细地址（精确到门牌号）" name="address" placeholder-class='font-size30'></input>
+		<input placeholder="详细地址（精确到门牌号）" value="{{address}}" name="address" placeholder-class='font-size30'></input>
 	</view>
   <view class="cu-form-group">
 		<input placeholder="公司名称（选填）" name="companyname" placeholder-class='font-size30'></input>
@@ -52,7 +52,7 @@
   <view class='detailed_information_box'>
     <view class='detailed_information'>
       <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动解析地址" placeholder-class='textarea_class'></textarea>
-      <view class='jiexi' type="button">解析地址</view>
+      <view class='jiexi' type="button" bindtap="addressJieXi">解析地址</view>
       <view>
         <!-- <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
         <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image> -->

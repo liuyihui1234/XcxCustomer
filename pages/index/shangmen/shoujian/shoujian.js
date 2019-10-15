@@ -267,6 +267,50 @@ Page({
     })
 
   },
+
+  addressJieXi: function (e) {
+    var that = this;
+    wx.request({
+      url: http + '/weixin/address/addressResolution',
+      data: {
+        address: that.data.jeixi
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res);
+        if (res.data.code == 1) {
+          that.setData({
+            sheetCode: res.data.data.villageCode,
+            province: res.data.data.provinceName,//省份
+            provincecode: res.data.data.provinceCode,//省code
+            sheetContent: res.data.data.villageName,
+            city: res.data.data.cityName,//市
+            citycode: res.data.data.cityCode,//市code
+            county: res.data.data.countyName,//区
+            countycode: res.data.data.countyCode,//区code
+            areastreet: res.data.data.villageName,//街道
+            areastreetcode: res.data.data.villageCode,//街道code
+            address: res.data.data.detailAddress,//详细地址
+            postcode: res.data.data.provinceCode,//邮政编码
+            region: [res.data.data.provinceName, res.data.data.cityName, res.data.data.countyName]
+          });
+          console.log(that.data.sheetContent);
+        }
+      }
+    })
+  },
+
+
+  textareaAInput: function (e) {
+    var that = this;
+    that.setData({
+      jeixi: e.detail.value
+    })
+  },
+
   // 点击跳转我的地址
   address_book: function (e) {
     wx.navigateTo({
