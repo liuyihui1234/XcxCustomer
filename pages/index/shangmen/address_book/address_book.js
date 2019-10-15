@@ -12,9 +12,18 @@ Page({
     type:"",
   },
   new_add_address: function (e) {
-    wx.navigateTo({
-      url: '../../../my/address/new_add_address/new_add_address',
-    })
+    var that=this;
+    if (that.data.type==0){
+      wx.navigateTo({
+        url: '../../../../pages/index/shangmen/jijian/jijian',
+      })
+    }
+    if (that.data.type == 1) {
+      wx.navigateTo({
+        url: '../../../../pages/index/shangmen/shoujian/shoujian',
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载

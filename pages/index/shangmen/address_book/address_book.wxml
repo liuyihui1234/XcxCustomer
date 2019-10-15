@@ -35,7 +35,7 @@
   </view>
 </view>
   <view class='btn_add_address_box'>
-    <view class='btn_add_address' bindtap='new_add_address'>
+    <view class='btn_add_address' bindtap='new_add_address'  >
       新增地址
     </view>
   </view>
