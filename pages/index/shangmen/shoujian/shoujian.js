@@ -1,4 +1,5 @@
 // pages/manage/sender_detail/sender_detail.js
+import WxValidate from '../../../../utils/WxValidate'
 var bmap = require('../../../.././libs/bmap-wx.min.js');
 const App = getApp();
 const http = App.http;
@@ -84,6 +85,18 @@ Page({
   },
   formSubmit: function (e) {
     let that = this;
+
+    const params = e.detail.value
+
+    console.log(params)
+
+    // 传入表单数据，调用验证方法
+    if (!this.WxValidate.checkForm(params)) {
+      const error = this.WxValidate.errorList[0]
+      this.showModal(error)
+      return false
+    }
+
     that.setData({
       contactname: e.detail.value.contactname,
       contacttel: e.detail.value.contacttel,
@@ -147,7 +160,54 @@ Page({
       }
     })
   },
+  initValidate() {
+    // 验证字段的规则
+    const rules = {
+      contactphone: {
+        required: true,
+      },
+      contactname: {
+        required: true,
+      },
+      address: {
+        required: true,
+      },
+      county: {
+        required: true,
+      },
+      areastreet: {
+        required: true,
+      },
+    }
 
+    // 验证字段的提示信息，若不传则调用默认的信息
+    const messages = {
+      contactphone: {
+        required: '请输入手机号',
+      },
+      contactname: {
+        required: '请输入姓名',
+      },
+      address: {
+        required: '请输入详细地址',
+      },
+      county: {
+        required: '请选择国家/地区',
+      },
+      areastreet: {
+        required: '请选择街道',
+      },
+
+    }
+
+    // 创建实例对象
+    this.WxValidate = new WxValidate(rules, messages)
+
+    // 自定义验证规则
+    this.WxValidate.addMethod('assistance', (value, param) => {
+      return this.WxValidate.optional(value) || (value.length >= 1 && value.length <= 2)
+    }, '请勾选1-2个敲码助手')
+  },
 
 
   getAddress: function (latitude, longitude) {
@@ -207,6 +267,50 @@ Page({
     })
 
   },
+
+  addressJieXi: function (e) {
+    var that = this;
+    wx.request({
+      url: http + '/weixin/address/addressResolution',
+      data: {
+        address: that.data.jeixi
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res);
+        if (res.data.code == 1) {
+          that.setData({
+            sheetCode: res.data.data.villageCode,
+            province: res.data.data.provinceName,//省份
+            provincecode: res.data.data.provinceCode,//省code
+            sheetContent: res.data.data.villageName,
+            city: res.data.data.cityName,//市
+            citycode: res.data.data.cityCode,//市code
+            county: res.data.data.countyName,//区
+            countycode: res.data.data.countyCode,//区code
+            areastreet: res.data.data.villageName,//街道
+            areastreetcode: res.data.data.villageCode,//街道code
+            address: res.data.data.detailAddress,//详细地址
+            postcode: res.data.data.provinceCode,//邮政编码
+            region: [res.data.data.provinceName, res.data.data.cityName, res.data.data.countyName]
+          });
+          console.log(that.data.sheetContent);
+        }
+      }
+    })
+  },
+
+
+  textareaAInput: function (e) {
+    var that = this;
+    that.setData({
+      jeixi: e.detail.value
+    })
+  },
+
   // 点击跳转我的地址
   address_book: function (e) {
     wx.navigateTo({
@@ -215,8 +319,15 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
+    that.initValidate();
     wx.setNavigationBarTitle({
-      title: '寄件人地址填写'  //修改title
+      title: '收件人地址填写'  //修改title
+    })
+  },
+  showModal(error) {
+    wx.showModal({
+      content: error.msg,
+      showCancel: false,
     })
   },
 

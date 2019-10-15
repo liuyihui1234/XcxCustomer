@@ -53,16 +53,27 @@ input{
   padding-bottom: 34rpx;
 }
 .detailed_information{
+  position: relative;
   width: 700rpx;
   height: 200rpx;
   border: 1rpx solid #cccccc;
   margin: 0 auto;
   padding: 30rpx;
 }
+.jiexi{
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 120rpx;
+  font-size: 26rpx;
+  color: #999999;
+  text-align: center;
+}
 textarea{
   height: 110rpx;
 }
 .textarea_class{
+  color: #999999;
   padding: 30rpx;
 }
 .camera{
