@@ -7,18 +7,22 @@ Page({
   data: {
     find_navs:[
       {
+        find_nav_id:1,
         img: "../.././images/find_wangdian.png",
         text: "网点查询"
       },
       {
+        find_nav_id: 2,
         img: "../.././images/find_weijin.png",
         text: "违禁品查询"
       },
       {
+        find_nav_id: 3,
         img: "../.././images/find_yunfei.png",
         text: "运费时效"
       },
       {
+        find_nav_id: 4,
         img: "../.././images/find_serve.png",
         text: "服务范围"
       },
@@ -26,7 +30,31 @@ Page({
     find_banner:"../.././images/find_banner.png",
     find_banner2:"../.././images/find_banner2.png"
   },
-
+  getFindNav:function(e){
+    console.log(e);
+    var find_nav_id = e.currentTarget.dataset.find_nav_id
+    if (find_nav_id == 1){
+      //contraband违禁品
+      wx.navigateTo({
+        url: './find_wangdian/find_wangdian',
+      })
+    } else if (find_nav_id == 2){
+      //contraband违禁品
+      wx.navigateTo({
+        url: './find_weijin/find_weijin',
+      })
+    } else if (find_nav_id == 3) {
+      //contraband违禁品
+      wx.navigateTo({
+        url: './find_yunfei/find_yunfei',
+      })
+    } else if (find_nav_id == 4) {
+      //contraband违禁品
+      wx.navigateTo({
+        url: './find_serve/find_serve',
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

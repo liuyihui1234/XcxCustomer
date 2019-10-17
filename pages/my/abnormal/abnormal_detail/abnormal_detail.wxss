@@ -1,8 +1,8 @@
 page{
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 .cu-list.menu>.cu-item{
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 .cu-list.card-menu{
   margin-left: 0;
@@ -41,4 +41,51 @@ page{
 .cu-form-group{
   width:700rpx;
   margin:0 auto;
+}
+/* 物品图片 */
+.additional_info{
+  font-size: 30rpx;
+  background-color: #ffffff;
+  padding: 10rpx 30rpx;
+}
+.additional_info_title{
+  margin-bottom: 30rpx;
+}
+.cu-bar .action:first-child{
+  margin-left: 0;
+}
+.contact{
+  width:700rpx;
+  margin:0 auto;
+  border:1rpx solid #dcdcdc;
+  border-radius: 10rpx;
+  background-color:var(--white);
+  padding:1rpx 30rpx;
+  display:flex;
+  align-items:center;
+  min-height:100rpx;
+}
+.contact_input{
+  margin-left: 2em;
+}
+
+/* 打对勾部分 */
+.tick{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 22rpx;
+}
+.tick .text1{
+  margin-left: 18rpx;
+}
+/* 提交按钮 */
+.submit{
+  width:570rpx;
+  padding:20rpx 0rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #cb252a;
+  border-radius: 16rpx; 
+  margin: 50rpx auto;
 }

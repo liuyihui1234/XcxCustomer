@@ -1,0 +1,74 @@
+<view class="cu-list menu card-menu shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content" hover-class="none">
+      <text class="text-grey">原寄地</text>
+      <view class='input_float_right'>请选择原寄地</view>
+    </view>
+  </view>
+   <view class="cu-item arrow">
+    <view class="content" hover-class="none">
+      <text class="text-grey">目的地</text>
+      <view class='input_float_right'>请先选择原寄地再选择目的地</view>
+    </view>
+  </view>
+   <view class="cu-item arrow">
+    <view class="content" hover-class="none">
+      <text class="text-grey">重量（kg）</text>
+      <input class='input_float_right' placeholder="输入快件重量或体积进行查询"></input>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content" hover-class="none">
+      <text class="text-grey">体积</text>
+      <view class='length'>
+        <view class="length_item">长<input class='width-input'></input>cm</view>
+        <view class="length_item">宽<input class='width-input'></input>cm</view>
+        <view class="length_item">高<input class='width-input'></input>cm</view>
+      </view>
+    </view>
+  </view>
+</view>
+ <view class="cu-form-group">
+    <view class="title">寄件时间</view>
+    <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+      <view class="picker">
+        {{index>-1?picker[index]:'现在'}}
+      </view>
+    </picker>
+  </view>
+  
+  <!-- 为什么要同时输入体积和重量？ -->
+  <view class='red_dialog'>
+    <text bindtap='showModal'>为什么要同时输入体积和重量？</text>
+ </view>
+  <!-- 弹窗 -->
+		<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+					<view class='dialog_title'>《体积和重量说明》</view>
+          <view class='dialog_cnt'>
+            <view> 
+              1、体积重量是一种反映包裹密度的计算方式。低密度的包裹，比较其实际重量，占用的空间通常较大。计算出来
+  的体积重量，会与其实际重量比较，取较重者为计费重量，用以计算运费。
+            </view>
+            <view>
+              2、根据市场惯例，体积重量（kg）的计算方法为：长度（cm）x宽度（cm）x高度（cm）/6，000（计算方法都是按地区及市场惯例决定，当中可能各有差异。）
+            </view>
+          </view>
+          <view class='btn_know' bindtap="hideModal">我知道了</view>
+				</view>
+			</view>
+		</view>
+  <!-- 查询按钮 -->
+  <view class='submit'>查询</view>
+<!--   
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{item==TabCur?'text-orange cur':''}}" wx:for="{{tabBarNav}}" wx:key bindtap="tabSelect" data-tab_nav_id="{{item.tab_nav_id}}">
+      {{item.tab_bar_nav}}
+    </view>
+  </view>
+</scroll-view>
+<view wx:for="{{10}}" wx:key wx:if="{{item==TabCur}}" class="bg-grey padding margin text-center">
+  Tab{{index}}
+</view> -->

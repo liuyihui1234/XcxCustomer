@@ -1,0 +1,35 @@
+<view class='with100'>
+  <view class="cu-form">
+      <view class="cu-form-title">寄递流向</view>
+        <view class='select'>
+          <view class="bgc">大陆互寄</view>
+          <view class="bgc">香港同城</view>
+          <view class="bgc">台湾同城</view>
+          <view class="bgc">澳门同城</view>
+          <view class="bgc">进出口（含港/澳/台）</view>
+        </view>
+    </view>
+</view>
+<form>
+  <view class="cu-form-group">
+    <view class="title">托寄物品</view>
+    <input placeholder="示例：电池"></input>
+  </view>
+</form>
+<!-- 查询按钮 -->
+<view class='submit'>查询</view>
+<!-- 收寄原则 -->
+<view class='principle'>
+<!-- principle原则 -->
+  <view class='principle_title'>收寄原则：</view>
+  <view class='principle_cnt'>
+    <view>一、禁止收寄：禁止收取易燃、易爆、易腐蚀、有毒、放射性及违法物品</view>
+    <view>二、限制收寄：</view>
+    <view class='text_indent'>1、尺寸和重量：</view>
+    <view class='text_indent'>①、陆运快件：单件计费重量不超过130KG或三边（长、宽、高）分别不超过2.5米、1.5米、1.5米；</view>
+    <view class='text_indent'>②、航空快件：单件计费重量不超过80KG或三边（长、宽、高）分别不超过2.5米、1米、0.8米；</view>
+    <view class='text_indent'>特殊说明：快8时效产品需按照各时效产品的重量及尺寸要求执行。</view>
+    <view class='text_indent'>2、航空限制：原商业包装液体、膏状、粉末类食品可通过航空方式发运，如原包装的奶粉、咖啡粉、保健品、矿
+  泉水等；非商业原包装的其他液体、膏状、粉末类物品需提供安全属性证明材料，确认安全后，将证明材料随货寄出。若需要通过航空发运的，需提供《鉴定报告书》在发运机场报备通过后方可发云航空。</view>
+  </view>
+</view>
