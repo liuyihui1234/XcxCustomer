@@ -9,7 +9,7 @@ App({
     });
   },
   //http: '',
-  http:'http://www.k8yz.com',
+  http:'http://127.0.0.1:8081/',
   openId:"oa8tD0aijnZprPCG759mI-H0mcJE",
   globalData: {
     userInfo: null

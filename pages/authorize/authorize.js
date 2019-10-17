@@ -31,19 +31,18 @@ Page({
       wx.login({
         success: res => {
           var resCode = res;
-          console.log(resCode.code);
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
           wx.getUserInfo({
             success: res => {
               var userInfo = res.userInfo;
-
-              wx.setStorageSync('userInfo', res.userInfo);
-              // console.log("用户信息="+res.userInfo)
-              console.log(res.userInfo.nickName, res.userInfo.avatarUrl)
+              console.log(resCode.code, res.iv, res.iv)
               wx.request({
                 url: http + '/weixin/wechatUser/auth',
                 data: {
-                  code: resCode.code
+                  code: resCode.code,
+                  // nickname: res.userInfo.nickName,
+                  // avatorUrl: res.userInfo.avatarUrl
+                  encryptedData: res.encryptedData, iv: res.iv
                 },
                 method: "post",
                 header: {
@@ -52,8 +51,9 @@ Page({
                 success: function (res) {
                   console.log(res);
                   var str = res.data.data;
+                  console.log(res);
                   // console.log("str",str);
-                  console.log("openid="+str.openid);
+                  // console.log("openid=" + str.openid);
                   wx.setStorageSync('userInfo', str);
                   wx.setStorageSync('openId', str.openid);
                   wx.navigateBack({

@@ -74,6 +74,7 @@ Page({
   onLoad:function(){
     var that = this;
     var openId = wx.getStorageSync('openId')
+    console.log(openId);
     if (!openId) {
       wx.navigateTo({
         url: '/pages/authorize/authorize',
