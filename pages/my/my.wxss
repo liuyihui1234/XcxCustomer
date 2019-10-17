@@ -37,6 +37,7 @@ page{
 }
 .touxiang_img{
   width: 134rpx;
+  border-radius: 50%;
 }
 .touxiang_text{
   line-height: 134rpx;

@@ -17,7 +17,7 @@ Page({
   // 复制运单号
   copy:function(e){
     wx.setClipboardData({
-      data: 'data',
+      data: e.currentTarget.dataset.id,
       success(res) {
         wx.getClipboardData({
           success(res) {
@@ -207,6 +207,11 @@ Page({
   search: function () {
     let that = this;
     console.log(this.data.number);
+    if (this.data.number==''){
+      that.onLoad({
+      });
+      return;
+    }
     wx.request({
       url: http + '/weixin/order/getNumberSendOrder',
       data: {

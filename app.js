@@ -9,8 +9,8 @@ App({
     });
   },
   //http: '',
-  http:'http://www.k8yz.com',
-  openId:"oa8tD0aijnZprPCG759mI-H0mcJE",
+  http:'http://192.168.1.191:8081/',
+  openId: wx.getStorageSync('openId'),
   globalData: {
     userInfo: null
   },

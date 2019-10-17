@@ -20,8 +20,8 @@
 <view class='touxiang'>
 <!-- 头像一行 -->
   <view class='touxiang_info'>
-    <image class='touxiang_img' src='../.././images/touxiang.png' mode='widthFix'></image>
-    <text class='touxiang_text'>15873666020</text>
+    <image class='touxiang_img' src='{{headImg}}' mode='widthFix'></image>
+    <text class='touxiang_text'>{{nickname}}</text>
     <view class='qiandao' bindtap="showModal">
       签到
     </view>

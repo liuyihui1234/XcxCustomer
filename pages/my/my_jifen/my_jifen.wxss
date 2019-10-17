@@ -78,5 +78,5 @@
   color: #ffffff;
   border-radius: 80rpx;
   text-align: center;
-  margin: 160rpx auto 140rpx auto;
+  margin: 50rpx auto;
 }

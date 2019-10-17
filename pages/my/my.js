@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    headImg:"",
+    nickname:'',
     modalName: null,
     my_imgs: [
       {
@@ -72,6 +74,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    var user = wx.getStorageSync('userInfo');
+    console.log(user);
+    that.setData({
+      headImg: user.headimgurl,
+      nickname:user.nickname ,
+      
+    })
     wx.setNavigationBarTitle({
       title: '我的'  //修改title
     })
