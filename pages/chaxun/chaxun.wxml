@@ -26,7 +26,7 @@
         <view class='yundanhao'>
             运单号：{{item.number}}
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix' bindtap='copy'></image>
+        <image src='../.././images/fuzhi.png' mode='widthFix' data-id="{{item.number}}" bindtap='copy'></image>
         <view class='qianshou' wx:if="{{item.status==3}}" >已签收</view>
         <view class='qianshou' wx:if="{{item.status!=3}}" >未签收</view>
       </view>
