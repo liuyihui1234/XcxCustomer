@@ -10,7 +10,7 @@ App({
   },
   //http: '',
   http:'http://127.0.0.1:8081/',
-  openId:"oa8tD0aijnZprPCG759mI-H0mcJE",
+  openId: wx.getStorageSync('openId'),
   globalData: {
     userInfo: null
   },
