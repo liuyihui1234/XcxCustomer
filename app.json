@@ -23,7 +23,10 @@
     "pages/my/address/new_add_address/new_add_address",
     "pages/my/fapiao/fapiao_apply/fapiao_apply",
     "pages/my/fapiao/kaipiao_history/kaipiao_history",
-    "pages/index/shangmen/address_book/address_book"
+    "pages/index/shangmen/address_book/address_book",
+    "pages/my/kf_tel/kf_tel",
+    "pages/my/abnormal/abnormal",
+    "pages/my/abnormal/abnormal_detail/abnormal_detail"
   ],
   "tabBar": {
     "color": "#333",

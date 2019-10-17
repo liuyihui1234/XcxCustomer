@@ -54,7 +54,11 @@ Page({
       })
     }
   },
-
+  kf_tel:function(e){
+    wx.navigateTo({
+      url: './kf_tel/kf_tel',
+    })
+  },
   showModal(e) {
     this.setData({
       modalName: "Modal"
@@ -85,6 +89,11 @@ Page({
   my_jifen: function (e) {
     wx.navigateTo({
       url: './my_jifen/my_jifen',
+    })
+  },
+  abnormal:function(e){
+    wx.navigateTo({
+      url: './abnormal/abnormal',
     })
   },
   /**
