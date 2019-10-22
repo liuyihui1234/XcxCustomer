@@ -12,7 +12,7 @@
 
 <!-- 我寄的 我收的 自寄码 -->
 <view class='topTabSwiper'>
-    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>我寄的(3)</view>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>我寄的({{orderList.length}})</view>
     <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>我收的(3)</view>
     <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>自寄码</view>
 </view>
@@ -82,10 +82,10 @@
 
       <!-- 按钮 -->
       <view class='anniu'>
-        <view class='button tousu' bindtap='tousu'>
+        <view class='button tousu' bindtap='tousu'  wx:if="{{item.status==3}}">
           投诉
         </view>
-        <view class='button del'  bindtap='del' data-index="{{item.id}}">
+        <view class='button del'  bindtap='del' wx:if="{{item.status==3}}" data-index="{{item.id}}">
           删除
         </view>
       </view>

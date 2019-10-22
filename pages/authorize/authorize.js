@@ -36,6 +36,7 @@ Page({
             success: res => {
               var userInfo = res.userInfo;
               console.log(resCode.code, res.iv, res.iv)
+              
               wx.request({
                 url: http + '/weixin/wechatUser/auth',
                 data: {
@@ -44,9 +45,9 @@ Page({
                   // avatorUrl: res.userInfo.avatarUrl
                   encryptedData: res.encryptedData, iv: res.iv
                 },
-                method: "post",
+                method: "POST",
                 header: {
-                  'Content-Type': 'application/json'
+                  'content-type': 'application/json;charset=UTF-8'
                 },
                 success: function (res) {
                   console.log(res);
