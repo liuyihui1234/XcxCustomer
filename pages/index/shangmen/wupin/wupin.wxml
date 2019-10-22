@@ -58,7 +58,7 @@
 					<text class="cuIcon-close"></text>
 				</view>
 			</view>
-			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
 				<text class="cuIcon-cameraadd">
           <!-- <text>上传照片</text> -->
         </text>

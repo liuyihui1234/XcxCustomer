@@ -96,7 +96,7 @@ Page({
       })
     } else if (big_nav_id==2){
       // wx.navigateTo({
-      //   url: '../query/query',
+      //   url: './query/query',
       // })
       var that = this;
       wx.scanCode({ //扫描API
@@ -113,11 +113,11 @@ Page({
       })
     } else if (big_nav_id==3){
       wx.navigateTo({
-        url: '../supervise/supervise',
+        url: './large_pieces/large_pieces',
       })
     } else if (big_nav_id==4) {
       wx.navigateTo({
-        url: '../contract/contract',
+        url: './contract/contract',
       })
     }
   }

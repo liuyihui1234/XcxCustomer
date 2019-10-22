@@ -30,7 +30,8 @@
     "pages/find/find_wangdian/find_wangdian",
     "pages/find/find_weijin/find_weijin",
     "pages/find/find_yunfei/find_yunfei",
-    "pages/find/find_serve/find_serve"
+    "pages/find/find_serve/find_serve",
+    "pages/my/kf_online/kf_online"
   ],
   "tabBar": {
     "color": "#333",

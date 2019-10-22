@@ -54,6 +54,12 @@ Page({
       })
     }
   },
+  // 在线客服
+  kf_online:function(e){
+    wx.navigateTo({
+      url: './kf_online/kf_online',
+    })
+  },
   kf_tel:function(e){
     wx.navigateTo({
       url: './kf_tel/kf_tel',
@@ -69,7 +75,12 @@ Page({
       modalName: "null"
     })
   },
-
+  // 寄大件的物品信息
+  big_wupin:function(e){
+    wx.navigateTo({
+      url: './big_wupin/big_wupin',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

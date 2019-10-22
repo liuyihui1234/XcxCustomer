@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wupin_baoguo_type": "/components/wupin_baoguo_type/wupin_baoguo_type"
+  }
+}

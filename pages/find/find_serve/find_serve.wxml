@@ -1,2 +1,10 @@
-<!--pages/find/find_serve/find_serve.wxml-->
-<text>pages/find/find_serve/find_serve.wxml</text>
+<view class="cu-list menu card-menu shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content" hover-class="none">
+      <text class="text-grey">查询地区</text>
+      <view class='input_float_right'>请选择原寄地</view>
+    </view>
+  </view>
+</view>
+ <!-- 查询按钮 -->
+  <view class='submit' bindtap='isShow'>查询</view>

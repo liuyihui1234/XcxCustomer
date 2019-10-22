@@ -65,8 +65,8 @@
         </view>
         <view class='input_float_right' bindtap='wupin'>请填写</view>
       </view>
-    </view>
-    <view class="cu-item arrow">
+    </view> -->
+    <!-- <view class="cu-item arrow">
       <view class="content" hover-class="none">
         <text class="text-grey">保价</text>
         <view class='input_float_right' bindtap='baojia'>未保价物品最高赔7倍运费，建议保价</view>

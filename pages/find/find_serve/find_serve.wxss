@@ -1,1 +1,36 @@
-/* pages/find/find_serve/find_serve.wxss */
+.cu-list.card-menu{
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+.cu-list.menu>.cu-item{
+  padding: 0rpx 40rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.input_float_right{
+  display: flex;
+  justify-content:flex-end;
+  font-size: 28rpx;
+  color: #999999;
+  margin-left: 20rpx;
+}
+.text-grey{
+  color: #333333;
+}
+/* 查询按钮 */
+.submit{
+  width:600rpx;
+  padding:20rpx 0rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #a0a0a0;
+  border-radius: 16rpx; 
+  margin: 35rpx auto;
+}
+.submit:hover{
+  background-color: #cb252a;
+}

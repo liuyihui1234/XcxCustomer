@@ -1,1 +1,22 @@
-/* pages/my/shopping/shopping.wxss */
+.padding{
+  padding: 0 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bg-white{
+  margin-top: 45rpx;
+  width: 308rpx;
+  height: 225rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.shopping_image_01{
+  width: 138rpx;
+  height: 134rpx;
+  margin-top: 20rpx;
+}
+.shopping-text{
+  line-height: 48rpx;
+}

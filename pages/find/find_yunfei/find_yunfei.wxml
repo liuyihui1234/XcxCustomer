@@ -60,15 +60,114 @@
 			</view>
 		</view>
   <!-- 查询按钮 -->
-  <view class='submit'>查询</view>
-<!--   
-<scroll-view scroll-x class="bg-white nav">
-  <view class="flex text-center">
-    <view class="cu-item flex-sub {{item==TabCur?'text-orange cur':''}}" wx:for="{{tabBarNav}}" wx:key bindtap="tabSelect" data-tab_nav_id="{{item.tab_nav_id}}">
-      {{item.tab_bar_nav}}
+  <view class='submit' bindtap='isShow'>查询</view>
+<view class='query_block {{query_block == "block"?"show":""}}'>
+  <scroll-view scroll-x class="bg-white nav text-center" style="top:{{CustomBar}}px">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{tabNav[index]}}
+    </view>
+  </scroll-view>
+  <!-- 快递 -->
+  <block wx:if="{{TabCur==0}}">
+    <view class='tr'>
+      <view class='th'>产品类型</view>
+      <view class='th flex1'>重量</view>
+      <view class='th'>预计到达时间</view>
+      <view class='th'>
+        <view>寄付价</view>
+        <view class='th4_down'>
+          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <view>到付换算</view>
+        </view>
+      </view>
+    </view>
+    <view class='tr bg-white td'>
+      <view class='th'>
+        <view class='th_red_icon'>
+          <view>快8即日</view>
+          <image class='table_red_icon' src='../../.././images/table_red_icon.png' mode='widthFix'></image>
+        </view>
+      </view>
+      <view class='th flex1'>42.7kg</view>
+      <view class='th'>已过最晚收件时间</view>
+      <view class='th color_red'>53元</view>
+    </view>
+    <view class='tr bg-white td'>
+      <view class='th'>快8标快</view>
+      <view class='th flex1'>42.7kg</view>
+      <view class='th'>2019-09-03 12：00前</view>
+      <view class='th color_red'>53元</view>
+    </view>
+  </block>
+  <!-- 大件 -->
+  <block wx:if="{{TabCur==1}}">
+    <view class='tr'>
+      <view class='th'>产品类型</view>
+      <view class='th flex1'>重量</view>
+      <view class='th'>预计到达时间</view>
+      <view class='th'>
+        <view>寄付价</view>
+        <view class='th4_down'>
+          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <view>到付换算</view>
+        </view>
+      </view>
+    </view>
+  <view class='tr bg-white td'>
+      <view class='th'>重货包裹</view>
+      <view class='th flex1'>42.7kg</view>
+      <view class='th'>2019-09-03 12：00前</view>
+      <view class='th color_red'>53元</view>
+    </view>
+  </block>
+  <!-- 冷运 -->
+  <block wx:if="{{TabCur==2}}">
+    <view class='tr'>
+      <view class='th'>产品类型</view>
+      <view class='th flex1'>重量</view>
+      <view class='th'>预计到达时间</view>
+      <view class='th'>
+        <view>寄付价</view>
+        <view class='th4_down'>
+          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <view>到付换算</view>
+        </view>
+      </view>
+    </view>
+  <view class='tr bg-white td'>
+      <view class='th'>冷运速配</view>
+      <view class='th flex1'>42.7kg</view>
+      <view class='th'>2019-09-03 12：00前</view>
+      <view class='th color_red'>53元</view>
+    </view>
+    <view class='tips'>
+      <view class='tip_title color_red'>温馨提示：</view>
+      <view class='tip_cnt'>
+        <view>一、冷运零担</view>
+        <view>a)寄付价=提货费+运输费+送货费：当查询结果未显示提货或送货费用时，请您选择自送至冷库或冷库自提。</view>
+        <view>b)关于时效：“如需提、送服务，时效在此基础上慢0到2天”。</view>
+        <view>c)如需自助下单请关注【快8速运】微信公众号</view>
+        <view>二、冷运速配、冷运特惠</view>
+        <view>a)如使用EPP箱，加收6元/票的收据。</view>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 运费及时效查询 -->
+<view class="cu-list border menu card-menu shadow-lg radius">
+  <view class="cu-item">
+    <view class="content justify-content" hover-class="none">
+      <text class="text-grey">运费查询其他说明</text>
+      <image class='drop-down' src='../../.././images/drop-down-up.png' mode='widthFix'></image>
     </view>
   </view>
-</scroll-view>
-<view wx:for="{{10}}" wx:key wx:if="{{item==TabCur}}" class="bg-grey padding margin text-center">
-  Tab{{index}}
-</view> -->
+</view>
+<view class='drop-down-text'>
+  <view class='drop-down-title'>一、运费计算基于以下计费规则：</view>
+    <view>1.体积重量计算方法</view>
+    <view class='drop-down-cnt'>
+      <view>托寄物的计费重量取体积重量与实际重量两者之间的较大值，体积重量的计算方法为：</view>
+      <view>【快8即日/次晨/标快】</view>
+      <view>同城、省内件以及经济区域内互寄，体积重量=长（cm）x宽（cm）x高（cm）/12000;</view>
+    </view>
+</view>

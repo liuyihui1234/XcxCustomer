@@ -1,2 +1,9 @@
-<!--pages/my/shopping/shopping.wxml-->
-<text>pages/my/shopping/shopping.wxml</text>
+
+<view class='padding'>
+  <view class='bg-white'>
+    <view class='image-text'>
+      <image class='shopping_image_01' src='../../.././images/shopping_image_01.png' mode='widthFix'></image>
+      <view class='shopping-text'>生鲜订单</view>
+    </view>
+  </view>
+</view>

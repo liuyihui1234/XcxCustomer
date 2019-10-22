@@ -1,43 +1,20 @@
-// pages/find/find_yunfei/find_yunfei.js
-    const app = getApp();
+// pages/my/kf_online/kf_online.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    picker: ['09:00-10:00', '10:00-11:00', '11:00-12:00', '12:00-13:00', '13:00-14:00', '14:00-15:00', '15:00-16:00', '16:00-17:00', '17:00-18:00', '18:00-19:00', '19:00-20:00'],
-    CustomBar: app.globalData.CustomBar,
-    TabCur: 0,
-    tabNav: ['快递', '大件', '冷运'],
+    InputBottom: 0
   },
-  PickerChange(e) {
-    var that = this;
-    that.setData({
-      index: e.detail.value
+  InputFocus(e) {
+    this.setData({
+      InputBottom: e.detail.height
     })
   },
-  // 弹窗
-  showModal(e) {
+  InputBlur(e) {
     this.setData({
-      modalName: "Modal"
-    })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: "null"
-    })
-  },
-  isShow:function(e){
-    this.setData({
-      query_block: "block"
-    })
-  },
-  // 滑块切换
-  tabSelect(e) {
-    console.log(e);
-    this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+      InputBottom: 0
     })
   },
   /**
@@ -45,7 +22,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '运费及时效查询',
+      title: '在线客服',
     })
   },
 
