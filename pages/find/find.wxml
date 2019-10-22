@@ -2,7 +2,7 @@
 <view class='find_c'>
 <view class='img_text'>
   <block wx:for="{{find_navs}}" :key="{{index}}">
-    <view class='block_item'>
+    <view class='block_item' bindtap='getFindNav' data-find_nav_id="{{item.find_nav_id}}">
       <view class='img'>
         <image src='{{item.img}}' mode='widthFix'></image>
       </view>
@@ -17,7 +17,6 @@
   <view class='find_banner' >
   <image src="{{find_banner}}" mode='widthFix'></image>
   </view>
-
   <text class='find_banner2_title'>热门活动</text>
   <view class='find_banner2'>
     <image src='{{find_banner2}}' mode='widthFix'></image>

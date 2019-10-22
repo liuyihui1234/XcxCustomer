@@ -26,7 +26,11 @@
     "pages/index/shangmen/address_book/address_book",
     "pages/my/kf_tel/kf_tel",
     "pages/my/abnormal/abnormal",
-    "pages/my/abnormal/abnormal_detail/abnormal_detail"
+    "pages/my/abnormal/abnormal_detail/abnormal_detail",
+    "pages/find/find_wangdian/find_wangdian",
+    "pages/find/find_weijin/find_weijin",
+    "pages/find/find_yunfei/find_yunfei",
+    "pages/find/find_serve/find_serve"
   ],
   "tabBar": {
     "color": "#333",
