@@ -33,10 +33,9 @@ page{
   color: #cb252a;
 }
 .search_input{
-  padding-left: 30rpx;
+  padding-left: 2em;
 }
 .placeholder{
-  padding-left: 30rpx;
   font-size: 30rpx;
   color: #999;
 }

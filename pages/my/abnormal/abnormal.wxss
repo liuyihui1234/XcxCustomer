@@ -4,3 +4,6 @@
   margin-right: 0;
   border-radius: 0;
 }
+.text-grey{
+  color: #333333;
+}

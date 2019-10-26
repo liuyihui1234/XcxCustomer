@@ -52,7 +52,7 @@
     </view>
     <!-- 功能异常  abnormal -->
     <view class="cu-item arrow" bindtap='abnormal'>
-      <view class="content" url="" hover-class="none">
+      <view class="content">
         <image src='../.././images/my_fankui.png'></image>
         <text class="text-grey">功能反馈</text>
       </view>
@@ -63,8 +63,8 @@
         <text class="text-grey">客服电话</text>
       </view>
     </view>
-    <view class="cu-item arrow" bindtap='big_wupin'>
-      <button class="cu-btn content" open-type="feedback">
+    <view class="cu-item arrow">
+      <button class="cu-btn content">
         <image src='../.././images/my_tousujilu.png'></image>
         <text class="text-grey">投诉记录</text>
       </button>

@@ -2,7 +2,7 @@
 
 <view class="cu-bar search">
 				<view class="search-form">
-					<input bindfocus="InputFocus" bindinput="getNumber" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
+					<input class='search_input' bindfocus="InputFocus" bindinput="getNumber" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
 					<image class='saomiao' src='../.././images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
 				</view>
 				<view class="action">

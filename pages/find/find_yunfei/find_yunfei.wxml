@@ -61,7 +61,7 @@
 		</view>
   <!-- 查询按钮 -->
   <view class='submit' bindtap='isShow'>查询</view>
-<view class='query_block {{query_block == "block"?"show":""}}'>
+<view class='query_block {{query_block == "block"?"show":""}}' hidden='{{query_block}}'>
   <scroll-view scroll-x class="bg-white nav text-center" style="top:{{CustomBar}}px">
     <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
       {{tabNav[index]}}
@@ -158,11 +158,11 @@
   <view class="cu-item">
     <view class="content justify-content" hover-class="none">
       <text class="text-grey">运费查询其他说明</text>
-      <image class='drop-down' src='../../.././images/drop-down-up.png' mode='widthFix'></image>
+      <image class='drop-down' src='../../.././images/drop-down.png' mode='widthFix' bindtap='yunfei_rule'></image>
     </view>
   </view>
 </view>
-<view class='drop-down-text'>
+<view class='drop-down-text' hidden='{{hiddenName}}'>
   <view class='drop-down-title'>一、运费计算基于以下计费规则：</view>
     <view>1.体积重量计算方法</view>
     <view class='drop-down-cnt'>

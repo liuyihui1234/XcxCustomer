@@ -75,12 +75,6 @@ Page({
       modalName: "null"
     })
   },
-  // 寄大件的物品信息
-  big_wupin:function(e){
-    wx.navigateTo({
-      url: './big_wupin/big_wupin',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -102,6 +96,7 @@ Page({
       url: './my_jifen/my_jifen',
     })
   },
+  // 功能异常
   abnormal:function(e){
     wx.navigateTo({
       url: './abnormal/abnormal',

@@ -58,13 +58,14 @@
 				</picker>
 			</view>
     <view class="cu-list menu card-menu margin-bottom-xl shadow-lg radius">
-    <!-- <view class="cu-item arrow">
+    <view class="cu-item arrow">
       <view class="content" hover-class="none">
         <view class="text-grey">物品信息
         <view class='red_must'>必填</view>
         </view>
-        <view class='input_float_right' bindtap='wupin'>请填写</view>
-      </
+        <view class='input_float_right' bindtap='wupin' data-shang="{{nav_id}}">请填写</view>
+      </view>
+    </view>
     <!-- <view class="cu-item arrow">
       <view class="content" hover-class="none">
         <text class="text-grey">保价</text>

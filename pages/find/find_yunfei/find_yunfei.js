@@ -9,6 +9,9 @@ Page({
     CustomBar: app.globalData.CustomBar,
     TabCur: 0,
     tabNav: ['快递', '大件', '冷运'],
+    // 点击查询显示
+    query_block: true,
+    hiddenName: true
   },
   PickerChange(e) {
     var that = this;
@@ -38,6 +41,16 @@ Page({
     this.setData({
       TabCur: e.currentTarget.dataset.id,
       scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+    })
+  },
+  isShow:function(e){
+    this.setData({
+      query_block: !this.data.query_block
+    })
+  },
+  yunfei_rule: function (e) {
+    this.setData({
+      hiddenName: !this.data.hiddenName
     })
   },
   /**

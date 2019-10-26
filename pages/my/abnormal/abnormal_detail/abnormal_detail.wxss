@@ -1,6 +1,7 @@
 page{
   background-color: #ffffff;
 }
+
 .cu-list.menu>.cu-item{
   background-color: #ffffff;
 }

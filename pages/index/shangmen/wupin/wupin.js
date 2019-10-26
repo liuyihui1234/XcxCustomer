@@ -8,13 +8,22 @@ Page({
     count: 1,
     imgList: [],
     textareaAInput: '',
-    textareaAValue: ''
+    textareaAValue: '',
+    // 寄大件物品信息按钮
+    switchB: true,
+    hiddenName: true,
+    volume_count:0.00
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    this.setData({
+      nav_id: options.nav_id
+    })
+    console.log(this.data.nav_id)
     wx.setNavigationBarTitle({
       title: '物品信息'  //修改title
     })
@@ -25,14 +34,14 @@ Page({
     this.setData({
       count: count
     })
-    console.log(this.data.count)
+    // console.log(this.data.count)
   },
   button_add(e) {
     let count = ++this.data.count;
     this.setData({
       count: count
     })
-    console.log(this.data.count)
+    // console.log(this.data.count)
   },
   ChooseImage() {
     wx.chooseImage({
@@ -81,6 +90,30 @@ Page({
       textareaAValue: e.detail.value
     })
     // console.log(this.data.textareaAValue)
+  },
+
+
+  // 寄大件物品信息按钮事件
+  SwitchB(e) {
+    this.switchB = e.detail.value
+    this.setData({
+      hiddenName: !this.data.hiddenName
+    })
+  },
+  // 预估重量
+  volume_button_reduce(e) {
+    let volume_count = --this.data.volume_count;
+    this.setData({
+      volume_count: volume_count
+    })
+    // console.log(this.data.count)
+  },
+  volume_button_add(e) {
+    let volume_count = ++this.data.volume_count;
+    this.setData({
+      volume_count: volume_count
+    })
+    // console.log(this.data.count)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

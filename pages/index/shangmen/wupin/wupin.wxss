@@ -58,7 +58,7 @@
   flex-direction: row;
 }
 .input_count input{
-  width: 130rpx;
+  width: 113rpx;
   text-indent: 1em;
   text-align: center;
 }
@@ -83,12 +83,12 @@
 
 /* 物品图片与捎话 */
 .additional_info{
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   background-color: #ffffff;
   padding: 32rpx 39rpx;
 }
 .additional_info_title{
-  margin-bottom: 60rpx;
+  margin-bottom: 30rpx;
 }
 /* 照片方框 */
 .cuIcon-cameraadd{
@@ -145,14 +145,87 @@
   font-size: 24rpx;
   line-height: 40rpx;
   margin-top: 30rpx;
+  margin-bottom:30rpx;
 }
 /* 确定按钮 */
 .btn_box{
   background-color: #cb252a;
   font-size: 32rpx;
   color: #ffffff;
-  padding: 33rpx 260rpx;
+  padding: 20rpx;
+  width: 594rpx;
+  margin: 50rpx auto;
   border-radius: 98rpx;
   text-align: center;
   /* margin-top: 107rpx; */
 } 
+
+/* 寄大件的物品信息样式 */
+.weight{
+  margin-top: 30rpx;
+}
+.large_pieces{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  line-height:51rpx;
+  margin: 30rpx 0;
+}
+.radio_title{
+  margin-right: 15rpx;
+}
+/* 红色必填文字部分 */
+.total_weight_aside{
+  display: flex;
+  flex-direction: row;
+}
+.red_must{
+  display: block;
+  width: 72rpx;
+  height: 30rpx;
+  border: 1rpx solid #cb252a;
+  border-radius: 14rpx;
+  font-size: 24rpx;
+  color: #cb252a;
+  text-align: center;
+  line-height: 30rpx;
+  margin-top: 3rpx;
+  margin-left:5rpx;
+}
+.hidden_block{
+  background-color: #faf8f8;
+  padding:0 20rpx 20rpx 20rpx;
+}
+.long{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:30%;
+}
+.border{
+  border: 1rpx solid #dcdcdc;
+  border-radius:10rpx;
+  text-align: center;
+}
+.limi{
+  line-height: 54rpx;
+}
+/* 给小哥捎句话 */
+.cu-form-group{
+  margin-top: 20rpx;
+}
+
+/* 冷链物品信息 */
+/* 数量 */
+.lenglian_padding{
+  padding: 30rpx 39rpx;
+}
+.padding0{
+  padding: 0;
+  background-color: #ffffff;
+  margin-top: 10rpx;
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+}
