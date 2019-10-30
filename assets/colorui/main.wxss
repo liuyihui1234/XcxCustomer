@@ -10,6 +10,7 @@
 /* ==================
         初始化
  ==================== */
+
 page {
 	/* Color 可以自定义相关配色 */
 	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
@@ -197,9 +198,9 @@ checkbox::before {
 	position: absolute;
 	color: var(--white) !important;
 	top: 50%;
-	margin-top: -8px;
-	right: 5px;
-	font-size: 32rpx;
+	margin-top: -7px;
+	right: 3px;
+	font-size: 24rpx;
 	line-height: 16px;
 	pointer-events: none;
 	transform: scale(1, 1);
@@ -210,8 +211,10 @@ checkbox::before {
 radio .wx-radio-input,
 checkbox .wx-checkbox-input{
 	margin: 0;
-	width: 24px;
-	height: 24px;
+	/* width: 24px;
+	height: 24px; */
+  width: 16px;
+	height: 16px;
 }
 
 checkbox.round .wx-checkbox-input{
@@ -1421,8 +1424,8 @@ button.icon.lg {
 .cu-list.menu>.cu-item .content>image {
 	display: inline-block;
 	margin-right: 10rpx;
-	width: 1.6em;
-	height: 1.6em;
+	/* width: 1.6em;
+	height: 1.6em; */
 	vertical-align: middle
 }
 

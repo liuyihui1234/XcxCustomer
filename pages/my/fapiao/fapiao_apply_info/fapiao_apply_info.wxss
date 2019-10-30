@@ -1,0 +1,122 @@
+.bg-white{
+  padding: 20rpx 30rpx;
+}
+.border_bottom{
+  border-bottom: 1rpx solid #cfcfcf;
+}
+.border_top{
+  border-top: 1rpx solid #cfcfcf;
+}
+.font32{
+  font-size: 32rpx;
+}
+.font30{
+  font-size: 30rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font26{
+  font-size: 26rpx;
+}
+.text_align{
+  text-align: center;
+}
+.margin-bottom{
+  margin-bottom: 20rpx;
+}
+.margin-top{
+  margin-top: 20rpx;
+}
+.margin_left20{
+  margin-left: 20rpx;
+}
+.nashui_title{
+  width: 200rpx;
+}
+/* 发票类型 */
+.fapiao_type{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.e-invoice{
+  margin-left: 100rpx;
+  padding: 20rpx;
+  border: 1rpx solid #cb252a;
+  color: #cb252a;
+  border-radius: 10rpx;
+}
+/* 星号 */
+.color_red{
+  color: red;
+}
+/* 单选框 */
+.cu-form-group{
+  border-top: 1rpx solid #eeeeee;
+  justify-content:flex-start;
+}
+.cu-form-group .title{
+  font-size: 26rpx;
+}
+.yes_no{
+  display: flex;
+  flex-direction: row;
+  text-align: right !important;
+}
+.radio_posi{
+  display: flex;
+  flex-direction: row;
+  margin-left: 50rpx;
+}
+.margin_right10{
+  margin-right: 10rpx;
+}
+/* 更多信息 */
+.color_glay{
+  color: #bebbbb;
+}
+.more_info{
+  width: 100%;
+  position: relative;
+}
+.cuIcon-unfold{
+  position: absolute;
+  right: 0;
+}
+/* 地址电话 */
+.address_phone{
+  display: flex;
+  flex-direction: row;
+  border-top: 1rpx solid #eeeeee;
+  min-height:100rpx;
+}
+.address_phone_aside{
+  width: 153rpx;
+  line-height: 26rpx;
+  color: #333333;
+}
+textarea{
+  max-height:80rpx;
+}
+.textarea_address_phone{
+  line-height: 40rpx;
+}
+.red{
+  color: #cb252a;
+}
+/* 下一步 */
+.next_step{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  background-color: #cfcfcf;
+  text-align: center;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.next_step:hover{
+  background-color: #cb252a;
+}

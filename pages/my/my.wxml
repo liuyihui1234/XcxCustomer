@@ -46,26 +46,30 @@
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
       <view class="content" url="" hover-class="none" bindtap='kf_online'>
-        <image src="../.././images/my_online.png" mode="aspectFit"></image>
+        <image class='my_online' src="../.././images/my_online.png" mode="aspectFit"></image>
+        <!-- <text class='lg text-gray cuIcon-service'></text> -->
         <text class="text-grey">在线客服</text>
       </view>
     </view>
     <!-- 功能异常  abnormal -->
     <view class="cu-item arrow" bindtap='abnormal'>
       <view class="content">
-        <image src='../.././images/my_fankui.png'></image>
+        <image class='my_fankui' src='../.././images/my_fankui.png'></image>
+        <!-- <text class='lg text-gray cuIcon-question'></text> -->
         <text class="text-grey">功能反馈</text>
       </view>
     </view>
     <view class="cu-item arrow" bindtap='kf_tel'>
       <view class="content">
-        <image src='../.././images/my_phone.png'></image>
+        <image class='my_phone' src='../.././images/my_phone.png'></image>
+        <!-- <text class='lg text-gray cuIcon-dianhua'></text> -->
         <text class="text-grey">客服电话</text>
       </view>
     </view>
     <view class="cu-item arrow">
       <button class="cu-btn content">
-        <image src='../.././images/my_tousujilu.png'></image>
+        <image class='my_tousujilu' src='../.././images/my_tousujilu.png'></image>
+        <!-- <text class='lg text-gray cuIcon-record'></text> -->
         <text class="text-grey">投诉记录</text>
       </button>
     </view>

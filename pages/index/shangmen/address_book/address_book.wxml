@@ -1,7 +1,8 @@
 <view class='search_group'>
   <view class='search_info'>
     <input class='search_input' placeholder='请输入姓名/电话'></input>
-    <image class='address_search_icon' src='../../../.././images/address_search_icon.png' mode='widthFix'></image>
+    <!-- <image class='address_search_icon' src='../../../.././images/address_search_icon.png' mode='widthFix'></image> -->
+    <text class='lg text-gray cuIcon-search'></text>
   </view>
 </view>
 <view class='address_group'>

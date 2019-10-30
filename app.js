@@ -9,7 +9,7 @@ App({
     });
   },
   //http: '',
-  http:'http://122.114.82.200:8088/',
+  http:'https://www.k8yz.com:8088/',
   openId: wx.getStorageSync('openId'),
   globalData: {
     userInfo: null

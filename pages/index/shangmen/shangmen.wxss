@@ -1,4 +1,8 @@
 /* pages/index/shangmen.wxss */
+.tick{
+   display: flex;
+   flex-direction: row;
+ }
 .cnt_address{
   font-size: 26rpx;
   color: #999999;

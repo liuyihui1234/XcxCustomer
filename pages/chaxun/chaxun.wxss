@@ -121,7 +121,6 @@ page{
   width: 96rpx;
   height: 10rpx;
   background-size: contain;
- 
 }
 .city{
   display: flex;

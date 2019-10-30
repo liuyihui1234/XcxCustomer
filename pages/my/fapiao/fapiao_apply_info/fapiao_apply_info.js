@@ -1,33 +1,36 @@
-// pages/my/fapiao/fapiao.js
+// pages/my/fapiao/fapiao_apply_info/fapiao_apply_info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+    email:true,
+    hiddenName:true
   },
-  fapiao_apply:function(e){
-    wx.navigateTo({
-      url: './fapiao_apply/fapiao_apply',
+  // 点击发送邮箱 是
+  radio_yes:function(e){
+    this.setData({
+      email:!this.data.email
     })
   },
-  kaipiao_history:function(e){
-    wx.navigateTo({
-      url: './kaipiao_history/kaipiao_history',
+  // 点击发送邮箱 否
+  radio_no:function(e){
+    this.setData({
+      email: this.data.email
     })
   },
-  // 点击申请发票
-  fapiao_apply_info:function(e){
-    wx.navigateTo({
-      url: './fapiao_apply_info/fapiao_apply_info',
+  // 点击更多信息的下拉框
+  more_info_up:function(e){
+    this.setData({
+      hiddenName: !this.data.hiddenName
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

@@ -157,3 +157,23 @@ page{
 .jifen_count{
   color: #cb252a;
 }
+/* 在线客服 */
+.my_online{
+  width: 39rpx;
+  height: 35rpx;
+}
+/* 功能反馈 */
+.my_fankui{
+  width: 40rpx;
+  height: 42rpx;
+}
+/* 客服电话 */
+.my_phone{
+  width: 34rpx;
+  height: 46rpx;
+}
+/* 投诉记录 */
+.my_tousujilu{
+  width: 36rpx;
+  height: 36rpx;
+}

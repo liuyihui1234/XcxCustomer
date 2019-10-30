@@ -29,11 +29,89 @@
         </view>
       </view>
       <view class='point_me_cnt_jiantou'>
-        <image class='point_me_right' src='../../.././images/point_me_right.png' mode='widthFix'></image>
+        <!-- <image class='point_me_right' src='../../.././images/point_me_right.png' mode='widthFix'></image> -->
+        <text class='lg text-gray cuIcon-right'></text>
       </view>
   </view>
 </view>
 
+<!-- 发票信息列表-->
+<view>
+	<view class="cu-form-group margin-top">
+    <view class='flex_row'>
+      <checkbox class="round red" checked></checkbox>
+      <view class='font22'>
+          <view>运单号：262504406918</view>
+          <view>寄件时间：2019-10-29</view>
+      </view>
+    </view>
+    <!-- 往返地址 -->
+    <view class='flex_address_row'>
+      <view class='address_row'>
+        <view class='aside_left'>
+          <view class='address_bold'>郑州市</view>
+          <view>王小豆</view>
+        </view>
+        <view class='send'>
+          <image src='../../.././images/send.png' mode='widthFix'></image>
+        </view>
+        <view class='aside_right'>
+          <view class='address_bold'>郑州市</view>
+          <view>王小豆</view>
+        </view>
+      </view>
+        <view class='right_right'>
+          <view>开票金额</view>
+          <view class='address_bold'>￥111</view>
+        </view>
+    </view>
+	</view>
+	
+
+</view>
+<!-- 发票信息列表-->
+<view>
+	<view class="cu-form-group margin-top">
+    <view class='flex_row'>
+      <checkbox class="round red" checked></checkbox>
+      <view class='font22'>
+          <view>运单号：262504406918</view>
+          <view>寄件时间：2019-10-29</view>
+      </view>
+    </view>
+    <!-- 往返地址 -->
+    <view class='flex_address_row'>
+      <view class='address_row'>
+        <view class='aside_left'>
+          <view class='address_bold'>郑州市</view>
+          <view>王小豆</view>
+        </view>
+        <view class='send'>
+          <image src='../../.././images/send.png' mode='widthFix'></image>
+        </view>
+        <view class='aside_right'>
+          <view class='address_bold'>郑州市</view>
+          <view>王小豆</view>
+        </view>
+      </view>
+        <view class='right_right'>
+          <view>开票金额</view>
+          <view class='address_bold'>￥111</view>
+        </view>
+    </view>
+	</view>
+	
+
+</view>
+<!-- 没有更多信息了 -->
 <view class='when_no_info'>
   <text class='when_no_info_text'>没有更多信息了</text>
+</view>
+
+<view class='fixed'>
+  <checkbox class="round red" checked></checkbox>
+  <text style='margin-left:20rpx'>全选</text>
+  <text style='margin-left:20rpx; color:red;'>0</text><text>个运单</text>
+  <text style='margin-left:20rpx'>共</text><text style='color:red'>0</text><text>元</text>
+  <text class='gray' bindtap='fapiao_apply_info'>申请发票</text>
 </view>

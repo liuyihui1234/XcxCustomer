@@ -4,6 +4,7 @@
 				<view class="search-form">
 					<input class='search_input' bindfocus="InputFocus" bindinput="getNumber" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
 					<image class='saomiao' src='../.././images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
+          <!-- <text class='lg text-gray cuIcon-scan'></text> -->
 				</view>
 				<view class="action">
 					<button class="cu-btn shadow-blur" bindtap='search'>查询</button>

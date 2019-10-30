@@ -31,7 +31,8 @@
     "pages/find/find_weijin/find_weijin",
     "pages/find/find_yunfei/find_yunfei",
     "pages/find/find_serve/find_serve",
-    "pages/my/kf_online/kf_online"
+    "pages/my/kf_online/kf_online",
+    "pages/my/fapiao/fapiao_apply_info/fapiao_apply_info"
   ],
   "tabBar": {
     "color": "#333",

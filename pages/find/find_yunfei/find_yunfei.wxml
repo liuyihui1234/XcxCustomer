@@ -1,18 +1,18 @@
 <view class="cu-list menu card-menu shadow-lg radius">
   <view class="cu-item arrow">
-    <view class="content" hover-class="none">
+    <view class="content">
       <text class="text-grey">原寄地</text>
       <view class='input_float_right'>请选择原寄地</view>
     </view>
   </view>
    <view class="cu-item arrow">
-    <view class="content" hover-class="none">
+    <view class="content">
       <text class="text-grey">目的地</text>
       <view class='input_float_right'>请先选择原寄地再选择目的地</view>
     </view>
   </view>
    <view class="cu-item arrow">
-    <view class="content" hover-class="none">
+    <view class="content">
       <text class="text-grey">重量（kg）</text>
       <input class='input_float_right' placeholder="输入快件重量或体积进行查询"></input>
     </view>
@@ -158,7 +158,8 @@
   <view class="cu-item">
     <view class="content justify-content" hover-class="none">
       <text class="text-grey">运费查询其他说明</text>
-      <image class='drop-down' src='../../.././images/drop-down.png' mode='widthFix' bindtap='yunfei_rule'></image>
+      <!-- <image class='drop-down' src='../../.././images/drop-down.png' mode='widthFix'></image> -->
+      <text class="lg text-gray cuIcon-unfold"  bindtap='yunfei_rule'></text>
     </view>
   </view>
 </view>
