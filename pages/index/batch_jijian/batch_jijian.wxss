@@ -1,0 +1,145 @@
+/* pages/index/shangmen.wxss */
+.tick{
+   display: flex;
+   flex-direction: row;
+ }
+.cnt_address{
+  font-size: 26rpx;
+  color: #999999;
+}
+.input_cnt_ji{
+  width: 480rpx;
+}
+.input_cnt_shou{
+   width: 480rpx;
+}
+.name_tel{
+  font-size: 30rpx;
+  color: #333333;
+}
+.ji_shou_address{
+    width: 706rpx;
+    height: 150rpx;
+    background-color: #ffffff;
+    margin: 30rpx auto;
+}
+.ji_shou_logo{
+   width: 34rpx;
+   height: 34rpx;
+   margin: 57rpx 21rpx;
+   float: left;
+} 
+.ji_shou_cnt{
+  width: 620rpx;
+  height: 100%;
+  float: left;
+}
+.ji_cnt{
+  position: relative;
+  padding: 37rpx 0;
+}
+/* .ji_shou_line{
+  width: 620rpx;
+  height: 1rpx;
+  background-color: #cccccc;
+  text-align: right;
+} */
+.click_address_box_ji{
+  position: absolute;
+  right: 0;
+  top: 52rpx;
+  width: 125rpx;
+  height: 77rpx;
+  border-left: 1rpx solid #e1e1e1;
+  text-align: center;
+}
+.click_address_ji_img{
+  width: 36rpx;
+  margin: 15rpx auto;
+}
+.shou_cnt{
+  position: relative;
+  padding: 37rpx 0;
+}
+/* 增加收件人 */
+.add_shoujian{
+  width: 706rpx;
+  margin: 0rpx auto 30rpx;
+  background-color: #ffffff;
+  padding: 28rpx;
+  font-size: 32rpx;
+  color: #cb252a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2rpx;
+}
+.plus{
+  font-size: 46rpx;
+  margin-right: 8rpx;
+}
+/* 我已阅读并同意 */
+.cu-form-group{
+  justify-content: flex-start;
+}
+.tick{
+  margin-top:30rpx;
+  margin-left: 22rpx;
+  margin-right: 22rpx;
+}
+.tick .text1{
+  margin-left: 18rpx;
+}
+/* 底部结算部分 */
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120rpx;
+  background-color: #ffffff;
+  border-top: 1rpx solid #d7d7d7;
+  display: flex;
+  flex-direction: row;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  justify-content: space-between;
+  align-items:center;
+}
+.footer_left{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+}
+.footer_left_up{
+  display: flex;
+  flex-direction: row;
+}
+/* 预估价格 */
+.footer_left_money{
+  border-right: 1rpx solid #cccccc;
+}
+.footer_left_money text{
+  color: #cb252a;
+  padding-right: 16rpx;
+}
+/* 寄付现结 */
+.jifu{
+  padding-left: 12rpx;
+}
+.footer_left_down{
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 52rpx;
+}
+/* 右边的下单按钮 */
+.footer_right{
+  width: 196rpx;
+  height: 66rpx;
+  background-color: #999999;
+  border-radius: 66rpx;
+  color: #ffffff;
+  line-height: 66rpx;
+  text-align: center;
+  font-size: 28rpx;
+}

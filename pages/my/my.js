@@ -44,10 +44,14 @@ Page({
       wx.navigateTo({
         url: './youhui/youhui',
       })
-    } else if (my_imgs_id == 3) {
-      wx.navigateTo({
-        url: './fapiao/fapiao',
-      })
+    // } 
+    // else if (my_imgs_id == 3) {
+    //   wx.navigateTo({
+    //     url: './fapiao/fapiao',
+    //   })
+    } 
+    else if (my_imgs_id == 3) {
+      
     } else if (my_imgs_id == 4) {
       wx.navigateTo({
         url: './shopping/shopping',

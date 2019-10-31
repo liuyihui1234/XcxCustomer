@@ -33,11 +33,22 @@ Page({
       }
     ],
     small_navs:[
+    
+      // {
+      //   nav_id:5,
+      //   img: "../../images/yiyao.png",
+      //   text: "医药寄"
+      // },
       {
-        nav_id:5,
-        img: "../../images/yiyao.png",
-        text: "医药寄"
+        nav_id: 5,
+        img: "../../images/piliang.png",
+        text: "批量寄"
       },
+      // {
+      //   nav_id: 7,
+      //   img: "../../images/shengxian.png",
+      //   text: "生鲜寄"
+      // },
       {
         nav_id: 6,
         img: "../../images/guojijijian.png",
@@ -45,29 +56,40 @@ Page({
       },
       {
         nav_id: 7,
-        img: "../../images/shengxian.png",
-        text: "生鲜寄"
+        img: "../../images/duobang.png",
+        text: "多邦易购"
       },
+
       {
         nav_id: 8,
+        img: "../../images/yiyao.png",
+        text: "医药寄"
+      },
+      {
+        nav_id: 9,
         img: "../../images/tongcheng.png",
         text: "同城直送"
       },
       {
-        nav_id: 9,
+        nav_id: 10,
         img: "../../images/lenglian.png",
         text: "冷链物流"
       },
-      {
-        nav_id: 10,
-        img: "../../images/piliang.png",
-        text: "批量寄"
-      },
+      // {
+      //   nav_id: 10,
+      //   img: "../../images/piliang.png",
+      //   text: "批量寄"
+      // },
       {
         nav_id: 11,
-        img: "../../images/duobang.png",
-        text: "多邦易购"
+        img: "../../images/shengxian.png",
+        text: "生鲜寄"
       }
+      // {
+      //   nav_id: 11,
+      //   img: "../../images/duobang.png",
+      //   text: "多邦易购"
+      // }
     ]
     
   },
@@ -126,32 +148,32 @@ Page({
     var nav_id = e.currentTarget.dataset.nav_id;
       if (nav_id == 5) {
       wx.navigateTo({
-        url: './shangmen/shangmen?nav_id=5',
+        url: './batch_jijian/batch_jijian',
       })
     } else if (nav_id == 6) {
       wx.navigateTo({
         url: './shangmen/shangmen?nav_id=6',
       })
-    } else if (nav_id == 7) {
-      wx.navigateTo({
-        url: './shangmen/shangmen?nav_id=7',
-      })
-    } else if (nav_id == 8) {
-      // wx.navigateTo({
-      //   url: './shangmen/shangmen?nav_id=8',
-      // })
-      } else if (nav_id == 9) {
-        wx.navigateTo({
-          url: './shangmen/shangmen?nav_id=9',
-        })
-      } else if (nav_id == 10) {
-        wx.navigateTo({
-          url: './shangmen/shangmen?nav_id=10',
-        })
-      } else if (nav_id == 11) {
-        wx.navigateTo({
-          url: './shangmen/shangmen?nav_id=11',
-        })
+    // } else if (nav_id == 7) {
+    //   wx.navigateTo({
+    //     url: './shangmen/shangmen?nav_id=7',
+    //   })
+    // } else if (nav_id == 8) {
+    //   wx.navigateTo({
+    //     url: './shangmen/shangmen?nav_id=8',
+    //   })
+    //   } else if (nav_id == 9) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=9',
+    //     })
+    //   } else if (nav_id == 10) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=10',
+    //     })
+    //   } else if (nav_id == 11) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=11',
+    //     })
       }
   }
 })

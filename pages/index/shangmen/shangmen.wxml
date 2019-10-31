@@ -27,7 +27,7 @@
             <view class='ji_shou_line'>
             </view>
 
-            <view class='shou_cnt'>
+          <view class='shou_cnt'>
             <view class='input_cnt_shou' bindtap='shoujian'>
               <text class='name_tel'></text>
               <view class='cnt_address'>{{toname!=''?toname+totel+toprovincename+tocityname+toareaname+toareastreetname:'请填写收件人信息'}}</view>

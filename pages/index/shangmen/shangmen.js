@@ -149,9 +149,30 @@ Page({
       nav_id: options.nav_id
     })
     console.log(this.data.nav_id)
-    wx.setNavigationBarTitle({
-      title: '快递员上门'  //修改title
-    })
+    if (this.data.nav_id == 1){
+      wx.setNavigationBarTitle({
+        title: '快递员上门'  //修改title
+      })
+    } else if (this.data.nav_id == 3) {
+      wx.setNavigationBarTitle({
+        title: '寄大件'  //修改title
+      })
+    } else if (this.data.nav_id == 4) {
+      wx.setNavigationBarTitle({
+        title: '丰巢寄件'  //修改title
+      })
+    }
+    else if (this.data.nav_id == 5) {
+      wx.setNavigationBarTitle({
+        title: '批量寄'  //修改title
+      })
+    }
+     else if (this.data.nav_id==6){
+      wx.setNavigationBarTitle({
+        title: '国际/港澳台'  //修改title
+      })
+    }
+   
   },
 
   /**

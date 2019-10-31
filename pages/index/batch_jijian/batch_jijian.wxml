@@ -1,0 +1,91 @@
+  <view>
+       <view class='ji_shou_address'>
+          <!-- 左边寄收图片 -->
+          <image class='ji_shou_logo' src='../../../images/ji_icon.png'></image>
+          <!-- 右边输入部分 -->
+          <view class='ji_shou_cnt'>
+            <view class='ji_cnt'>
+              <view class='input_cnt_ji' bindtap='jijian'>
+                <text class='name_tel'>寄件人信息</text>
+                <view class='cnt_address'>{{fromname!=''?fromname+fromtel+fromprovincename+fromcityname+fromareaname+fromareastreetname:'请填写寄件人信息'}}</view>
+              </view>
+              <view class='click_address_box_ji'>
+                <image class='click_address_ji_img' src='../../../images/click_address.png' mode='widthFix' data-index="0" bindtap='address_book'></image>
+              </view>
+              </view>
+              <view>
+            </view>
+              
+          </view>
+      </view>
+       <view class='ji_shou_address'>
+          <!-- 左边寄收图片 -->
+          <image class='ji_shou_logo' src='../../../images/ji_icon.png'></image>
+          <!-- 右边输入部分 -->
+          <view class='ji_shou_cnt'>
+            <view class='ji_cnt'>
+              <view class='input_cnt_ji' bindtap='jijian'>
+                <text class='name_tel'>收件人信息</text>
+                <view class='cnt_address'>{{fromname!=''?fromname+fromtel+fromprovincename+fromcityname+fromareaname+fromareastreetname:'请填写寄件人信息'}}</view>
+              </view>
+              <!-- <view class='click_address_box_ji'>
+                <image class='click_address_ji_img' src='../../../images/click_address.png' mode='widthFix' data-index="0" bindtap='address_book'></image>
+              </view> -->
+              </view>
+              <view>
+            </view>
+              
+            <!-- 寄收快递中间的线 -->
+            <!-- <view class='ji_shou_line'>
+            </view> -->
+          </view>
+      </view>
+
+      <!-- 增加收件人 -->
+      <view class='add_shoujian' bindtap='shoujian'>
+         <text class='plus'>+</text>
+          <text>增加收件人</text>   
+      </view>
+
+      <!-- 期待上门时间 -->
+      <view class="cu-form-group">
+				<view class="title">期待上门时间</view>
+				<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+					<view class="picker">
+						{{index>-1?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+					</view>
+				</picker>
+			</view>
+
+       <!-- tick  打对勾 -->
+  <view class='tick'>
+      <checkbox class='round red' :class="checkbox[2].checked?'checked':''" :checked="checkbox[2].checked?true:false"
+        value="C"></checkbox>
+        <text class='text1'>我已阅读并同意</text>
+        <text style=' font-weight: bold;'>《电子运单契约条款》</text>
+  </view>
+
+
+  <!-- 底部结算部分 -->
+  <view class='footer'>
+    <view class='footer_left'>
+      <view class='footer_left_up'>
+        <view class='footer_left_money'>
+            预估
+            <text>￥--</text>
+        </view>
+        <view class='jifu'>
+            寄付现结
+        </view>
+      </view>
+      <view class='footer_left_down'>
+         最终费用以快递小哥核实为准
+      </view>
+    </view>
+    <view class='footer_right' bindtap="submitCreateForm" >
+        下单
+    </view>
+  </view>
+
+
+  </view>
