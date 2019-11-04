@@ -66,13 +66,13 @@
         <text class="text-grey">客服电话</text>
       </view>
     </view>
-    <view class="cu-item arrow">
+    <!-- <view class="cu-item arrow">
       <button class="cu-btn content">
         <image class='my_tousujilu' src='../.././images/my_tousujilu.png'></image>
-        <!-- <text class='lg text-gray cuIcon-record'></text> -->
+        <text class='lg text-gray cuIcon-record'></text>
         <text class="text-grey">投诉记录</text>
       </button>
-    </view>
+    </view> -->
   </view>
   <view class="cu-tabbar-height">
     <text>退出登录</text>
@@ -86,6 +86,20 @@
           <view class='qiandao_succ'>签到成功</view>
           <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
           <view class='btn_know' bindtap="hideModal">朕知道了</view>
+				</view>
+			</view>
+		</view>
+
+
+      <!-- 签到弹窗 -->
+		<view class="cu-modal {{fapiaoName=='fapiao'?'show':''}}">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+					<!-- <image class='qiandao_dialog_img' src='../.././images/qiandao.png' mode='widthFix'></image>
+          <view class='qiandao_succ'>签到成功</view>
+          <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
+          <view class='btn_know' bindtap="hideModal">朕知道了</view> -->
+          <view bindtap="hideModal">发票申请请联系寄件人</view>
 				</view>
 			</view>
 		</view>

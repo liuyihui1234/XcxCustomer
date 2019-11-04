@@ -8,6 +8,7 @@ Page({
     headImg:"",
     nickname:'',
     modalName: null,
+    fapiaoName: null,
     my_imgs: [
       {
         my_imgs_id: 1,
@@ -51,7 +52,10 @@ Page({
     //   })
     } 
     else if (my_imgs_id == 3) {
-      
+      this.setData({
+        fapiaoName:"fapiao"
+      })
+
     } else if (my_imgs_id == 4) {
       wx.navigateTo({
         url: './shopping/shopping',
@@ -76,7 +80,8 @@ Page({
   },
   hideModal(e) {
     this.setData({
-      modalName: "null"
+      modalName: "null",
+      fapiaoName: "null"
     })
   },
   /**

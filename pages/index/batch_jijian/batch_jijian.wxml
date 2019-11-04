@@ -18,22 +18,25 @@
               
           </view>
       </view>
-       <view class='ji_shou_address'>
-          <!-- 左边寄收图片 -->
-          <image class='ji_shou_logo' src='../../../images/ji_icon.png'></image>
-          <!-- 右边输入部分 -->
-          <view class='ji_shou_cnt'>
-            <view class='ji_cnt'>
-              <view class='input_cnt_ji' bindtap='jijian'>
-                <text class='name_tel'>收件人信息</text>
-                <view class='cnt_address'>{{fromname!=''?fromname+fromtel+fromprovincename+fromcityname+fromareaname+fromareastreetname:'请填写寄件人信息'}}</view>
+
+      <view wx:if="{{shou.length}}">
+        <view class='ji_shou_address'>
+            <!-- 左边寄收图片 -->
+            <image class='ji_shou_logo' src='../../../images/shou_icon.png'></image>
+            <!-- 右边输入部分 -->
+            <view class='ji_shou_cnt'>
+              <view class='ji_cnt'>
+                <view class='input_cnt_ji' bindtap='jijian'>
+                  <text class='name_tel'>收件人信息</text>
+                  <view class='cnt_address'>{{fromname!=''?fromname+fromtel+fromprovincename+fromcityname+fromareaname+fromareastreetname:'请填写寄件人信息'}}</view>
+                </view>
+                <!-- <view class='click_address_box_ji'>
+                  <image class='click_address_ji_img' src='../../../images/click_address.png' mode='widthFix' data-index="0" bindtap='address_book'></image>
+                </view> -->
+                </view>
+                <view>
               </view>
-              <!-- <view class='click_address_box_ji'>
-                <image class='click_address_ji_img' src='../../../images/click_address.png' mode='widthFix' data-index="0" bindtap='address_book'></image>
-              </view> -->
-              </view>
-              <view>
-            </view>
+      </view>
               
             <!-- 寄收快递中间的线 -->
             <!-- <view class='ji_shou_line'>
