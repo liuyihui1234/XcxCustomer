@@ -4,7 +4,7 @@
 <view class='first_baojia'>
     <view class='baojia'>
       <text class='baojia_text'>保价</text>
-      <image class='baojia_img' bindtap="baojia_showModal" src='../../../.././images/baojia_img.png' mode='widthFix'></image>
+      <image class='baojia_img' bindtap="baojia_showModal" src='../../../../images/baojia_img.png' mode='widthFix'></image>
     </view>
     <!-- value价值 -->
   <view class='value'>
@@ -84,7 +84,7 @@
         <view class='serve'>
 					<checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
 					<view class="title">特殊入仓
-          <image class='rucang_img' bindtap="rucang_showModal" src='../../../.././images/baojia_img.png' mode='widthFix'></image>
+          <image class='rucang_img' bindtap="rucang_showModal" src='../../../../images/baojia_img.png' mode='widthFix'></image>
           </view>
         </view>
          <view class='serve_cost'>

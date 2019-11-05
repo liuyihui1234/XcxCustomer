@@ -82,7 +82,7 @@
 		<view class="cu-modal {{modalName=='Modal'?'show':''}}">
 			<view class="cu-dialog">
 				<view class="padding-xl">
-					<image class='qiandao_dialog_img' src='../.././images/qiandao.png' mode='widthFix'></image>
+					<image class='qiandao_dialog_img' src='../../images/qiandao.png' mode='widthFix'></image>
           <view class='qiandao_succ'>签到成功</view>
           <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
           <view class='btn_know' bindtap="hideModal">朕知道了</view>
@@ -95,7 +95,7 @@
 		<view class="cu-modal {{fapiaoName=='fapiao'?'show':''}}">
 			<view class="cu-dialog">
 				<view class="padding-xl">
-					<!-- <image class='qiandao_dialog_img' src='../.././images/qiandao.png' mode='widthFix'></image>
+					<!-- <image class='qiandao_dialog_img' src='../../images/qiandao.png' mode='widthFix'></image>
           <view class='qiandao_succ'>签到成功</view>
           <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
           <view class='btn_know' bindtap="hideModal">朕知道了</view> -->

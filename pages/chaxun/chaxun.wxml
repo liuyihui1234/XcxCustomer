@@ -3,7 +3,7 @@
 <view class="cu-bar search">
 				<view class="search-form">
 					<input class='search_input' bindfocus="InputFocus" bindinput="getNumber" wx:adjust-position="false" type="text" placeholder="请输入运单号" placeholder-class='placeholder' confirm-type="search"></input>
-					<image class='saomiao' src='../.././images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
+					<image class='saomiao' src='../../images/chaxun_saomiao.png' mode='widthFix' bindtap='scanCode'></image>
           <!-- <text class='lg text-gray cuIcon-scan'></text> -->
 				</view>
 				<view class="action">
@@ -27,7 +27,7 @@
         <view class='yundanhao'>
             运单号：{{item.number}}
         </view>
-        <image src='../.././images/fuzhi.png' mode='widthFix' data-id="{{item.number}}" bindtap='copy'></image>
+        <image src='../../images/fuzhi.png' mode='widthFix' data-id="{{item.number}}" bindtap='copy'></image>
         <view class='qianshou' wx:if="{{item.status==3}}" >已签收</view>
         <view class='qianshou' wx:if="{{item.status!=3}}" >未签收</view>
       </view>
@@ -42,7 +42,7 @@
             </view>
           </view>
             <view class='send'>
-              <image src='../.././images/send.png' mode='widthFix'></image>
+              <image src='../../images/send.png' mode='widthFix'></image>
             </view>
           <view class='end_city'>
             <view class='end city'>
@@ -102,7 +102,7 @@
           <view class='yundanhao'>
               运单号：198350506575
           </view>
-          <image src='../.././images/fuzhi.png' mode='widthFix'></image>
+          <image src='../../images/fuzhi.png' mode='widthFix'></image>
           <view class='qianshou'>已签收</view>
         </view>
         <!-- 运单号内容 -->
@@ -116,7 +116,7 @@
               </view>
             </view>
               <view class='send'>
-                <image src='../.././images/send.png' mode='widthFix'></image>
+                <image src='../../images/send.png' mode='widthFix'></image>
               </view>
             <view class='end_city'>
               <view class='end city'>

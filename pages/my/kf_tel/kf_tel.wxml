@@ -2,7 +2,7 @@
     <view class="cu-item arrow"  bindtap="open">
       <navigator class="content" url="" hover-class="none">
         <text>快8速递客服</text>
-        <image class='my_phone' src="../../.././images/my_phone.png" mode="aspectFit"></image>
+        <image class='my_phone' src="../../../images/my_phone.png" mode="aspectFit"></image>
       </navigator>
     </view>
   </view>

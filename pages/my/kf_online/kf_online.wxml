@@ -1,7 +1,7 @@
 <view class="cu-chat">
  <view class="cu-item">
     <view class="cu-avatar radius">
-      <image src='../../.././images/online_avatar.png' mode='widthFix'></image>
+      <image src='../../../images/online_avatar.png' mode='widthFix'></image>
     </view>
     <view class="main">
       <view class="content shadow">

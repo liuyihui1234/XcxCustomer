@@ -76,7 +76,7 @@
       <view class='th'>
         <view>寄付价</view>
         <view class='th4_down'>
-          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <image class='money_icon' src='../../../images/money_icon.png' mode='widthFix'></image>
           <view>到付换算</view>
         </view>
       </view>
@@ -85,7 +85,7 @@
       <view class='th'>
         <view class='th_red_icon'>
           <view>快8即日</view>
-          <image class='table_red_icon' src='../../.././images/table_red_icon.png' mode='widthFix'></image>
+          <image class='table_red_icon' src='../../../images/table_red_icon.png' mode='widthFix'></image>
         </view>
       </view>
       <view class='th flex1'>42.7kg</view>
@@ -108,7 +108,7 @@
       <view class='th'>
         <view>寄付价</view>
         <view class='th4_down'>
-          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <image class='money_icon' src='../../../images/money_icon.png' mode='widthFix'></image>
           <view>到付换算</view>
         </view>
       </view>
@@ -129,7 +129,7 @@
       <view class='th'>
         <view>寄付价</view>
         <view class='th4_down'>
-          <image class='money_icon' src='../../.././images/money_icon.png' mode='widthFix'></image>
+          <image class='money_icon' src='../../../images/money_icon.png' mode='widthFix'></image>
           <view>到付换算</view>
         </view>
       </view>
@@ -158,7 +158,7 @@
   <view class="cu-item">
     <view class="content justify-content" hover-class="none">
       <text class="text-grey">运费查询其他说明</text>
-      <!-- <image class='drop-down' src='../../.././images/drop-down.png' mode='widthFix'></image> -->
+      <!-- <image class='drop-down' src='../../../images/drop-down.png' mode='widthFix'></image> -->
       <text class="lg text-gray cuIcon-unfold"  bindtap='yunfei_rule'></text>
     </view>
   </view>

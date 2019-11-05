@@ -7,27 +7,27 @@ Page({
   data: {
     tousuPro:[
       {
-        img: "../../.././images/yanwu.png",
+        img: "../../../images/yanwu.png",
         text: "快递延误"
       },
       {
-        img: "../../.././images/sunhuai.png",
+        img: "../../../images/sunhuai.png",
         text: "损坏/丢失"
       },
       {
-        img: "../../.././images/feibenren.png",
+        img: "../../../images/feibenren.png",
         text: "非本人签收"
       },
       {
-        img: "../../.././images/atitu.png",
+        img: "../../../images/atitu.png",
         text: "服务态度差"
       },
       {
-        img: "../../.././images/charge.png",
+        img: "../../../images/charge.png",
         text: "收费问题"
       },
       {
-        img: "../../.././images/other_problem.png",
+        img: "../../../images/other_problem.png",
         text: "其他问题"
       }
     ]
