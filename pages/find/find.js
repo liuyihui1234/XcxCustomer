@@ -8,27 +8,27 @@ Page({
     find_navs:[
       {
         find_nav_id:1,
-        img: "../.././images/find_wangdian.png",
+        img: "../../images/find_wangdian.png",
         text: "网点查询"
       },
       {
         find_nav_id: 2,
-        img: "../.././images/find_weijin.png",
+        img: "../../images/find_weijin.png",
         text: "违禁品查询"
       },
       {
         find_nav_id: 3,
-        img: "../.././images/find_yunfei.png",
+        img: "../../images/find_yunfei.png",
         text: "运费时效"
       },
       {
         find_nav_id: 4,
-        img: "../.././images/find_serve.png",
+        img: "../../images/find_serve.png",
         text: "服务范围"
       },
     ],
-    find_banner:"../.././images/find_banner.png",
-    find_banner2:"../.././images/find_banner2.png"
+    find_banner:"../../images/find_banner.png",
+    find_banner2:"../../images/find_banner2.png"
   },
   getFindNav:function(e){
     console.log(e);

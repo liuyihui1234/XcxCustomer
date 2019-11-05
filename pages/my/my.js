@@ -12,22 +12,22 @@ Page({
     my_imgs: [
       {
         my_imgs_id: 1,
-        img: "../.././images/my_img1.png",
+        img: "../../images/my_img1.png",
         text: "地址簿"
       },
       { 
         my_imgs_id: 2,
-        img: "../.././images/my_img2.png",
+        img: "../../images/my_img2.png",
         text: "优惠券"
       },
       {
         my_imgs_id: 3,
-        img: "../.././images/my_img3.png",
+        img: "../../images/my_img3.png",
         text: "发票申请"
       },
       {
         my_imgs_id: 4,
-        img: "../.././images/my_img4.png",
+        img: "../../images/my_img4.png",
         text: "购物订单"
       },
     ]
