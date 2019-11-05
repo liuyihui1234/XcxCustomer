@@ -10,25 +10,25 @@ Page({
       {
         big_nav_id: 1,
         img: '../../images/shangmen.png',
-        textTitle: "快递员上门",
+        textTitle: "上门服务",
         textPs: "一小时取件"
       },
       {
         big_nav_id: 2,
         img: '../../images/saoma.png',
-        textTitle: "扫码寄件",
+        textTitle: "扫码速运",
         textPs: "扫小哥/运单二维码"
       },
       {
         big_nav_id: 3,
         img: '../../images/jidajian.png',
-        textTitle: "寄大件",
+        textTitle: "速运大件",
         textPs: "20公斤以上优惠寄"
       },
       {
         big_nav_id: 4,
         img: '../../images/fengchao.png',
-        textTitle: "丰巢寄件",
+        textTitle: "丰巢速运",
         textPs: "24小时自助寄件"
       }
     ],
