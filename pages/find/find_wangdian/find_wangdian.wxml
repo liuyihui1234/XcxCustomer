@@ -1,2 +1,61 @@
-<!--pages/find/find_wangdian/find_wangdian.wxml-->
-<text>pages/find/find_wangdian/find_wangdian.wxml</text>
+<!-- 大盒子 -->
+<view>
+  <view class='search_group'>
+      <view class='search_info'>
+        <view class='search_info_aside'>
+        <text>请输入市区</text>
+        <text class='lg text-gray cuIcon-triangledownfill'></text>
+        </view>
+        <input class='search_input' placeholder-class='search_placeholder' placeholder='请输入网点名称或地址搜索'></input>
+        <text class="lg text-gray cuIcon-search"></text>
+      </view>
+    </view>
+    <!-- 查询列表 -->
+    <view class='list_padding'>
+      <view class='address'>
+        <view class='left_address'>
+          <view class='left_one'>
+            <text class='bg-blue'>合作商家店</text>
+            <text>新华书店（尚书苑店）</text>
+          </view>
+          <view class='font26'>农业南路与康宁街交叉口西南角</view>
+        </view>
+        <view class='text_align phone_border_right'>
+          <text class='lg text-gray cuIcon-phone'></text>
+          <view class='font24_color'>电话</view>
+        </view>
+        <view class='text_align location_padding'>
+          <text class='lg text-gray cuIcon-location'></text>
+          <view class='font24_color'>693m</view>
+        </view>
+      </view>
+      <view>  
+        <text class='lg text-gray cuIcon-time'></text>
+        <text class='font24'>营业时间： 8：00-18：00</text>
+      </view>
+    </view>
+    <!-- 查询列表 -->
+    <view class='list_padding'>
+      <view class='address'>
+        <view class='left_address'>
+          <view class='left_one'>
+            <text class='bg-blue'>合作商家店</text>
+            <text>新华书店（尚书苑店）</text>
+          </view>
+          <view class='font26'>农业南路与康宁街交叉口西南角</view>
+        </view>
+        <view class='text_align phone_border_right'>
+          <text class='lg text-gray cuIcon-phone'></text>
+          <view class='font24_color'>电话</view>
+        </view>
+        <view class='text_align location_padding'>
+          <text class='lg text-gray cuIcon-location'></text>
+          <view class='font24_color'>693m</view>
+        </view>
+      </view>
+      <view>  
+        <text class='lg text-gray cuIcon-time'></text>
+        <text class='font24'>营业时间： 8：00-18：00</text>
+      </view>
+    </view>
+</view>

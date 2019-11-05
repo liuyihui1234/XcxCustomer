@@ -26,6 +26,7 @@ page{
   background-color: #fff;
   border-radius: 11rpx;
   box-shadow: 0rpx 3rpx 2rpx 2rpx #e5e5e5;
+  /* z-index: -1; */
 }
 /* 头像 */
 .touxiang_info{
@@ -80,6 +81,7 @@ page{
   flex-direction: row;
   margin-top: 135rpx;
   justify-content: space-around;
+  z-index: 2;
 }
 .block_item{
   display: flex;
@@ -104,6 +106,9 @@ page{
   line-height: 90rpx;
   font-size: 32rpx;
   color: #333333;
+}
+.cu-tabbar-height:hover text{
+  color: #ffffff;
 }
 /* colorui的样式修改 */
 .margin-top-xl {
@@ -156,4 +161,24 @@ page{
 /* +.... */
 .jifen_count{
   color: #cb252a;
+}
+/* 在线客服 */
+.my_online{
+  width: 39rpx;
+  height: 35rpx;
+}
+/* 功能反馈 */
+.my_fankui{
+  width: 40rpx;
+  height: 42rpx;
+}
+/* 客服电话 */
+.my_phone{
+  width: 34rpx;
+  height: 46rpx;
+}
+/* 投诉记录 */
+.my_tousujilu{
+  width: 36rpx;
+  height: 36rpx;
 }

@@ -4,7 +4,7 @@
 		<input placeholder="电话" placeholder-class='font-size30'></input>
     <text>-</text>
 		<input class='fenjihao' placeholder="分机号" placeholder-class='font-size30'></input>
-    <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix'></image>
+    <image class="telephone_book" src='../../../../images/telephone_book.png' mode='widthFix'></image>
 	</view>
   <view class="cu-form-group">
   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
@@ -42,8 +42,8 @@
     <view class='detailed_information'>
       <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动拆分姓名、电话和地址" placeholder-class='textarea_class'></textarea>
       <view>
-        <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
-        <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image>
+        <image class='camera' src='../../../../images/camera.png' mode='widthFix'></image>
+        <image class='voice' src='../../../../images/voice.png' mode='widthFix'></image>
       </view>
     </view>
   </view>

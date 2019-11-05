@@ -1,6 +1,6 @@
 <!--pages/index/shangmen/wupin/wupin.wxml-->
 <!-- 大盒子 -->
-<view class='big_box'>
+<view class='wupin_shangmen' wx:if="{{nav_id==1}}">
   <!-- 包裹类型模块 -->
     <view class='baoguo_type'>
         <view class='baoguo_type_title'>包裹类型</view>
@@ -58,13 +58,13 @@
 					<text class="cuIcon-close"></text>
 				</view>
 			</view>
-			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<5}}">
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
 				<text class="cuIcon-cameraadd">
           <!-- <text>上传照片</text> -->
         </text>
 			</view>
 		</view>
-	</view>
+	  </view>
   <!-- 文字描述 给小哥捎句话儿吧 -->
   	<view class="cu-form-group">
      <view class='textarea_box'>
@@ -94,5 +94,336 @@
     <view class='btn_box'>
       确定
     </view>
+  </view>
 </view>
+
+
+<!-- 寄大件物品信息 -->
+<view class='wupin_jidajian' wx:if="{{nav_id==3}}">
+
+  <!-- 包裹类型模块 -->
+    <view class='baoguo_type'>
+        <view class='baoguo_type_title'>包裹类型</view>
+        <view class='baoguo_type_cnt_box'>
+          <view class='baoguo_type_cnt'>
+              <text>日用品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>家具用电</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>数码产品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>食品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>设备及材料</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>服装鞋帽</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>其他</text>
+          </view>
+        </view>
+    </view> 
+    <!-- 预估重量 -->
+    <view class='predict_weight'>
+        <view class='predict_weight_title'>重量与体积</view>
+      <view class='predict_weight_up weight'>
+        <view class="total_weight_aside">总重量
+          <view class='red_must'>必填</view>
+        </view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='button_reduce' disabled="{{!count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{count}}'></input>
+              <view>公斤</view>
+            </view>
+            <button class='button_add' bindtap='button_add'>+</button>
+        </view>
+      </view>
+
+      <view class='predict_weight_down large_pieces'>
+        <!-- 按钮 -->
+				<view class="radio_title">补充体积预估费用更准确</view>
+				<!-- #ifdef MP-ALIPAY -->
+				<switch class='red' bindchange="SwitchB" :class="switchB?'checked':''" :checked="switchB?true:false" color="#e54d42"></switch>
+				<!-- #endif -->
+      </view>
+      <!-- 隐藏部分的体积 -->
+      <view class='hidden_block' hidden="{{hiddenName}}">
+        <view class='predict_weight_up weight'>
+        <view class="total_weight_aside">总体积</view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='volume_button_reduce' disabled="{{!volume_count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{volume_count}}'></input>
+              <view>立方米</view>
+            </view>
+            <button class='button_add' bindtap='volume_button_add'>+</button>
+        </view>
+      </view>
+          <!-- 长宽高 -->
+          <view class='predict_weight_up weight'>
+            <view class='long'>
+              <input class='border' placeholder='长'></input>
+              <view class='limi'>cm</view>
+            </view>
+            <view class='long'>
+              <input class='border' placeholder='宽'></input>
+              <view class='limi'>cm</view>
+            </view>
+            <view class='long'>
+              <input class='border' placeholder='高'></input>
+              <view class='limi'>cm</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 文字描述 给小哥捎句话儿吧 -->
+<view class='additional_info'>
+  	<view class="cu-form-group">
+     <view class='textarea_box'>
+				<textarea :disabled="modalName!=null" bindinput="textareaAInput" placeholder="给小哥捎句话吧..." placeholder-class='textarea_class' maxlength="20">
+        </textarea>
+        <!-- Lower right corner右下角 -->
+        <text class='lower_right_corner'>{{textareaAValue.length}}/20</text>
+      </view>
+		</view>
+    <!-- 带纸箱 -->
+    <!-- Be careful注意 -->
+    <view class='be_careful'>
+      <view class='bg_color'>带纸箱</view>
+      <view class='bg_color'>上门前先联系</view>
+      <view class='color_red'>注意：纸箱需额外收费</view>
+    </view>
+
+    <!-- 备注 -->
+    <!-- Remarks备注 -->
+    <view class='remarks_info'>
+      注：物品照片帮助小哥判断是否符合快递规范以及选择合适运
+输工具，不会进行其他用途。
+    </view>
+
+    <!-- 确定按钮 -->
+    <!-- Determine确定 -->
+    <view class='btn_box'>
+      确定
+    </view>
+  </view>
+</view>
+
+<!-- 丰巢寄件物品信息 -->
+<view class='wupin_fengchao' wx:if="{{nav_id==4}}">
+  <!-- 包裹类型模块 -->
+    <view class='baoguo_type'>
+        <view class='baoguo_type_title'>包裹类型</view>
+        <view class='baoguo_type_cnt_box'>
+          <view class='baoguo_type_cnt'>
+              <text>日用品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>食品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>文件</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>数码产品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>衣物</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>其他</text>
+          </view>
+        </view>
+    </view> 
+</view>
+
+<!-- 医药寄物品信息 -->
+<view class='yiyao' wx:if="{{nav_id == 5}}">
+  <!-- 包裹类型模块 -->
+    <view class='baoguo_type'>
+        <view class='baoguo_type_title'>包裹类型</view>
+        <view class='baoguo_type_cnt_box'>
+          <view class='baoguo_type_cnt'>
+              <text>药品(国药准字)</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>药品(其他)</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>医疗器械</text>
+          </view>
+        </view>
+    </view> 
+    <!-- 预估重量 -->
+    <view class='predict_weight'>
+      <view class='predict_weight_up'>
+        <view class='predict_weight_title'>预估重量</view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='button_reduce' disabled="{{!count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{count}}'></input>
+              <view>公斤</view>
+            </view>
+            <button class='button_add' bindtap='button_add'>+</button>
+        </view>
+      </view>
+
+      <view class='predict_weight_down'>
+        <view>注：实际重量以收派员确定为准</view>
+      </view>
+    </view>
+
+    <!-- 物品照片与捎话 -->
+    <view class='additional_info'>
+      <view class='additional_info_title'>
+        物品照片与捎话
+      </view>
+      <!-- 图片上传 -->
+     <view class="">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd">
+          <!-- <text>上传照片</text> -->
+        </text>
+			</view>
+		</view>
+	  </view>
+  <!-- 文字描述 给小哥捎句话儿吧 -->
+  	<view class="cu-form-group">
+     <view class='textarea_box'>
+				<textarea :disabled="modalName!=null" bindinput="textareaAInput" placeholder="给小哥捎句话吧..." placeholder-class='textarea_class' maxlength="20">
+        </textarea>
+        <!-- Lower right corner右下角 -->
+        <text class='lower_right_corner'>{{textareaAValue.length}}/20</text>
+      </view>
+		</view>
+    <!-- 带纸箱 -->
+    <!-- Be careful注意 -->
+    <view class='be_careful'>
+      <view class='bg_color'>带纸箱</view>
+      <view class='bg_color'>上门前先联系</view>
+      <view class='color_red'>注意：纸箱需额外收费</view>
+    </view>
+
+    <!-- 备注 -->
+    <!-- Remarks备注 -->
+    <view class='remarks_info'>
+      注：物品照片帮助小哥判断是否符合快递规范以及选择合适运
+输工具，不会进行其他用途。
+    </view>
+
+    <!-- 确定按钮 -->
+    <!-- Determine确定 -->
+    <view class='btn_box'>
+      确定
+    </view>
+  </view>
+</view>
+
+
+<!-- 冷链物品信息 -->
+<view class='lenglian' wx:if="{{nav_id == 9}}">
+  <!-- 包裹类型模块 -->
+    <view class='baoguo_type'>
+        <view class='baoguo_type_title'>物品与数量</view>
+        <view class='baoguo_type_cnt_box'>
+          <view class='baoguo_type_cnt'>
+              <text>果蔬(农产品)</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>禽肉类</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>水产</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>速冻食品</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>花卉</text>
+          </view>
+          <view class='baoguo_type_cnt'>
+              <text>其他</text>
+          </view>
+        </view>
+      <view class='predict_weight_up weight lenglian_padding'>
+        <view class="total_weight_aside">数量
+          <view class='red_must'>必填</view>
+        </view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='button_reduce' disabled="{{!count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{count}}'></input>
+              <view>箱</view>
+            </view>
+            <button class='button_add' bindtap='button_add'>+</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 预估重量 -->
+    <view class='predict_weight'>
+        <view class='predict_weight_title flex_row'>重量与体积
+         <view class='red_must'>必填</view>
+        </view>
+      <view class='predict_weight_up weight'>
+        <view class="total_weight_aside">总重量
+         
+        </view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='button_reduce' disabled="{{!count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{count}}'></input>
+              <view>公斤</view>
+            </view>
+            <button class='button_add' bindtap='button_add'>+</button>
+        </view>
+      </view>
+      <!-- 隐藏部分的体积 -->
+      <view class='hidden_block padding0'>
+        <view class='predict_weight_up weight'>
+        <view class="total_weight_aside">总体积</view>
+        <view class='button_two'>
+            <button class='button_reduce' bindtap='volume_button_reduce' disabled="{{!volume_count}}">-</button>
+            <view class='input_count'>
+              <input placeholder='1' value='{{volume_count}}'></input>
+              <view>立方米</view>
+            </view>
+            <button class='button_add' bindtap='volume_button_add'>+</button>
+        </view>
+      </view>
+          <!-- 长宽高 -->
+          <view class='predict_weight_up weight'>
+            <view class='long'>
+              <input class='border' placeholder='长'></input>
+              <view class='limi'>cm</view>
+            </view>
+            <view class='long'>
+              <input class='border' placeholder='宽'></input>
+              <view class='limi'>cm</view>
+            </view>
+            <view class='long'>
+              <input class='border' placeholder='高'></input>
+              <view class='limi'>cm</view>
+            </view>
+          </view>
+        </view>
+       <!-- 确定按钮 -->
+    <!-- Determine确定 -->
+    <view class='btn_box'>
+      确定
+    </view>
+      </view>
 </view>

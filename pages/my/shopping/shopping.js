@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '我的购物订单'  //修改title
+      title: '购物订单'  //修改title
     })
   },
 

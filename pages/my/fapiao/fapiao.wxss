@@ -91,3 +91,91 @@
   font-size: 28rpx;
   color: #cb252a;
 }
+/* 发票列表 */
+
+.cu-form-group{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 30rpx 20rpx;
+}
+.margin-top{
+  margin-top: 20rpx;
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex_address_row{
+  display: flex;
+  flex-direction: row;
+  margin-top:28rpx;
+  color:#727070;
+}
+.address_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+}
+.address_bold{
+  font-size: 30rpx;
+  color: #333333;
+}
+.aside_left,.aside_right{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.aside_left{
+  margin-left: 100rpx;
+  margin-right: 50rpx;
+}
+.aside_right{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.font22{
+  font-size: 24rpx;
+  color: #c4c2c2;
+  margin-left: 10rpx;
+}
+.send image{
+  width: 96rpx;
+  height: 10rpx;
+}
+/* 开票金额 */
+.right_right{
+  padding-left: 50rpx; 
+  border-left: 1rpx solid #c4c2c2;
+  text-align: center;
+}
+/* 固定定位 */
+.fixed{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1rpx solid #c4c2c2;
+  padding: 20rpx;
+}
+.gray{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #c4c2c2;
+  height: 100%;
+  line-height: 250%;
+  padding:0rpx 26rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+}
+.gray:hover{
+  background-color: #cb252a;
+}
+.red{
+  color: #cb252a;
+}

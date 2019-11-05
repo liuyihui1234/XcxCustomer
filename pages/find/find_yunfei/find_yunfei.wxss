@@ -11,11 +11,12 @@
   flex-direction: row;
 }
 .input_float_right{
-  display: flex;
-  justify-content:flex-end;
+  /* display: flex; */
+  /* justify-content:flex-end; */
   font-size: 28rpx;
   color: #999999;
   margin-left: 20rpx;
+  width: 440rpx;
 }
 .text-grey{
   color: #333333;
@@ -85,9 +86,101 @@
 
 .btn_know{
   font-size: 28rpx;
+  letter-spacing: 2rpx;
   color: #ffffff;
-  padding: 24rpx 30rpx;
+  padding: 20rpx 0rpx;
+  width: 366rpx;
+  margin: 0rpx auto;
   margin-top: 60rpx;
   background: -webkit-linear-gradient(left,#ef5746,#e9341f);
   border-radius: 78rpx;
+}
+/* 查询结果 */
+.nav .cu-item{
+  padding: 0 80rpx;
+}
+/* 快递表格 */
+/* .query_block{
+  display: none;
+} */
+.text-blue, .line-blue, .lines-blue{
+  color: #cb252a;
+}
+.tr{
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: #f0f0f0;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.tr.bg-white{
+  background-color: #ffffff;
+}
+.tr.bg-white.td{
+  padding: 25rpx 20rpx;
+}
+.th{
+  flex: 2;
+  text-align: center;
+}
+.th.flex1{
+  margin-right: 30rpx;
+  flex: 1;
+}
+/* 寄付件图标 */
+.money_icon{
+  width: 34rpx;
+  height: 30rpx;
+}
+.th4_down{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/* 快递即日图标 */
+.th_red_icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.table_red_icon{
+  width: 27rpx;
+  height: 26rpx;
+}
+.color_red{
+  color: #cb252a;
+}
+/* 冷运文字温馨提示 */
+.tips{
+  padding: 24rpx 40rpx;
+}
+.tip_cnt{
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  color: #777777;
+  line-height: 42rpx;
+}
+/* 运费查询其他说明 */
+.border{
+  margin-top: 15rpx;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+}
+.content.justify-content{
+  justify-content: space-between;
+  align-items:center;
+}
+.drop-down-text{
+  font-size: 26rpx;
+  line-height: 56rpx;
+  padding: 30rpx 40rpx;
+  background-color: #ffffff;
+}
+.drop-down-title{
+  font-weight: bold;
+}
+.drop-down-cnt{
+  padding-left: 40rpx;
 }

@@ -1,1 +1,92 @@
-/* pages/find/find_wangdian/find_wangdian.wxss */
+page{
+  background-color: #ffffff;
+}
+/* 搜索框 */
+.search_group{
+  width: 100%;
+  background-color: #ffffff;
+  padding:10rpx;
+  border-bottom:1rpx solid #e9e9e9; 
+}
+.search_info{
+  position: relative;
+  margin: 20rpx 33rpx;
+  background-color: #e9e9e9;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  border-radius:60rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.search_info_aside{
+  font-size: 24rpx;
+  border-right: 1rpx solid #c2c1c1;
+  padding: 0rpx 20rpx;
+}
+.search_input{
+  line-height:60rpx;
+  height:60rpx;
+  width:400rpx;
+  margin-left: 20rpx;
+}
+.search_placeholder{
+  line-height: 60rpx;
+}
+/* 小箭头 */
+.cuIcon-triangledownfill{
+  color: #000000;
+}
+/* 网点地址列表 */
+.bg-blue{
+  padding: 7rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+/* 两行地址 */
+.list_padding{
+  padding: 30rpx 20rpx;
+  line-height: 40rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+.address{
+  display: flex;
+  flex-direction: row;
+}
+.left_address{
+  width: 540rpx;
+}
+.text_align{
+  text-align: center;
+}
+/* 左边第一行 */
+.left_one{
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: bold;
+}
+/* 左边第二行 */
+.font26{
+  font-size: 26rpx;
+  color: #5f5e5e;
+}
+/* 左边第三行 */
+.font24{
+  font-size: 24rpx;
+  color: #a19f9f;
+  margin-left: 6rpx;
+}
+/* 电话右边线 */
+.phone_border_right{
+  border-right: 1rpx solid #e9e9e9;
+  padding-right:20rpx;
+}
+/* 距离 */
+.location_padding{
+  padding-left: 20rpx;
+}
+.font24_color{
+  font-size: 24rpx;
+  color: #5f5e5e;
+}

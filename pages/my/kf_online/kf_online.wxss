@@ -1,0 +1,14 @@
+/* 头像 */
+.cu-chat .cu-item>.cu-avatar{
+  width: 66rpx;
+  height: 66rpx;
+  border-radius: 50%;
+}
+.cu-chat .cu-item>.main .content{
+  display: block;
+  line-height: 52rpx;
+}
+.color-blue{
+  font-size: 28rpx;
+  color: #6cadde;
+}

@@ -1,6 +1,6 @@
 // pages/manage/sender_detail/sender_detail.js
 import WxValidate from '../../../../utils/WxValidate'
-var bmap = require('../../../.././libs/bmap-wx.min.js');
+var bmap = require('../../../../libs/bmap-wx.min.js');
 const App = getApp();
 const http = App.http;
 const openId = App.openId;

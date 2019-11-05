@@ -1,2 +1,35 @@
-<!--pages/find/find_serve/find_serve.wxml-->
-<text>pages/find/find_serve/find_serve.wxml</text>
+<view class="cu-list menu card-menu shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content" hover-class="none">
+      <text class="text-grey">查询地区</text>
+      <view class='input_float_right'>请选择原寄地</view>
+    </view>
+  </view>
+</view>
+ <!-- 查询按钮 -->
+  <view class='submit' bindtap='isShow'>查询</view>
+  <!-- 查询的地址占位 -->
+  <view wx:if="{{address.length}}">
+    <view class='address_title'>
+      <view class='red_title'>河南省-郑州市-金水区</view>
+      <view>全境提供服务</view>
+    </view>
+    <view class='address_detail'>
+      <view>地区服务详情</view>
+      <view class='red_color'>正常收送地区</view>
+      <view class='jiedao'>
+        <view class='jiedao_detail'>北林路街道</view>
+        <view class='jiedao_detail'>大石桥街道</view>
+        <view class='jiedao_detail'>东风路街道</view>
+        <view class='jiedao_detail'>杜玲街道</view>
+        <view class='jiedao_detail'>丰产路街道</view>
+        <view class='jiedao_detail'>丰庆路街道</view>
+        <view class='jiedao_detail'>凤凰台街道</view>
+        <view class='jiedao_detail'>国基路街道</view>
+        <view class='jiedao_detail'>花园路街道</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else>
+  </view>

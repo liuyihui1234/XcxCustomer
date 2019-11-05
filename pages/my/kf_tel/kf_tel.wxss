@@ -14,3 +14,7 @@
 .cu-list.menu>.cu-item.arrow{
   padding-right: 30rpx;
 }
+.my_phone{
+  width: 34rpx;
+  height: 46rpx;
+}

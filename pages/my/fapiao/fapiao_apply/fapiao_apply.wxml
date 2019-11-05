@@ -10,7 +10,7 @@
 
   <view class='yuan_box'>
     <view class='yuan'>
-      <image class='number_img' src='../../../.././images/number_img.png' mode='widthFix'></image>
+      <image class='number_img' src='../../../../images/number_img.png' mode='widthFix'></image>
     </view>
     <text class='yuan_box_text'>输入添加运单</text>
   </view>

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+   
   },
   fapiao_apply:function(e){
     wx.navigateTo({
@@ -15,6 +15,12 @@ Page({
   kaipiao_history:function(e){
     wx.navigateTo({
       url: './kaipiao_history/kaipiao_history',
+    })
+  },
+  // 点击申请发票
+  fapiao_apply_info:function(e){
+    wx.navigateTo({
+      url: './fapiao_apply_info/fapiao_apply_info',
     })
   },
   /**

@@ -1,0 +1,104 @@
+<!-- 发票信息 -->
+<view class='bg-white border_bottom font32 text_align margin-bottom'>
+  发票信息
+</view>
+
+<view class='bg-white border_top border_bottom margin-bottom font30'>
+  <view class='fapiao_type'>
+    <text>发票类型：</text>
+    <!-- e-invoice电子发票 -->
+    <view class='e-invoice'>电子发票</view>
+  </view>
+</view>
+
+<view class='bg-white border_top border_bottom margin-bottom'>
+  <view class='font28'><text>发票内容：</text><text class='margin_left20'>收派服务费</text></view>
+  <view class='font28'><text>发票金额：</text><text class='margin_left20'>￥111</text></view>
+</view>
+
+<view class='cu-form-group border_top font30'>
+  发票抬头
+</view>
+<radio-group class="block">
+		<view class="cu-form-group">
+			<view>
+				<radio class="red"></radio>
+			</view>
+			<view class="title margin-left-sm">个人/事业单位</view>
+      <view>
+				<radio class="red"></radio>
+      </view>
+			<view class="title margin-left-sm">单位</view>
+		</view>
+</radio-group>
+
+<view class='cu-form-group'>
+  <text class='color_red'>*</text>
+  <text>发票抬头：</text>
+  <input placeholder='请填写发票抬头' placeholder-class='font26 color_glay'></input>
+</view>
+<view class='cu-form-group margin-bottom border_bottom font26'>
+  <view class='nashui_title'>
+  <text class='color_red'>*</text>
+  <text>纳税人识别号</text>
+  <text class='color_red'>(15~20位)</text>
+  <text>：</text>
+  </view>
+  <input placeholder='请填写购买方纳税人识别号' placeholder-class='font26 color_glay'></input>
+</view>
+
+<radio-group class="block">
+		<view class="cu-form-group border_top">
+			<view class="title">发送邮箱</view>
+      <view class='yes_no'>
+        <view class='radio_posi margin-left-sm'>
+          <radio class="red margin_right10" bindtap='radio_yes'></radio>
+          <text>是</text>
+        </view>
+        <view class='radio_posi'>
+          <radio class="red margin_right10" bindtap='radio_no'></radio>
+          <text>否</text>
+        </view>
+      </view>
+		</view>
+</radio-group>
+
+<view class="cu-form-group" hidden="{{email}}">
+  <view class="title">收票人邮箱：</view>
+  <input placeholder="请填写收件人邮箱" placeholder-class='font26 color_glay'></input>
+</view>
+<view class="cu-form-group margin_bottom margin-top border_top">
+  <view class="title more_info">
+    <text>更多信息</text>
+    <text class="color_glay">（购买方信息、备注等）</text>
+    <text class="lg text-gray cuIcon-unfold"  bindtap='more_info_up'></text>
+  </view>
+</view>
+
+<view hidden='{{hiddenName}}'>
+  <view class="bg-white margin_bottom address_phone font26">
+    <view>
+      <view class='address_phone_aside'>地址、电话：</view>
+    </view>
+    <view>
+      <textarea placeholder="请填写准确的地址与七位或以上电话,限制100位字符" placeholder-class='textarea_address_phone color_glay' maxlength="100"></textarea>
+    </view>
+  </view>
+  <view class="cu-form-group margin_bottom">
+    <view class="title">开户银行：</view>
+    <input placeholder="请填写购买方开户行" placeholder-class='font26 color_glay'></input>
+  </view>
+  <view class="cu-form-group margin_bottom">
+    <view class="title">银行账号：</view>
+    <input placeholder="请填写购买方银行账号" placeholder-class='font26 color_glay'></input>
+  </view>
+  <view class="cu-form-group margin_bottom">
+    <view class="title">备注说明：</view>
+    <input placeholder="请填写需在发票备注栏中显示的内容" placeholder-class='font26 color_glay'></input>
+  </view>
+</view>
+
+<!-- 下一步 -->
+<view class='next_step'>
+  下一步
+</view>

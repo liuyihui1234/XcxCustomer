@@ -1,0 +1,32 @@
+<view class="cu-chat">
+ <view class="cu-item">
+    <view class="cu-avatar radius">
+      <image src='../../../images/online_avatar.png' mode='widthFix'></image>
+    </view>
+    <view class="main">
+      <view class="content shadow">
+        <view>Hi，小满很高兴为您服务，任何快递问题记得找我哦~</view>
+        <view>猜您可能想问以下问题：</view>
+          <view class='color-blue'>
+            <view>【1】寄件</view>
+            <view>【2】手机号查件</view>
+            <view>【3】运费时效查询</view>
+            <view>【4】快件能不能自取</view>
+            <view>【5】怎么申请电子发票</view>
+            <view>【6】已发出快件如何转寄、退回</view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input placeholder='请输入您的问题...' class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow">发送</button>
+</view>

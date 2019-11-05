@@ -1,10 +1,10 @@
 
 <view class='my_jifen'>
-  <image class='jifen_banner' src='../../.././images/jifen_banner.png' mode='widthFix'></image>
+  <image class='jifen_banner' src='../../../images/jifen_banner.png' mode='widthFix'></image>
   <text class='jifen_number'>0</text>
   <view class='jifen_text'>
     <text class='jifen_now'>当前可用积分</text>
-    <image class='jifen_action' src='../../.././images/jifen_action.png' mode='widthFix' bindtap="showModal" ></image>
+    <image class='jifen_action' src='../../../images/jifen_action.png' mode='widthFix' bindtap="showModal" ></image>
   </view>
 </view>
 <view class='jifen_detail'>

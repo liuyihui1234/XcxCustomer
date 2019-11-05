@@ -8,25 +8,26 @@ Page({
     headImg:"",
     nickname:'',
     modalName: null,
+    fapiaoName: null,
     my_imgs: [
       {
         my_imgs_id: 1,
-        img: "../.././images/my_img1.png",
+        img: "../../images/my_img1.png",
         text: "地址簿"
       },
       { 
         my_imgs_id: 2,
-        img: "../.././images/my_img2.png",
+        img: "../../images/my_img2.png",
         text: "优惠券"
       },
       {
         my_imgs_id: 3,
-        img: "../.././images/my_img3.png",
+        img: "../../images/my_img3.png",
         text: "发票申请"
       },
       {
         my_imgs_id: 4,
-        img: "../.././images/my_img4.png",
+        img: "../../images/my_img4.png",
         text: "购物订单"
       },
     ]
@@ -44,15 +45,28 @@ Page({
       wx.navigateTo({
         url: './youhui/youhui',
       })
-    } else if (my_imgs_id == 3) {
-      wx.navigateTo({
-        url: './fapiao/fapiao',
+    // } 
+    // else if (my_imgs_id == 3) {
+    //   wx.navigateTo({
+    //     url: './fapiao/fapiao',
+    //   })
+    } 
+    else if (my_imgs_id == 3) {
+      this.setData({
+        fapiaoName:"fapiao"
       })
+
     } else if (my_imgs_id == 4) {
       wx.navigateTo({
         url: './shopping/shopping',
       })
     }
+  },
+  // 在线客服
+  kf_online:function(e){
+    wx.navigateTo({
+      url: './kf_online/kf_online',
+    })
   },
   kf_tel:function(e){
     wx.navigateTo({
@@ -66,10 +80,10 @@ Page({
   },
   hideModal(e) {
     this.setData({
-      modalName: "null"
+      modalName: "null",
+      fapiaoName: "null"
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -91,6 +105,7 @@ Page({
       url: './my_jifen/my_jifen',
     })
   },
+  // 功能异常
   abnormal:function(e){
     wx.navigateTo({
       url: './abnormal/abnormal',

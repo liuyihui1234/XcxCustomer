@@ -27,7 +27,7 @@
             <view class='ji_shou_line'>
             </view>
 
-            <view class='shou_cnt'>
+          <view class='shou_cnt'>
             <view class='input_cnt_shou' bindtap='shoujian'>
               <text class='name_tel'></text>
               <view class='cnt_address'>{{toname!=''?toname+totel+toprovincename+tocityname+toareaname+toareastreetname:'请填写收件人信息'}}</view>
@@ -58,15 +58,26 @@
 				</picker>
 			</view>
     <view class="cu-list menu card-menu margin-bottom-xl shadow-lg radius">
-    <!-- <view class="cu-item arrow">
-      <view class="content" hover-class="none">
-        <view class="text-grey">物品信息
-        <view class='red_must'>必填</view>
+     <!-- 如果是港澳台寄件 -->
+      <view class="cu-item arrow" wx:if="{{this.data.nav_id == 6}}">
+        <view class="content" hover-class="none">
+          <view class="text-grey">预估重量
+          <view class='red_must'>必填</view>
+          </view>
+          <view class='input_float_right' bindtap='wupin' data-shang="{{nav_id}}">请填写</view>
         </view>
-        <view class='input_float_right' bindtap='wupin'>请填写</view>
       </view>
-    </view>
-    <view class="cu-item arrow">
+    
+        <!-- 如果不是港澳台寄件 -->
+      <view class="cu-item arrow" wx:else>
+        <view class="content" hover-class="none">
+          <view class="text-grey">物品信息
+          <view class='red_must'>必填</view>
+          </view>
+          <view class='input_float_right' bindtap='wupin' data-shang="{{nav_id}}">请填写</view>
+        </view>
+      </view>
+    <!-- <view class="cu-item arrow">
       <view class="content" hover-class="none">
         <text class="text-grey">保价</text>
         <view class='input_float_right' bindtap='baojia'>未保价物品最高赔7倍运费，建议保价</view>

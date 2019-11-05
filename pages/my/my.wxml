@@ -2,7 +2,7 @@
 
 <!-- banner部分 -->
 <view class='my_banner'>
-  <image class='my_banner_img' src='../.././images/my_banner.png' mode="widthFix"></image>
+  <image class='my_banner_img' src='../../images/my_banner.png' mode="widthFix"></image>
   <view class='my_imgs'>
    <block wx:for="{{my_imgs}}" :key="{{index}}">
     <view class='block_item' bindtap='my_imgs' data-my_imgs_id='{{item.my_imgs_id}}'>
@@ -20,8 +20,8 @@
 <view class='touxiang'>
 <!-- 头像一行 -->
   <view class='touxiang_info'>
-    <image class='touxiang_img' src='{{headImg}}' mode='widthFix'></image>
-    <text class='touxiang_text'>{{nickname}}</text>
+    <image class='touxiang_img' src='{{headImg||"../../images/touxiang.png"}}' mode='widthFix'></image>
+    <text class='touxiang_text'>{{nickname||"点击获取昵称"}}</text>
     <view class='qiandao' bindtap="showModal">
       签到
     </view>
@@ -45,27 +45,31 @@
 
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" url="" hover-class="none">
-        <image src="../.././images/my_online.png" mode="aspectFit"></image>
+      <view class="content" url="" hover-class="none" bindtap='kf_online'>
+        <image class='my_online' src="../../images/my_online.png" mode="aspectFit"></image>
+        <!-- <text class='lg text-gray cuIcon-service'></text> -->
         <text class="text-grey">在线客服</text>
       </view>
     </view>
     <!-- 功能异常  abnormal -->
     <view class="cu-item arrow" bindtap='abnormal'>
-      <view class="content" url="" hover-class="none">
-        <image src='../.././images/my_fankui.png'></image>
+      <view class="content">
+        <image class='my_fankui' src='../../images/my_fankui.png'></image>
+        <!-- <text class='lg text-gray cuIcon-question'></text> -->
         <text class="text-grey">功能反馈</text>
       </view>
     </view>
     <view class="cu-item arrow" bindtap='kf_tel'>
       <view class="content">
-        <image src='../.././images/my_phone.png'></image>
+        <image class='my_phone' src='../../images/my_phone.png'></image>
+        <!-- <text class='lg text-gray cuIcon-dianhua'></text> -->
         <text class="text-grey">客服电话</text>
       </view>
     </view>
     <view class="cu-item arrow">
-      <button class="cu-btn content" open-type="feedback">
-        <image src='../.././images/my_tousujilu.png'></image>
+      <button class="cu-btn content">
+        <image class='my_tousujilu' src='../../images/my_tousujilu.png'></image>
+        <!-- <text class='lg text-gray cuIcon-record'></text> -->
         <text class="text-grey">投诉记录</text>
       </button>
     </view>
@@ -78,10 +82,24 @@
 		<view class="cu-modal {{modalName=='Modal'?'show':''}}">
 			<view class="cu-dialog">
 				<view class="padding-xl">
-					<image class='qiandao_dialog_img' src='../.././images/qiandao.png' mode='widthFix'></image>
+					<image class='qiandao_dialog_img' src='../../images/qiandao.png' mode='widthFix'></image>
           <view class='qiandao_succ'>签到成功</view>
           <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
           <view class='btn_know' bindtap="hideModal">朕知道了</view>
+				</view>
+			</view>
+		</view>
+
+
+      <!-- 签到弹窗 -->
+		<view class="cu-modal {{fapiaoName=='fapiao'?'show':''}}">
+			<view class="cu-dialog">
+				<view class="padding-xl">
+					<!-- <image class='qiandao_dialog_img' src='../../images/qiandao.png' mode='widthFix'></image>
+          <view class='qiandao_succ'>签到成功</view>
+          <view>今日签到获得<text class='jifen_count'>+10</text>积分</view>
+          <view class='btn_know' bindtap="hideModal">朕知道了</view> -->
+          <view bindtap="hideModal">发票申请请联系寄件人</view>
 				</view>
 			</view>
 		</view>

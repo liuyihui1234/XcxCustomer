@@ -5,7 +5,7 @@
 		<input placeholder="电话" name="contactphone" placeholder-class='font-size30'></input>
     <text>-</text>
 		<input class='fenjihao' name="contacttel" placeholder="分机号" placeholder-class='font-size30'></input>
-    <!-- <image class="telephone_book" src='../../../.././images/telephone_book.png' mode='widthFix' bindtap='address_book'></image> -->
+    <!-- <image class="telephone_book" src='../../../../images/telephone_book.png' mode='widthFix' bindtap='address_book'></image> -->
 	</view>
   <view class="cu-form-group">
   <picker mode="region" bindchange="bindRegionChange" name="county" value="{{region}}" custom-item="{{customItem}}">
@@ -54,8 +54,8 @@
       <textarea maxlength="-1" :disabled="modalName!=null" bindinput="textareaAInput" placeholder="粘贴地址信息，自动解析地址" placeholder-class='textarea_class'></textarea>
       <view class='jiexi' type="button" bindtap="addressJieXi">解析地址</view>
       <view>
-        <!-- <image class='camera' src='../../../.././images/camera.png' mode='widthFix'></image>
-        <image class='voice' src='../../../.././images/voice.png' mode='widthFix'></image> -->
+        <!-- <image class='camera' src='../../../../images/camera.png' mode='widthFix'></image>
+        <image class='voice' src='../../../../images/voice.png' mode='widthFix'></image> -->
       </view>
     </view>
   </view>

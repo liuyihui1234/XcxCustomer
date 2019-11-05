@@ -7,7 +7,7 @@
   <block wx:for="{{big_navs}}" wx:key="{{index}}">
     <view class='big_item'>
        <image class='big_item_img' src='{{item.img}}' mode='widthFix'></image> 
-      <view class='big_item_text' bindtap="getNavItem" data-big_nav_id="{{item.big_nav_id}}">
+      <view class='big_item_text' bindtap="getNavItem" data-nav_id="{{item.nav_id}}">
         <text class='textTitle'>{{item.textTitle}}</text>
         <text class='textPs'>{{item.textPs}}</text>
       </view>
@@ -18,7 +18,7 @@
 <!-- 七个导航 -->
 <view class='small_nav'>
   <block class="" wx:for="{{small_navs}}" wx:key="{{index}}" >
-  <view class='small_item' bindtap="getNavItem" data-nav_id="{{item.nav_id}}">
+  <view class='small_item' bindtap="getNavSmall" data-nav_id="{{item.nav_id}}">
     <view class='small_item_img'>
     <image src="{{item.img}}" mode='widthFix'></image>
     </view>

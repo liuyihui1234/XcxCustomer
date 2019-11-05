@@ -7,13 +7,13 @@
 <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
   <swiper-item>
     <view class='when_no_avai'>
-        <image class='no_avai' src='../../.././images/no_avai.png' mode='widthFix'></image>
+        <image class='no_avai' src='../../../images/no_avai.png' mode='widthFix'></image>
         <view class='no_avai_text'>您暂时无可用快8券</view>
     </view>
   </swiper-item>
   <swiper-item>
    <view class='when_no_avai'>
-        <image class='no_avai' src='../../.././images/no_avai.png' mode='widthFix'></image>
+        <image class='no_avai' src='../../../images/no_avai.png' mode='widthFix'></image>
         <view class='no_avai_text'>您暂时无可用快8券</view>
     </view>
   </swiper-item>

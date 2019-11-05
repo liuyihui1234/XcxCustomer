@@ -1,1 +1,71 @@
-/* pages/find/find_serve/find_serve.wxss */
+.cu-list.card-menu{
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+.cu-list.menu>.cu-item{
+  padding: 0rpx 40rpx;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.input_float_right{
+  display: flex;
+  justify-content:flex-end;
+  font-size: 28rpx;
+  color: #999999;
+  margin-left: 20rpx;
+}
+.text-grey{
+  color: #333333;
+}
+/* 查询按钮 */
+.submit{
+  width:600rpx;
+  padding:20rpx 0rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #a0a0a0;
+  border-radius: 16rpx; 
+  margin: 35rpx auto;
+}
+.submit:hover{
+  background-color: #cb252a;
+}
+/* 地址的样式 */
+.red_title{
+  color: #cb252a;
+  font-size: 30rpx;
+  margin-bottom: 5rpx;
+}
+.address_title{
+  padding: 20rpx 10rpx;
+  border-top: 1rpx solid #c2c0c0;
+  border-bottom: 1rpx solid #c2c0c0;
+  background-color: #e5e2e2;
+}
+.address_detail{
+  border-bottom: 1rpx solid #c2c0c0;
+  padding: 40rpx 10rpx;
+}
+.red_color{
+  color: #cb252a;
+  margin-top: 10rpx;
+}
+.jiedao{
+  padding: 5rpx 8rpxx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.jiedao_detail{
+  width: 30%;
+  padding: 5rpx 3rpx;
+  background-color: #e2e2e2;
+  margin-right: 15rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  text-align: center;
+}

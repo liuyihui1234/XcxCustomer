@@ -8,66 +8,88 @@ Page({
     received: "500",
     big_navs:[
       {
-        big_nav_id: 1,
+        nav_id: 1,
         img: '../../images/shangmen.png',
         textTitle: "上门服务",
         textPs: "一小时取件"
       },
       {
-        big_nav_id: 2,
+        nav_id: 2,
         img: '../../images/saoma.png',
         textTitle: "扫码速运",
         textPs: "扫小哥/运单二维码"
       },
       {
-        big_nav_id: 3,
+        nav_id: 3,
         img: '../../images/jidajian.png',
         textTitle: "速运大件",
         textPs: "20公斤以上优惠寄"
       },
       {
-        big_nav_id: 4,
+        nav_id: 4,
         img: '../../images/fengchao.png',
         textTitle: "丰巢速运",
         textPs: "24小时自助寄件"
       }
     ],
     small_navs:[
+    
+      // {
+      //   nav_id:5,
+      //   img: "../../images/yiyao.png",
+      //   text: "医药寄"
+      // },
       {
-        small_nav_id:1,
-        img: "../../images/yiyao.png",
-        text: "医药寄"
+        nav_id: 5,
+        img: "../../images/piliang.png",
+        text: "批量寄"
       },
+      // {
+      //   nav_id: 7,
+      //   img: "../../images/shengxian.png",
+      //   text: "生鲜寄"
+      // },
       {
-        small_nav_id: 2,
+        nav_id: 6,
         img: "../../images/guojijijian.png",
         text: "国际及港澳台"
       },
       {
-        small_nav_id: 3,
-        img: "../../images/shengxian.png",
-        text: "生鲜寄"
+        nav_id: 7,
+        img: "../../images/duobang.png",
+        text: "多邦易购"
+      },
+
+      {
+        nav_id: 8,
+        img: "../../images/yiyao.png",
+        text: "医药寄"
       },
       {
-        small_nav_id: 4,
+        nav_id: 9,
         img: "../../images/tongcheng.png",
         text: "同城直送"
       },
       {
-        small_nav_id: 5,
+        nav_id: 10,
         img: "../../images/lenglian.png",
         text: "冷链物流"
       },
+      // {
+      //   nav_id: 10,
+      //   img: "../../images/piliang.png",
+      //   text: "批量寄"
+      // },
       {
-        small_nav_id: 6,
-        img: "../../images/piliang.png",
-        text: "批量寄"
-      },
-      {
-        small_nav_id: 7,
-        img: "../../images/duobang.png",
-        text: "多邦易购"
+        nav_id: 11,
+        img: "../../images/shengxian.png",
+        text: "生鲜寄"
       }
+      // {
+      //   nav_id: 11,
+      //   img: "../../images/duobang.png",
+      //   text: "多邦易购"
+      // }
     ]
     
   },
@@ -88,15 +110,15 @@ Page({
   },
   getNavItem:function(e){
     console.log(e);
-    var big_nav_id = e.currentTarget.dataset.big_nav_id;
-    console.log('big_nav_id', big_nav_id);
-    if (big_nav_id == 1){
+    var nav_id = e.currentTarget.dataset.nav_id;
+    // console.log('nav_id',nav_id);
+    if (nav_id == 1){
       wx.navigateTo({
-        url: './shangmen/shangmen',
+        url: './shangmen/shangmen?nav_id=1',
       })
-    } else if (big_nav_id==2){
+    } else if (nav_id==2){
       // wx.navigateTo({
-      //   url: '../query/query',
+      //   url: './shangmen/shangmen',
       // })
       var that = this;
       wx.scanCode({ //扫描API
@@ -111,14 +133,47 @@ Page({
           })
         }
       })
-    } else if (big_nav_id==3){
+    } else if (nav_id == 3){
       wx.navigateTo({
-        url: '../supervise/supervise',
+        url: './shangmen/shangmen?nav_id=3',
       })
-    } else if (big_nav_id==4) {
+    } else if (nav_id==4) {
       wx.navigateTo({
-        url: '../contract/contract',
+        url: './shangmen/shangmen?nav_id=4',
       })
-    }
+    } 
+  },
+  getNavSmall:function(e){
+    console.log(e);
+    var nav_id = e.currentTarget.dataset.nav_id;
+      if (nav_id == 5) {
+      wx.navigateTo({
+        url: './batch_jijian/batch_jijian',
+      })
+    } else if (nav_id == 6) {
+      wx.navigateTo({
+        url: './shangmen/shangmen?nav_id=6',
+      })
+    // } else if (nav_id == 7) {
+    //   wx.navigateTo({
+    //     url: './shangmen/shangmen?nav_id=7',
+    //   })
+    // } else if (nav_id == 8) {
+    //   wx.navigateTo({
+    //     url: './shangmen/shangmen?nav_id=8',
+    //   })
+    //   } else if (nav_id == 9) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=9',
+    //     })
+    //   } else if (nav_id == 10) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=10',
+    //     })
+    //   } else if (nav_id == 11) {
+    //     wx.navigateTo({
+    //       url: './shangmen/shangmen?nav_id=11',
+    //     })
+      }
   }
 })

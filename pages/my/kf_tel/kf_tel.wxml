@@ -1,8 +1,8 @@
 <view class="cu-list menu card-menu shadow-lg radius">
-    <view class="cu-item arrow">
+    <view class="cu-item arrow"  bindtap="open">
       <navigator class="content" url="" hover-class="none">
         <text>快8速递客服</text>
-        <image src="../../.././images/my_phone.png" mode="aspectFit" bindtap="open"></image>
+        <image class='my_phone' src="../../../images/my_phone.png" mode="aspectFit"></image>
       </navigator>
     </view>
   </view>

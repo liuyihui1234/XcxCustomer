@@ -15,6 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.7.1",
 	"appid": "wxcee462db5d5dcc77",
+	//"appid": "wx857e727629a90116",
 	"projectname": "k8mini",
 	"debugOptions": {
 		"hidedInDevtools": []

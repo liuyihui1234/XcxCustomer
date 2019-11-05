@@ -116,8 +116,11 @@ Page({
     })
   },
   wupin: function (e) {
+    console.log(e)
+    let datalst = e.currentTarget.dataset.shang;
+    console.log(datalst);
     wx.navigateTo({
-      url: './wupin/wupin',
+      url: './wupin/wupin?nav_id='+datalst,
     })
   },
   baojia: function (e) {
@@ -134,15 +137,42 @@ Page({
    * 生命周期函数--监听页面加载
    */
   sender: function (options) {
+    // console.log(options)
     wx.navigateTo({
       url: './jijian/jijian',
     })
   },
 
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '快递员上门'  //修改title
+    console.log(options)
+    this.setData({
+      nav_id: options.nav_id
     })
+    console.log(this.data.nav_id)
+    if (this.data.nav_id == 1){
+      wx.setNavigationBarTitle({
+        title: '快递员上门'  //修改title
+      })
+    } else if (this.data.nav_id == 3) {
+      wx.setNavigationBarTitle({
+        title: '寄大件'  //修改title
+      })
+    } else if (this.data.nav_id == 4) {
+      wx.setNavigationBarTitle({
+        title: '丰巢寄件'  //修改title
+      })
+    }
+    else if (this.data.nav_id == 5) {
+      wx.setNavigationBarTitle({
+        title: '批量寄'  //修改title
+      })
+    }
+     else if (this.data.nav_id==6){
+      wx.setNavigationBarTitle({
+        title: '国际/港澳台'  //修改title
+      })
+    }
+   
   },
 
   /**
